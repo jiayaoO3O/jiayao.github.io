@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/ArtificialIntelligence32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/ArtificialIntelligence16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="5IoOHPeK1Gs6LKpb_pJOXhrUePDQUxzqf0hPjeAzdLo">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+
+<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;jiayaoo3o.github.io&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:false,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;none&quot;,&quot;post_header&quot;:&quot;none&quot;,&quot;post_body&quot;:&quot;none&quot;,&quot;coll_header&quot;:&quot;none&quot;,&quot;sidebar&quot;:&quot;none&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;},&quot;path&quot;:&quot;&#x2F;search.xml&quot;,&quot;localsearch&quot;:{&quot;enable&quot;:true,&quot;trigger&quot;:&quot;auto&quot;,&quot;top_n_per_article&quot;:1,&quot;unescape&quot;:false,&quot;preload&quot;:false}}</script>
+<meta name="description" content="笔记本配置  型号 : 坠机堡垒 服役时长 : 5年 cpu : i5-4200h 内存 : 8+4的ddr3内存 硬盘 : 240G用了4年的威刚SATA固态+1T机械硬盘用于存电影 屏幕 : 45%NTSC祖传普通15.6屏幕  换了新电脑, 这台老机器就决定用来当NAS用了.  2020.10.15更新  刚好三个月过去了, 中间又换了两种方案, 现在终于确定了什么系统做nas适合我. 本来">
+<meta property="og:type" content="article">
+<meta property="og:title" content="记录一次退休笔记本安装Ubuntu搭建NAS过程">
+<meta property="og:url" content="http://jiayaoo3o.github.io/2020/06/16/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1%E9%80%80%E4%BC%91%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%AE%89%E8%A3%85Uubuntu%E6%90%AD%E5%BB%BANAS%E8%BF%87%E7%A8%8B/index.html">
+<meta property="og:site_name" content="jiayaoO3O&#39;s Blog">
+<meta property="og:description" content="笔记本配置  型号 : 坠机堡垒 服役时长 : 5年 cpu : i5-4200h 内存 : 8+4的ddr3内存 硬盘 : 240G用了4年的威刚SATA固态+1T机械硬盘用于存电影 屏幕 : 45%NTSC祖传普通15.6屏幕  换了新电脑, 这台老机器就决定用来当NAS用了.  2020.10.15更新  刚好三个月过去了, 中间又换了两种方案, 现在终于确定了什么系统做nas适合我. 本来">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2020/06/16/9LDSjlIrdJhMRE8.png">
+<meta property="article:published_time" content="2020-06-16T01:37:00.000Z">
+<meta property="article:modified_time" content="2021-07-12T03:16:05.984Z">
+<meta property="article:author" content="jiayao">
+<meta property="article:tag" content="docker">
+<meta property="article:tag" content="Ubuntu">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2020/06/16/9LDSjlIrdJhMRE8.png">
+
+
+<link rel="canonical" href="http://jiayaoo3o.github.io/2020/06/16/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1%E9%80%80%E4%BC%91%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%AE%89%E8%A3%85Uubuntu%E6%90%AD%E5%BB%BANAS%E8%BF%87%E7%A8%8B/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;http:&#x2F;&#x2F;jiayaoo3o.github.io&#x2F;2020&#x2F;06&#x2F;16&#x2F;%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1%E9%80%80%E4%BC%91%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%AE%89%E8%A3%85Uubuntu%E6%90%AD%E5%BB%BANAS%E8%BF%87%E7%A8%8B&#x2F;&quot;,&quot;path&quot;:&quot;2020&#x2F;06&#x2F;16&#x2F;记录一次退休笔记本安装Uubuntu搭建NAS过程&#x2F;&quot;,&quot;title&quot;:&quot;记录一次退休笔记本安装Ubuntu搭建NAS过程&quot;}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<title>记录一次退休笔记本安装Ubuntu搭建NAS过程 | jiayaoO3O's Blog</title><script src="/js/config.js"></script>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">jiayaoO3O's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">sudo reboot</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%94%E8%AE%B0%E6%9C%AC%E9%85%8D%E7%BD%AE"><span class="nav-text">笔记本配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85ubuntu-20.04%E6%A1%8C%E9%9D%A2%E7%89%88"><span class="nav-text">安装Ubuntu 20.04桌面版</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E6%8D%A2%E4%B8%AD%E7%A7%91%E5%A4%A7%E6%BA%90"><span class="nav-text">更换中科大源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%96%E6%B6%88%E7%AC%94%E8%AE%B0%E6%9C%ACubuntu%E7%9A%84%E7%9B%92%E7%9B%96%E6%8C%82%E8%B5%B7%E5%8A%9F%E8%83%BD"><span class="nav-text">取消笔记本Ubuntu的盒盖挂起功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E9%97%AD%E7%BB%88%E7%AB%AF%E5%93%8D%E9%93%83"><span class="nav-text">关闭终端响铃</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E5%90%AF%E8%BF%9C%E7%A8%8Bssh%E8%BF%9E%E6%8E%A5"><span class="nav-text">开启远程ssh连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85docker"><span class="nav-text">安装docker</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2portainer%E6%9C%8D%E5%8A%A1"><span class="nav-text">部署Portainer服务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2adguardhome%E6%9C%8D%E5%8A%A1"><span class="nav-text">部署adguardhome服务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2aria2%E6%9C%8D%E5%8A%A1"><span class="nav-text">部署aria2服务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2jellyfin%E6%9C%8D%E5%8A%A1"><span class="nav-text">部署jellyfin服务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85zerotier-one"><span class="nav-text">安装ZeroTier One</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2vlmcsd%E6%9C%8D%E5%8A%A1"><span class="nav-text">部署vlmcsd服务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E4%BA%BA%E4%BA%BA%E5%BD%B1%E8%A7%86rrshareweb%E6%9C%8D%E5%8A%A1"><span class="nav-text">部署人人影视rrshareweb服务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2qbittorrent"><span class="nav-text">部署qbittorrent</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E7%A1%AC%E7%9B%98%E5%BC%80%E6%9C%BA%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD"><span class="nav-text">配置硬盘开机自动挂载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2samba%E6%9C%8D%E5%8A%A1"><span class="nav-text">部署samba服务</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="jiayao"
+      src="/images/pic.jpg">
+  <p class="site-author-name" itemprop="name">jiayao</p>
+  <div class="site-description" itemprop="description">重构！重构！重构！</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">130</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">37</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/jiayaoO3O" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;jiayaoO3O" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/jiayao3.14@outlook.com" title="E-Mail → jiayao3.14@outlook.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://jiayaoo3o.github.io/2020/06/16/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1%E9%80%80%E4%BC%91%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%AE%89%E8%A3%85Uubuntu%E6%90%AD%E5%BB%BANAS%E8%BF%87%E7%A8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/pic.jpg">
+      <meta itemprop="name" content="jiayao">
+      <meta itemprop="description" content="重构！重构！重构！">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jiayaoO3O's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          记录一次退休笔记本安装Ubuntu搭建NAS过程<a href="https://github.com/jiayaoO3O/jiayaoO3O.github.io/blob/Blog/source/_posts/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1%E9%80%80%E4%BC%91%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%AE%89%E8%A3%85Uubuntu%E6%90%AD%E5%BB%BANAS%E8%BF%87%E7%A8%8B.md" class="post-edit-link" title="编辑" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-06-16 09:37:00" itemprop="dateCreated datePublished" datetime="2020-06-16T09:37:00+08:00">2020-06-16</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-07-12 11:16:05" itemprop="dateModified" datetime="2021-07-12T11:16:05+08:00">2021-07-12</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="笔记本配置">笔记本配置</h2>
+<ul>
+<li>型号 : 坠机堡垒</li>
+<li>服役时长 : 5年</li>
+<li>cpu : i5-4200h</li>
+<li>内存 : 8+4的ddr3内存</li>
+<li>硬盘 : 240G用了4年的威刚SATA固态+1T机械硬盘用于存电影</li>
+<li>屏幕 : 45%NTSC祖传普通15.6屏幕</li>
+</ul>
+<p>换了新电脑, 这台老机器就决定用来当NAS用了.</p>
+<blockquote>
+<p>2020.10.15更新</p>
+</blockquote>
+<p>刚好三个月过去了, 中间又换了两种方案, 现在终于确定了什么系统做nas适合我.</p>
+<p>本来是从win10切过去了freenas, 因为我发现freenas原生就带有OneDrive云同步功能, 并且还有ZFS这种文件格式对数据进行保护, 所以一开始用起来觉得很完美, 但是由于以前没用过FreeBSD, 才发现freenas下的插件生态居然这么贫瘠, 第一次看到官方加上三方的插件一共就这么一点的时候我惊了, 就只有一个qBittorrent是能够开箱即用的, 并且由于我没有公网ip, 连装zerotier-one都失败了, 这就导致了这个freenas只能完全在内网, 没法远程访问.</p>
+<p>本来我以为就得这么别扭地用着freenas的时候, 我突然发现freenas公司现在在做一个新的项目 : <a target="_blank" rel="noopener" href="https://www.truenas.com/download-truenas-scale/">TrueNAS SCALE</a>, 这个项目是FreeNas公司目前在做的新的一款nas系统, 它让我感到兴奋的原因是这个新的系统<strong>是基于Debian而不是FreeBSD进行开发的!!!</strong>, 这就意味着可以原生使用Docker, 整个Docker镜像生态都可以直接接入到TrueNAS里面, 而不仅仅是以前的几十个插件, 甚至连zerotier都可以直接在DockerHub上面搜到镜像, 所以当我知道了这个系统之后, 马上就切换过去了, 但是由于目前这个系统还在非常早期的阶段, 有问题是很正常的, 各种各样的bug也经常出现, 如果想要稳定现在还是不适合上车. 现在可以说一下这个系统目前有什么坑.</p>
+<p>首先第一点是, 尽量不要将这个系统安装在内存卡和U盘上, 经过我多次尝试, 只要是将系统安装到内存卡或U盘上, 就没有启动正常过, 要么是刚启动就完全卡住, 要么就是无法导入boot-pool, 需要手动import, 但是当我用硬盘安装时, 瞬间流畅进入系统.</p>
+<p>第二点就是只要更新系统, Docker里面的镜像和容器会被全部清除, 所以启动容器要尽量挂在到本地, 并且保存好docker run命令, 以后更新系统之后方便重新启动容器.</p>
+<p>上面这两点是目前比较大的坑, 其余的页面小bug还是能够接受的, 并且新的TrueNAS SCALE可以无缝导入以前freenas的存储池, 所以目前基本完美.</p>
+<blockquote>
+<p>2020.07.15更新</p>
+</blockquote>
+<p>还是选择装回去Win10 2004了, Ubuntu下还是没法做到完美的Ondrive方案,我几百个G的视频想要完美同步到Onedrive, 所以选择安装2004版本, 开WSL2使用docker来确保原来的服务都是可用的, 以后通过笔记本远程桌面到这台NAS做主力机算了, 现在的笔记本夏天发热太严重了, 所以选择将服务压力都放到NAS上面, 笔记本直接远程桌面上去当正常电脑用.</p>
+<span id="more"></span>
+<h2 id="安装ubuntu-20.04桌面版">安装Ubuntu 20.04桌面版</h2>
+<p>前往Ubuntu官网下载Ubuntu 20.04桌面版, 因为这次是安装在笔记本电脑上, 有屏幕, 如果直接装服务器版本就有点浪费了, 安装有图形界面的Linux发行版都比较简单, 而且Ubuntu的汉化工作也比较到位, 就不多介绍了.</p>
+<h2 id="更换中科大源">更换中科大源</h2>
+<p>进入<a target="_blank" rel="noopener" href="http://mirrors.ustc.edu.cn/">中科大镜像站官网</a>, 找到Ubuntu选项, 点击右边的help按钮就可以进入Ubuntu换源帮助页面.</p>
+<p>首先先执行下方命令, 查看当前的源网址前面有没有country-code</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/apt/sources.list</span><br></pre></td></tr></table></figure>
+<p>如果看到了<code>cn.archive.ubuntu.com</code>则执行下方命令 :</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo sed -i &#x27;s/cn.archive.ubuntu.com/mirrors.ustc.edu.cn/g&#x27; /etc/apt/sources.list</span><br></pre></td></tr></table></figure>
+<p>如果只看到了<code>archive.ubuntu.com</code>则执行下方命令(少了一个cn) :</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo sed -i &#x27;s/archive.ubuntu.com/mirrors.ustc.edu.cn/g&#x27; /etc/apt/sources.list</span><br></pre></td></tr></table></figure>
+<p>然后就可以执行下方命令进行源更新 :</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br></pre></td></tr></table></figure>
+<p>更新所有软件 :</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt upgrade -y</span><br></pre></td></tr></table></figure>
+<h2 id="取消笔记本ubuntu的盒盖挂起功能">取消笔记本Ubuntu的盒盖挂起功能</h2>
+<p>默认情况下, 使用笔记本安装Ubuntu, 电脑盒盖时整个系统会被挂起, 这个功能相当的扯淡, 执行以下操作可以进行修改 :</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo nano /etc/systemd/logind.conf</span><br><span class="line"><span class="meta">#</span><span class="bash">HandleLidSwitch=<span class="built_in">suspend</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">找到上面的选项, 修改成下面的内容, 注意要删掉前面的<span class="comment">#号</span></span></span><br><span class="line">HandleLidSwitch=ignore</span><br></pre></td></tr></table></figure>
+<p>保存之后执行下方命令重启服务 :</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service systemd-logind restart</span><br></pre></td></tr></table></figure>
+<h2 id="关闭终端响铃">关闭终端响铃</h2>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo nano /etc/inputrc</span><br><span class="line">set bell-style off</span><br></pre></td></tr></table></figure>
+<h2 id="开启远程ssh连接">开启远程ssh连接</h2>
+<p>Ubuntu20.04默认没有安装sshd, 这个时候只要在终端输入sshd, 系统会提示没有安装sshd, 是否需要安装, 并且连命令都已经提示出来了, 执行下方命令安装sshd :</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install openssh-server -y</span><br></pre></td></tr></table></figure>
+<p>安装到这一步, 就可以不在这台笔记本上面操作了, 可以用另一台电脑远程连接到这台电脑上面.</p>
+<h2 id="安装docker">安装docker</h2>
+<p>因为笔记本电脑是x86架构的, 会比树莓派, 路由器等非x86架构的设备拥有更多的docker镜像, 搭建在NAS上面的服务都是使用docker而不是直接安装到本地.</p>
+<p>因为docker本身对Ubuntu的兼容性就足够好, 官方脚本里面已经默认兼容Ubuntu, 只要执行下方命令即可安装docker :</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install curl</span><br><span class="line">curl -fsSL https://get.docker.com -o get-docker.sh</span><br><span class="line">sudo sh get-docker.sh</span><br></pre></td></tr></table></figure>
+<p>安装完成之后, 执行下方命令, 将你的所在用户加入到docker组, 这样运行docker命令就不用每次都使用sudo :</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo usermod -aG docker 你的用户名</span><br></pre></td></tr></table></figure>
+<p>然后重启即可使用docker.</p>
+<h2 id="部署portainer服务">部署Portainer服务</h2>
+<p>Portainer是一个可视化的docker容器管理平台, 使用Portainer可以很方便地对docker容器进行各种操作, 部署Portainer也很简单, 两条命令即可 :</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker volume create portainer_data #创建一个portainer_data卷, 由于portainer本身存储的东西不是很重要, 哪怕没了也没关系所以就懒得本地化挂载了.</span><br><span class="line">docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer</span><br></pre></td></tr></table></figure>
+<p>部署完成进入设备的IP : 9000端口即可访问Portainer.</p>
+<h2 id="部署adguardhome服务">部署adguardhome服务</h2>
+<p>adguardhome是一款用于去除广告的开源DNS服务软件, 用户可以在自己的设备上搭建DNS服务用于去除广告和加速访问等等, 在<a target="_blank" rel="noopener" href="https://hub.docker.com/r/adguard/adguardhome">adguardhome</a>的docker hub主页可以看到它的详细信息.</p>
+<p>使用下方命令就可以直接拉取adguardhome镜像 :</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull adguard/adguardhome</span><br></pre></td></tr></table></figure>
+<p>需要注意的是, 现在还不能直接使用adguardhome提供的容器启动, 因为目前还有2个问题没有解决 :</p>
+<ul>
+<li>DNS服务器需要使用53端口, 但是Ubuntu自身的53端口已经被systemd-resolved占用了, 使用<code>sudo lsof -i:53</code>命令可以看到systemd-resolved正在运行中.</li>
+<li>adguardhome也需要使用68端口, 但是Ubuntu自身的DHCP会占用68端口, 不过由于我们不使用adguardhome的DHCP功能, 所以可以不用管, 换成映射成69端口即可</li>
+</ul>
+<p>要解决第一个问题, 其实adguardhome的docker hub主页就有提示要如何操作 :</p>
+<p><img src="https://i.loli.net/2020/06/16/9LDSjlIrdJhMRE8.png" /></p>
+<p>简单来说, 就是 :</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir /etc/systemd/resolved.conf.d #如果没有这个文件夹就创建一个</span><br><span class="line">sudo touch /etc/systemd/resolved.conf.d/adguardhome.conf #创建一个文件</span><br><span class="line"><span class="meta">#</span><span class="bash">写入下方内容并且保存</span></span><br><span class="line">[Resolve]</span><br><span class="line">DNS=127.0.0.1</span><br><span class="line">DNSStubListener=no</span><br><span class="line"><span class="meta">#</span><span class="bash">对/etc/resolv.conf进行备份</span></span><br><span class="line">mv /etc/resolv.conf /etc/resolv.conf.backup</span><br><span class="line"><span class="meta">#</span><span class="bash">创建一个链接</span></span><br><span class="line">ln -s /run/systemd/resolve/resolv.conf /etc/resolv.conf</span><br><span class="line"><span class="meta">#</span><span class="bash">重启systemd-resolved</span></span><br><span class="line">sudo systemctl restart systemd-resolved</span><br></pre></td></tr></table></figure>
+<p>搞完这套操作, 再执行<code>sudo lsof -i:53</code>就看不到占用了.</p>
+<p>此时执行下方命令, 即可启动adguardhome容器(注意68端口已经被换成69端口) :</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name adguardhome -v /home/jiayao/Docker/adguardhome/work:/opt/adguardhome/work -v /home/jiayao/Docker/adguardhome/conf:/opt/adguardhome/conf -p 53:53/tcp -p 53:53/udp -p 67:67/udp -p 69:68/tcp -p 69:68/udp -p 80:80/tcp -p 443:443/tcp -p 853:853/tcp -p 3000:3000/tcp -d adguard/adguardhome</span><br></pre></td></tr></table></figure>
+<p>如果没有报错, 就可以打开浏览器, 输入该设备的ip : 3000即可进入配置页面, 配置完成之后输入ip : 80端口即可访问adguardhome页面.</p>
+<p>使用adguardhome最重要的就是添加DNS过滤器, adguardhome就是根据这些过滤器来屏蔽广告和加速网页访问的, 分享一些我在使用的配置 :</p>
+<blockquote>
+<p>url: https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt name: AdGuard Simplified Domain Names filter url: https://cdn.jsdelivr.net/gh/neoFelhz/neohosts@gh-pages/127.0.0.1/full/hosts name: neohosts url: http://git.oschina.net/halflife/list/raw/master/ad.txt name: My AdFilters url: https://easylist-downloads.adblockplus.org/easyprivacy.txt name: EasyPrivacy url: https://raw.githubusercontent.com/jdlingyu/ad-wars/master/hosts name: ad-wars url: https://raw.githubusercontent.com/googlehosts/hosts/master/hosts-files/hosts name: googlehosts url: https://filters.adtidy.org/android/filters/11_optimized.txt name: AdGuard Mobile Ads filter (Optimized) url: https://filters.adtidy.org/android/filters/3_optimized.txt name: AdGuard Tracking Protection filter (Optimized)</p>
+</blockquote>
+<p>到这里adguardhome算是装完了.</p>
+<h2 id="部署aria2服务">部署aria2服务</h2>
+<p>对我来说搭建NAS最重要的功能就是aria2了, 依然使用docker搭建aria2服务.</p>
+<p>docker hub上面关于aria2的镜像有很多, 我选择了<a target="_blank" rel="noopener" href="https://hub.docker.com/r/superng6/aria2">superng6/aria2</a>, 输入下方命令即可拉取aria2镜像 :</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull superng6/aria2</span><br></pre></td></tr></table></figure>
+<p>先执行<code>id 你的用户名</code>查看一下PUID和PGID :</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uid=1000(jiayao) gid=1000(jiayao) 组=1000(jiayao),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),998(docker)</span><br></pre></td></tr></table></figure>
+<p>使用下方命令即可启动容器 :</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name=aria2 -d -v /home/jiayao/Videos:/downloads -v /home/jiayao/Docker/aria2:/config -e TZ=Asia/Shanghai -e PUID=1000 -e PGID=1000 -e SECRET=.... -e CACHE=1024M -e UpdateTracker=true -e MOVE=true -e MOVE=dmof -e SMD=true -p 6800:6800 -p 6881:6881 -p 6881:6881/udp --restart=always superng6/aria2</span><br></pre></td></tr></table></figure>
+<h2 id="部署jellyfin服务">部署jellyfin服务</h2>
+<p>jellyfin是一个开源的媒体系统, 在国内因为没啥在线流式服务可以使用, 所以它最常用的功能就是播放NAS上面的视频, 只要部署了jellyfin, 就可以直接在网页上面播放视频.</p>
+<p>想要部署jellyfin很简单, 首先执行下方命令拉取镜像 :</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull jellyfin/jellyfin:latest</span><br></pre></td></tr></table></figure>
+<p>然后在本地创建两个文件夹config和cache</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p jellyfin/&#123;config,cache&#125;</span><br></pre></td></tr></table></figure>
+<p>然后就可以开始运行启动一个jellyfin容器 :</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name=jellyfin -v /home/jiayao/Docker/jellyfin/config:/config -v /home/jiayao/Docker/jellyfin/cache:/cache -v /home/jiayao/Videos:/media -p 4000:8096 jellyfin/jellyfin:latest</span><br></pre></td></tr></table></figure>
+<p>访问4000端口即可进入jellyfin页面.</p>
+<h2 id="安装zerotier-one">安装ZeroTier One</h2>
+<p>ZeroTier One是一款免费的内网穿透软件, 安装之后就可以远程访问NAS里面的视频内容, 并且免费版可以让多达一百台设备加入同一网络, 具体部署可以参考我<a href="https://jiayaoo3o.github.io/2020/06/11/%E6%AF%94frp%E6%9B%B4%E5%A5%BD%E7%94%A8%E7%9A%84%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E5%B7%A5%E5%85%B7-ZeroTier%20One/">这一篇文章</a>, 可惜我的腾讯云服务器的学生优惠到期了, 1元/月的服务器没得用了, 所以也没法部署moon节点了, 可惜可惜.</p>
+<h2 id="部署vlmcsd服务">部署vlmcsd服务</h2>
+<p>vlmcsd是一个开源的kms服务, 本来是挂在腾讯云上面的, 结果上面说了腾讯云到期了, 也顺便部署到NAS上面吧.</p>
+<p>还是使用docker, 我使用的是<a target="_blank" rel="noopener" href="https://hub.docker.com/r/mikolatero/vlmcsd">mikolatero/vlmcsd</a>镜像, 使用下面命令可以拉取镜像 :</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull mikolatero/vlmcsd</span><br></pre></td></tr></table></figure>
+<p>部署非常简单, 只要暴露1688端口即可 :</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -p 1688:1688 --restart=always --name vlmcsd mikolatero/vlmcsd</span><br></pre></td></tr></table></figure>
+<h2 id="部署人人影视rrshareweb服务">部署人人影视rrshareweb服务</h2>
+<p>人人影视官方有一个linux版本的客户端, 虽然感觉不怎么更新了, 但是无广告, 功能还是非常好用的, 有人做成了docker版本, 我也选择部署到NAS上.</p>
+<p>使用<a target="_blank" rel="noopener" href="https://hub.docker.com/r/liubing/rrshareweb">liubing/rrshareweb</a>的版本, 其实docker hub上面的rrhsareweb镜像都大同小异, 都可以.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull liubing/rrshareweb</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name rrshare -d -p 3001:3001 -v /home/jiayao/Videos:/opt/work/store liubing/rrshareweb</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>搭建完发现官方已经废弃这个客户端了, 登陆上去啥都看不到, 也搜索不出来数据, 可惜了.</p>
+</blockquote>
+<h2 id="部署qbittorrent">部署qbittorrent</h2>
+<p>qbittorrent是一个bt下载器, 好用, 虽然默认界面略丑, 但是绝对当得上"拿钱办事"四个字.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name=qbittorrent -e PUID=1000 -e PGID=1000 -e TZ=Asia/Shanghai -e UMASK_SET=022 -e WEBUI_PORT=8080 -p 6881:6881 -p 6881:6881/udp -p 8080:8080 -v /mnt/disk-alpha/Docker/qbittorrent:/config -v /mnt/disk-alpha/Downloads:/downloads --restart unless-stopped linuxserver/qbittorrent</span><br></pre></td></tr></table></figure>
+<h2 id="配置硬盘开机自动挂载">配置硬盘开机自动挂载</h2>
+<p>因为系统是安装在240G的固态上的, 而电影都是放在1T固态硬盘上的, 所以需要让硬盘开机自动挂载, 但是惊喜的是, Ubuntu 20.04桌面版附带的"磁盘"软件是内置挂载磁盘管理功能的, 只要鼠标点击设置即可配置硬盘开机挂载, 这里就不上图了.</p>
+<h2 id="部署samba服务">部署samba服务</h2>
+<p>作为NAS, 肯定是要让我的另一台笔记本电脑能够访问地访问到, 所以, 所以而win下的共享就是用smb协议的, 所以需要在Ubuntu上安装samba服务, 另一个惊喜的是Ubuntu 20.04桌面版的文件管理器也能够通过右键文件夹设置共享, 第一次打开共享功能会提示让你安装samba, 后面只需要输入以下命令添加samba用户即可 :</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">smbpasswd -a jiayao # 这里的用户得是linux里面有的用户 </span><br><span class="line">New SMB password:  </span><br><span class="line">Retype new SMB password:</span><br><span class="line">sudo service smbd restart # 重启smbd服务</span><br></pre></td></tr></table></figure>
+<p>配置完用户之后, 剩下的就不用配置了, 让文件管理器帮你配置即可, 只需要找到你想要共享的文件夹, 右键共享即可.</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div></div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="jiayao 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.png" alt="jiayao 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>jiayao
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://jiayaoo3o.github.io/2020/06/16/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1%E9%80%80%E4%BC%91%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%AE%89%E8%A3%85Uubuntu%E6%90%AD%E5%BB%BANAS%E8%BF%87%E7%A8%8B/" title="记录一次退休笔记本安装Ubuntu搭建NAS过程">http://jiayaoo3o.github.io/2020/06/16/记录一次退休笔记本安装Uubuntu搭建NAS过程/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-ND</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/docker/" rel="tag"><i class="fa fa-tag"></i> docker</a>
+              <a href="/tags/Ubuntu/" rel="tag"><i class="fa fa-tag"></i> Ubuntu</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/06/15/%E5%88%A0%E9%99%A4win10%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95Radeon%E8%AE%BE%E7%BD%AE%E9%80%89%E9%A1%B9/" rel="prev" title="删除Win10右键菜单Radeon设置选项">
+                  <i class="fa fa-chevron-left"></i> 删除Win10右键菜单Radeon设置选项
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2020/06/19/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%AAWin10%202004%E7%89%88%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%89%8B%E6%9C%BA%E5%85%B1%E4%BA%AB%E7%BD%91%E7%BB%9C%E7%9A%84bug/" rel="next" title="记录一个Win10 2004版本使用USB网络共享导致的bug">
+                  记录一个Win10 2004版本使用USB网络共享导致的bug <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+<script src="/js/comments.js"></script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">jiayao</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{&quot;enable&quot;:true,&quot;tags&quot;:&quot;none&quot;,&quot;js&quot;:&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;mathjax@3.1.4&#x2F;es5&#x2F;tex-mml-chtml.js&quot;}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/ArtificialIntelligence32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/ArtificialIntelligence16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="5IoOHPeK1Gs6LKpb_pJOXhrUePDQUxzqf0hPjeAzdLo">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+
+<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;jiayaoo3o.github.io&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:false,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;none&quot;,&quot;post_header&quot;:&quot;none&quot;,&quot;post_body&quot;:&quot;none&quot;,&quot;coll_header&quot;:&quot;none&quot;,&quot;sidebar&quot;:&quot;none&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;},&quot;path&quot;:&quot;&#x2F;search.xml&quot;,&quot;localsearch&quot;:{&quot;enable&quot;:true,&quot;trigger&quot;:&quot;auto&quot;,&quot;top_n_per_article&quot;:1,&quot;unescape&quot;:false,&quot;preload&quot;:false}}</script>
+<meta name="description" content="重构！重构！重构！">
+<meta property="og:type" content="website">
+<meta property="og:title" content="jiayaoO3O&#39;s Blog">
+<meta property="og:url" content="http://jiayaoo3o.github.io/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/index.html">
+<meta property="og:site_name" content="jiayaoO3O&#39;s Blog">
+<meta property="og:description" content="重构！重构！重构！">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="jiayao">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://jiayaoo3o.github.io/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:false,&quot;lang&quot;:&quot;zh-CN&quot;,&quot;comments&quot;:&quot;&quot;,&quot;permalink&quot;:&quot;&quot;,&quot;path&quot;:&quot;categories&#x2F;算法学习&#x2F;index.html&quot;,&quot;title&quot;:&quot;&quot;}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<title>分类: 算法学习 | jiayaoO3O's Blog</title><script src="/js/config.js"></script>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">jiayaoO3O's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">sudo reboot</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="jiayao"
+      src="/images/pic.jpg">
+  <p class="site-author-name" itemprop="name">jiayao</p>
+  <div class="site-description" itemprop="description">重构！重构！重构！</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">130</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">37</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/jiayaoO3O" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;jiayaoO3O" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/jiayao3.14@outlook.com" title="E-Mail → jiayao3.14@outlook.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner category posts-collapse">
+
+
+  
+  
+  
+  <div class="post-block">
+    <div class="post-content">
+      <div class="collection-title">
+        <h2 class="collection-header">算法学习
+          <small>分类</small>
+        </h2>
+      </div>
+
+      
+    <div class="collection-year">
+      <span class="collection-header">2019</span>
+    </div>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2019-07-02T19:26:53+08:00"
+              content="2019-07-02">
+          07-02
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2019/07/02/326-3%E7%9A%84%E5%B9%82/" itemprop="url">
+            <span itemprop="name">326.3的幂</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2019-07-02T16:21:16+08:00"
+              content="2019-07-02">
+          07-02
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2019/07/02/292-Nim%E6%B8%B8%E6%88%8F/" itemprop="url">
+            <span itemprop="name">292.Nim游戏</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2019-07-01T23:53:24+08:00"
+              content="2019-07-01">
+          07-01
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2019/07/01/283-%E7%A7%BB%E5%8A%A8%E9%9B%B6/" itemprop="url">
+            <span itemprop="name">283.移动零</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2019-06-26T20:39:19+08:00"
+              content="2019-06-26">
+          06-26
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2019/06/26/278-%E7%AC%AC%E4%B8%80%E4%B8%AA%E9%94%99%E8%AF%AF%E7%9A%84%E7%89%88%E6%9C%AC/" itemprop="url">
+            <span itemprop="name">278.第一个错误的版本</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2019-06-26T20:32:03+08:00"
+              content="2019-06-26">
+          06-26
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2019/06/26/268-%E7%BC%BA%E5%A4%B1%E6%95%B0%E5%AD%97/" itemprop="url">
+            <span itemprop="name">268.缺失数字</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2019-06-03T17:18:17+08:00"
+              content="2019-06-03">
+          06-03
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2019/06/03/263-%E4%B8%91%E6%95%B0/" itemprop="url">
+            <span itemprop="name">263.丑数</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2019-06-02T21:55:17+08:00"
+              content="2019-06-02">
+          06-02
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2019/06/02/258-%E5%90%84%E4%BD%8D%E7%9B%B8%E5%8A%A0/" itemprop="url">
+            <span itemprop="name">258.各位相加</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2019-05-31T17:31:51+08:00"
+              content="2019-05-31">
+          05-31
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2019/05/31/242-%E6%9C%89%E6%95%88%E7%9A%84%E5%AD%97%E6%AF%8D%E5%BC%82%E4%BD%8D%E8%AF%8D/" itemprop="url">
+            <span itemprop="name">242.有效的字母异位词</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2019-05-31T16:24:44+08:00"
+              content="2019-05-31">
+          05-31
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2019/05/31/237-%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9/" itemprop="url">
+            <span itemprop="name">237.删除链表中的节点</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2019-05-29T22:25:33+08:00"
+              content="2019-05-29">
+          05-29
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2019/05/29/234-%E5%9B%9E%E6%96%87%E9%93%BE%E8%A1%A8/" itemprop="url">
+            <span itemprop="name">234.回文链表</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2019-05-28T23:26:40+08:00"
+              content="2019-05-28">
+          05-28
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2019/05/28/232-%E7%94%A8%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97/" itemprop="url">
+            <span itemprop="name">232.用栈实现队列</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2019-05-28T20:08:50+08:00"
+              content="2019-05-28">
+          05-28
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2019/05/28/1009-Product-of-Polynomials/" itemprop="url">
+            <span itemprop="name">1009 Product of Polynomials</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2019-05-28T16:38:08+08:00"
+              content="2019-05-28">
+          05-28
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2019/05/28/1007-Maximum-Subsequence-Sum/" itemprop="url">
+            <span itemprop="name">1007 Maximum Subsequence Sum</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2019-05-28T11:40:27+08:00"
+              content="2019-05-28">
+          05-28
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2019/05/28/1006-Sign-In-and-Sign-Out/" itemprop="url">
+            <span itemprop="name">1006 Sign In and Sign Out</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2019-05-26T11:20:06+08:00"
+              content="2019-05-26">
+          05-26
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2019/05/26/231-2%E7%9A%84%E5%B9%82/" itemprop="url">
+            <span itemprop="name">231.2的幂</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2019-05-25T17:12:51+08:00"
+              content="2019-05-25">
+          05-25
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2019/05/25/225-%E7%94%A8%E9%98%9F%E5%88%97%E5%AE%9E%E7%8E%B0%E6%A0%88/" itemprop="url">
+            <span itemprop="name">225.用队列实现栈</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2019-05-24T22:23:55+08:00"
+              content="2019-05-24">
+          05-24
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2019/05/24/217-%E5%AD%98%E5%9C%A8%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0/" itemprop="url">
+            <span itemprop="name">217.存在重复元素</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2019-05-24T11:33:59+08:00"
+              content="2019-05-24">
+          05-24
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2019/05/24/206-%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/" itemprop="url">
+            <span itemprop="name">206.反转链表</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2019-05-23T21:27:24+08:00"
+              content="2019-05-23">
+          05-23
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2019/05/23/205-%E5%90%8C%E6%9E%84%E5%AD%97%E7%AC%A6%E4%B8%B2/" itemprop="url">
+            <span itemprop="name">205.同构字符串</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2019-05-22T21:34:45+08:00"
+              content="2019-05-22">
+          05-22
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2019/05/22/203-%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9/" itemprop="url">
+            <span itemprop="name">203.删除链表中的节点</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2019-05-20T11:01:14+08:00"
+              content="2019-05-20">
+          05-20
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2019/05/20/202-%E5%BF%AB%E4%B9%90%E6%95%B0/" itemprop="url">
+            <span itemprop="name">202.快乐数</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2019-05-20T10:32:49+08:00"
+              content="2019-05-20">
+          05-20
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2019/05/20/198-%E6%89%93%E5%AE%B6%E5%8A%AB%E8%88%8D/" itemprop="url">
+            <span itemprop="name">198.打家劫舍</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2019-05-19T17:15:55+08:00"
+              content="2019-05-19">
+          05-19
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2019/05/19/191-%E4%BD%8D1%E7%9A%84%E4%B8%AA%E6%95%B0/" itemprop="url">
+            <span itemprop="name">191.位1的个数</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2019-05-16T16:29:23+08:00"
+              content="2019-05-16">
+          05-16
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2019/05/16/190-%E9%A2%A0%E5%80%92%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%BD%8D/" itemprop="url">
+            <span itemprop="name">190. 颠倒二进制位</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2019-05-15T20:57:50+08:00"
+              content="2019-05-15">
+          05-15
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2019/05/15/172-%E9%98%B6%E4%B9%98%E5%90%8E%E7%9A%84%E9%9B%B6/" itemprop="url">
+            <span itemprop="name">172.阶乘后的零</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2019-05-15T17:18:30+08:00"
+              content="2019-05-15">
+          05-15
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2019/05/15/169-%E6%B1%82%E4%BC%97%E6%95%B0/" itemprop="url">
+            <span itemprop="name">169.求众数</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2019-05-15T16:33:36+08:00"
+              content="2019-05-15">
+          05-15
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2019/05/15/167-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C-II-%E8%BE%93%E5%85%A5%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84/" itemprop="url">
+            <span itemprop="name">167.两数之和 II - 输入有序数组</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2019-05-14T09:54:58+08:00"
+              content="2019-05-14">
+          05-14
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2019/05/14/160-%E7%9B%B8%E4%BA%A4%E9%93%BE%E8%A1%A8/" itemprop="url">
+            <span itemprop="name">160.相交链表</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2019-05-13T10:33:20+08:00"
+              content="2019-05-13">
+          05-13
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2019/05/13/141-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8/" itemprop="url">
+            <span itemprop="name">141.环形链表</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2019-05-13T09:54:14+08:00"
+              content="2019-05-13">
+          05-13
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2019/05/13/136-%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E6%95%B0%E5%AD%97/" itemprop="url">
+            <span itemprop="name">136.只出现一次的数字</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+    </div>
+  </div>
+  
+  
+  
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/page/2/">2</a><a class="page-number" href="/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/page/3/">3</a><a class="extend next" rel="next" href="/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+<script src="/js/comments.js"></script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">jiayao</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{&quot;enable&quot;:true,&quot;tags&quot;:&quot;none&quot;,&quot;js&quot;:&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;mathjax@3.1.4&#x2F;es5&#x2F;tex-mml-chtml.js&quot;}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>

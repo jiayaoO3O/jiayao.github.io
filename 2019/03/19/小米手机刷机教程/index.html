@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/ArtificialIntelligence32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/ArtificialIntelligence16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="5IoOHPeK1Gs6LKpb_pJOXhrUePDQUxzqf0hPjeAzdLo">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+
+<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;jiayaoo3o.github.io&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:false,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;none&quot;,&quot;post_header&quot;:&quot;none&quot;,&quot;post_body&quot;:&quot;none&quot;,&quot;coll_header&quot;:&quot;none&quot;,&quot;sidebar&quot;:&quot;none&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;},&quot;path&quot;:&quot;&#x2F;search.xml&quot;,&quot;localsearch&quot;:{&quot;enable&quot;:true,&quot;trigger&quot;:&quot;auto&quot;,&quot;top_n_per_article&quot;:1,&quot;unescape&quot;:false,&quot;preload&quot;:false}}</script>
+<meta name="description" content="小米作为为数不多的还愿意开放bootloader锁的厂家,刷机其实是比较简单的,总的来说可以归纳为以下4步:  为自己的小米账号申请解锁权限. 用该账号解锁自己的手机 刷机(可选卡刷或者线刷). (可选)刷magisk获得root权限.  第一次刷机需要准备的东西比较多,但是只要第一次成功了,以后刷机只需要更换一个刷机包就行了,其他都是现成不变的,而且失败了也没关系,手机没这么容易坏,还是能救回来">
+<meta property="og:type" content="article">
+<meta property="og:title" content="小米手机刷机教程">
+<meta property="og:url" content="http://jiayaoo3o.github.io/2019/03/19/%E5%B0%8F%E7%B1%B3%E6%89%8B%E6%9C%BA%E5%88%B7%E6%9C%BA%E6%95%99%E7%A8%8B/index.html">
+<meta property="og:site_name" content="jiayaoO3O&#39;s Blog">
+<meta property="og:description" content="小米作为为数不多的还愿意开放bootloader锁的厂家,刷机其实是比较简单的,总的来说可以归纳为以下4步:  为自己的小米账号申请解锁权限. 用该账号解锁自己的手机 刷机(可选卡刷或者线刷). (可选)刷magisk获得root权限.  第一次刷机需要准备的东西比较多,但是只要第一次成功了,以后刷机只需要更换一个刷机包就行了,其他都是现成不变的,而且失败了也没关系,手机没这么容易坏,还是能救回来">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://www.miui.com/unlock/images/bl_apply_2.png">
+<meta property="og:image" content="https://i.loli.net/2019/03/19/5c9106a03faff.png">
+<meta property="og:image" content="https://i.loli.net/2019/03/20/5c911352c2331.png">
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/TWRP_2.7.0.0.png/360px-TWRP_2.7.0.0.png">
+<meta property="og:image" content="https://i.loli.net/2019/03/20/5c91e7e69e316.png">
+<meta property="og:image" content="https://i.loli.net/2019/03/21/5c93791231408.jpg">
+<meta property="article:published_time" content="2019-03-19T14:51:30.000Z">
+<meta property="article:modified_time" content="2021-07-12T03:16:05.984Z">
+<meta property="article:author" content="jiayao">
+<meta property="article:tag" content="备忘">
+<meta property="article:tag" content="刷机">
+<meta property="article:tag" content="小米">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://www.miui.com/unlock/images/bl_apply_2.png">
+
+
+<link rel="canonical" href="http://jiayaoo3o.github.io/2019/03/19/%E5%B0%8F%E7%B1%B3%E6%89%8B%E6%9C%BA%E5%88%B7%E6%9C%BA%E6%95%99%E7%A8%8B/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;http:&#x2F;&#x2F;jiayaoo3o.github.io&#x2F;2019&#x2F;03&#x2F;19&#x2F;%E5%B0%8F%E7%B1%B3%E6%89%8B%E6%9C%BA%E5%88%B7%E6%9C%BA%E6%95%99%E7%A8%8B&#x2F;&quot;,&quot;path&quot;:&quot;2019&#x2F;03&#x2F;19&#x2F;小米手机刷机教程&#x2F;&quot;,&quot;title&quot;:&quot;小米手机刷机教程&quot;}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<title>小米手机刷机教程 | jiayaoO3O's Blog</title><script src="/js/config.js"></script>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">jiayaoO3O's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">sudo reboot</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%B3%E8%AF%B7%E8%A7%A3%E9%94%81%E6%9D%83%E9%99%90"><span class="nav-text">申请解锁权限</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E9%94%81%E4%BD%A0%E7%9A%84%E6%89%8B%E6%9C%BA"><span class="nav-text">解锁你的手机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%E5%88%B7%E6%9C%BA"><span class="nav-text">开始刷机</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BA%BF%E5%88%B7%E5%88%B7%E6%9C%BA"><span class="nav-text">1.线刷刷机</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%A1%E5%88%B7%E5%88%B7%E6%9C%BA"><span class="nav-text">2.卡刷刷机</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%AF%E9%80%89%E5%88%B7%E5%85%A5magisk%E8%8E%B7%E5%BE%97root%E6%9D%83%E9%99%90"><span class="nav-text">(可选)刷入magisk获得root权限</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text">总结</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="jiayao"
+      src="/images/pic.jpg">
+  <p class="site-author-name" itemprop="name">jiayao</p>
+  <div class="site-description" itemprop="description">重构！重构！重构！</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">130</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">37</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/jiayaoO3O" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;jiayaoO3O" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/jiayao3.14@outlook.com" title="E-Mail → jiayao3.14@outlook.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://jiayaoo3o.github.io/2019/03/19/%E5%B0%8F%E7%B1%B3%E6%89%8B%E6%9C%BA%E5%88%B7%E6%9C%BA%E6%95%99%E7%A8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/pic.jpg">
+      <meta itemprop="name" content="jiayao">
+      <meta itemprop="description" content="重构！重构！重构！">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jiayaoO3O's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          小米手机刷机教程<a href="https://github.com/jiayaoO3O/jiayaoO3O.github.io/blob/Blog/source/_posts/%E5%B0%8F%E7%B1%B3%E6%89%8B%E6%9C%BA%E5%88%B7%E6%9C%BA%E6%95%99%E7%A8%8B.md" class="post-edit-link" title="编辑" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-03-19 22:51:30" itemprop="dateCreated datePublished" datetime="2019-03-19T22:51:30+08:00">2019-03-19</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-07-12 11:16:05" itemprop="dateModified" datetime="2021-07-12T11:16:05+08:00">2021-07-12</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>小米作为为数不多的还愿意开放bootloader锁的厂家,刷机其实是比较简单的,总的来说可以归纳为以下4步:</p>
+<ol type="1">
+<li>为自己的小米账号申请解锁权限.</li>
+<li>用该账号解锁自己的手机</li>
+<li>刷机(可选卡刷或者线刷).</li>
+<li>(可选)刷magisk获得root权限.</li>
+</ol>
+<p>第一次刷机需要准备的东西比较多,但是只要第一次成功了,以后刷机只需要更换一个刷机包就行了,其他都是现成不变的,而且失败了也没关系,手机没这么容易坏,还是能救回来的,哪怕真的刷坏了也没关系,小米依然保修的.</p>
+<p>接下来详细讲解各个步骤.</p>
+<span id="more"></span>
+<h2 id="申请解锁权限">申请解锁权限</h2>
+<p>进入miui网站的<a target="_blank" rel="noopener" href="http://www.miui.com/unlock/index.html">申请解锁页面</a>,用自己的账号登录来申请解锁权限,注意:</p>
+<ol type="1">
+<li>此时有可能需要0到360个小时的审核时间,有的账号申请马上可以过,有的账号要等15天,这个是小米决定的.</li>
+<li>不要借别人的账号给自己的手机解锁,因为现在解锁要求手机和电脑同时登录同一个账号,而让自己的手机登录别人的账号是十分不安全的.</li>
+<li>单个账号,一个月内只能解锁同一台设备,即你的A手机一个月内可以反复解锁,但是要等一个月后才能解锁你的B手机.</li>
+<li>解锁权限获得之后一直有效,不需要再次申请.</li>
+</ol>
+<h2 id="解锁你的手机">解锁你的手机</h2>
+<p>(警告,<strong>解锁</strong>会<strong>删除你的手机内的所有数据,格式化整个手机</strong>,请做好备份)</p>
+<p>申请成功之后,<a target="_blank" rel="noopener" href="http://miuirom.xiaomi.com/rom/u1106245679/3.3.1212.33/miflash_unlock-3.3.1212.33.zip">下载解锁工具</a>,开始解锁你的手机,步骤如下:</p>
+<ol type="1">
+<li><p>手机登录该账号.</p></li>
+<li><p>手机关机,按住<strong>音量下键+开机键</strong>,会进入fastboot界面,如果失败请反复尝试.</p>
+<p><img src="http://www.miui.com/unlock/images/bl_apply_2.png" /></p></li>
+<li><p>电脑端启动解锁工具,用同一个账号登录,开始解锁.<img src="https://i.loli.net/2019/03/19/5c9106a03faff.png" /></p></li>
+<li><p>解锁完成后,手机会重启,<strong>恢复出厂设置</strong>. (再次警告,解锁会<strong>删除你的手机内的所有数据,格式化整个手机</strong>,请做好备份)</p></li>
+</ol>
+<h2 id="开始刷机">开始刷机</h2>
+<p>刷机分为两种模式,一种叫<strong>线刷</strong>,即手机用数据线连接到电脑,用电脑刷机;另一种叫<strong>卡刷</strong>,即把刷机包放在手机里,用手机刷机(当年是用内存卡的,所以叫卡刷).</p>
+<p>接下来分别介绍.</p>
+<h3 id="线刷刷机">1.线刷刷机</h3>
+<ol type="1">
+<li><p>在<a target="_blank" rel="noopener" href="http://www.miui.com/shuaji-393.html">线刷包下载页面</a>下载属于你手机的系统刷机包,注意线刷包都带有<strong>fastboot</strong>字眼的.</p>
+<p>小米的系统分为开发板和稳定版,开发板基本每周更新,稳定版大约一个月更新一次.</p>
+<p>下载完成之后,解压该刷机包.</p></li>
+<li><p>手机关机,按住<strong>音量下键+开机键</strong>,进入fastboot界面,手机连接电脑.</p></li>
+<li><p>下载<a target="_blank" rel="noopener" href="http://bigota.d.miui.com/tools/MiFlash2018-5-28-0.zip">小米线刷刷机工具MiFlash</a>,解压,打开该软件.</p>
+<p><img src="https://i.loli.net/2019/03/20/5c911352c2331.png" /></p>
+<p>点击蓝色框的<strong>加载设备</strong>,会加载已经连接的手机设备.</p>
+<p>点击红色框的<strong>选择</strong>,选择刚刚解压的线刷包.</p>
+<p>点击黄色框的三个选项中的一个,其中:</p>
+<ul>
+<li><strong>全部删除</strong>会删除手机的所有数据,不会有任何残留,不需要再次解锁.</li>
+<li><strong>全部删除并且lock</strong>在删除的基础上,会锁定你的手机,即下次刷机还得用账号解锁一次.</li>
+<li><strong>保留用户数据</strong>会保留用户的文件和所安装的app,不需要再次解锁.</li>
+</ul>
+<p>建议选择全部删除.</p></li>
+<li><p>确定无误之后,点击绿色框的<strong>刷机</strong>,即可开始刷机,刷机过程只要进度条没有红色警告就是正常现象,刷机完成后手机会自动重启.</p></li>
+</ol>
+<p>注意,线刷是一个非常底层的操作,所以只要手机能进入fastboot界面,都能通过线刷救回来,线刷也是最彻底,最干净的一种刷机方式,<strong>但是一定要注意备份资料</strong>.</p>
+<hr />
+<h3 id="卡刷刷机">2.卡刷刷机</h3>
+<p>卡刷相对于线刷会更快,也更灵活,步骤如下:</p>
+<ol type="1">
+<li><p>在小米<a target="_blank" rel="noopener" href="http://www.miui.com/download.html">miui官网</a>下载你手机的卡刷包(文件名中没有fastboot字眼,以.zip结尾).</p></li>
+<li><p>在<a target="_blank" rel="noopener" href="https://twrp.me/Devices/Xiaomi/">TWRP官网</a>或者小米论坛,下载你手机的第三方recovery(也叫第三方re)镜像(文件后缀名是.img).</p>
+<p>这里要解释一下什么是第三方recovery.</p>
+<p>recovery的作用是给手机恢复出厂设置,更新系统,备份系统的,但是由于官方recovery功能太少,限制太多,所以我们要刷入第三方的recovery,而<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/TWRP">twrp</a>就是一个开源的,成熟的第三方re.</p>
+<p>注意:如果你是在小米论坛下载的第三方re,那他们一般会顺便提供一个叫"<strong>电脑端一键刷入recovery.bat</strong>"的文件,此时你只要手机进入fastboot界面,连接电脑,双击该文件,然后按照指示下一步就行了,不需要下面345步.</p></li>
+<li><p>点击下载<a target="_blank" rel="noopener" href="https://dl.google.com/android/repository/platform-tools-latest-Windows.zip">fastboot工具</a>,解压到某个文件夹中,将刚刚下载的img文件也放到该文件夹.</p></li>
+<li><p>电脑按住shift键,鼠标在该文件夹右键,打开powershell.</p></li>
+<li><p>输入以下命令:</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.\fastboot.exe flash recovery twrp<span class="literal">-3</span>.<span class="number">2.3</span><span class="literal">-0</span><span class="literal">-gemini</span>.img (最后一个文件填你刚刚下载的文件的名称)</span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.\fastboot.exe boot twrp<span class="literal">-3</span>.<span class="number">2.3</span><span class="literal">-0</span><span class="literal">-gemini</span>.img (最后一个文件填你刚刚下载的文件的名称)</span><br></pre></td></tr></table></figure>
+<p>手机就已经成功刷入第三方re,并且会重新启动进入第三方re界面.</p>
+<p>刷入了第三方re之后,关机状态下按住<strong>音量上键+电源键</strong>即可再次进入,以后卡刷就都在第三方re里面刷了,不需要电脑.</p></li>
+<li><p>这时你的手机进入了第三方re界面,应该是长这样的:</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/TWRP_2.7.0.0.png/360px-TWRP_2.7.0.0.png" /></p>
+<p>点击Settings进入设置,点击最右边的一项设置语言,找到中文(Chinese),点击设置,即可设置成中文.</p></li>
+<li><p>再返回到主页,点击<strong>清除</strong>,滑动按钮恢复出厂设置</p>
+<p>注意,这里的恢复出厂设置,和在fastboot里线刷删除所有数据不一样,<strong>这里的恢复出厂设置,不会删除你手机上存储文件</strong>.</p></li>
+<li><p>再返回到主页,将手机连接到电脑,将刚刚下载的刷机包复制到手机上(如果你是用手机下载的刷机包,那就不需要复制了).</p>
+<p>点击<strong>安装</strong>,选择刚刚的刷机包,开始刷机.</p>
+<p>刷机完成之后点击重启,即可刷机成功.</p>
+<hr />
+<h2 id="可选刷入magisk获得root权限">(可选)刷入magisk获得root权限</h2>
+<p>经过刚刚的步骤,刷机就已经完成了,如果想要进一步体验强大的<a target="_blank" rel="noopener" href="https://sspai.com/post/53043">magisk</a>,可以继续以下步骤,非常简单.</p>
+<ol type="1">
+<li><p>进入<a target="_blank" rel="noopener" href="https://github.com/topjohnwu/Magisk/releases">magisk下载页面</a>,分别下载下载最新的magisk和magisk manager.</p>
+<p>这里要解释一下,magisk分成两部分,一部分是magisk本身,另一部分是magisk manager这个管理magisk的app,刷入了magisk之后,手机再安装这个app就可以正常安装模块了.</p></li>
+<li><p>关机状态下,音量上键+开机键,进入第三方re,不需要清除数据,<strong>直接点击安装</strong>,选择刚刚下载的magisk文件.</p></li>
+<li><p>重启之后,安装magisk manager这个app,就可以正常使用,并且手机现在已经有了root权限了.<img src="https://i.loli.net/2019/03/20/5c91e7e69e316.png" /></p>
+<hr />
+<h2 id="总结">总结</h2>
+<p>以上就是刷机的全部步骤了,总的来说,只要按照步骤来基本都不会失败,而且哪怕是失败了,手机也不会轻易坏掉的,只要能进入fastboot界面,总是能救回来的,但是要注意,<strong>一定一定要记得备份自己的资料,资料没了就真的没了</strong>.<img src="https://i.loli.net/2019/03/21/5c93791231408.jpg" /></p></li>
+</ol></li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div></div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="jiayao 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.png" alt="jiayao 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>jiayao
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://jiayaoo3o.github.io/2019/03/19/%E5%B0%8F%E7%B1%B3%E6%89%8B%E6%9C%BA%E5%88%B7%E6%9C%BA%E6%95%99%E7%A8%8B/" title="小米手机刷机教程">http://jiayaoo3o.github.io/2019/03/19/小米手机刷机教程/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-ND</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E5%A4%87%E5%BF%98/" rel="tag"><i class="fa fa-tag"></i> 备忘</a>
+              <a href="/tags/%E5%88%B7%E6%9C%BA/" rel="tag"><i class="fa fa-tag"></i> 刷机</a>
+              <a href="/tags/%E5%B0%8F%E7%B1%B3/" rel="tag"><i class="fa fa-tag"></i> 小米</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2019/03/19/%E4%B8%8B%E8%BD%BDvs2017%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85%E5%8C%85/" rel="prev" title="下载vs2017离线安装包">
+                  <i class="fa fa-chevron-left"></i> 下载vs2017离线安装包
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2019/03/21/Git%E6%93%8D%E4%BD%9C%E6%89%8B%E5%86%8C/" rel="next" title="Git操作手册">
+                  Git操作手册 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+<script src="/js/comments.js"></script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">jiayao</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{&quot;enable&quot;:true,&quot;tags&quot;:&quot;none&quot;,&quot;js&quot;:&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;mathjax@3.1.4&#x2F;es5&#x2F;tex-mml-chtml.js&quot;}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>

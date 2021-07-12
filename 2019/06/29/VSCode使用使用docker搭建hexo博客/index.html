@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/ArtificialIntelligence32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/ArtificialIntelligence16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="5IoOHPeK1Gs6LKpb_pJOXhrUePDQUxzqf0hPjeAzdLo">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+
+<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;jiayaoo3o.github.io&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:false,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;none&quot;,&quot;post_header&quot;:&quot;none&quot;,&quot;post_body&quot;:&quot;none&quot;,&quot;coll_header&quot;:&quot;none&quot;,&quot;sidebar&quot;:&quot;none&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;},&quot;path&quot;:&quot;&#x2F;search.xml&quot;,&quot;localsearch&quot;:{&quot;enable&quot;:true,&quot;trigger&quot;:&quot;auto&quot;,&quot;top_n_per_article&quot;:1,&quot;unescape&quot;:false,&quot;preload&quot;:false}}</script>
+<meta name="description" content="随着vscode推出remote-container容器开发模式,在docker里面搭hexo变得简单了起来,非常方便,现在来记录一下vscode使用docker搭建hexo的步骤. 首先要知道待解决的问题有哪些:  vscode的remote-container模式好在哪. 如何使用vscode调用docker生成一个镜像. 生成的镜像会有哪些问题. 安装hexo需要哪些东西. 要对Docker">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VSCode使用docker搭建hexo博客">
+<meta property="og:url" content="http://jiayaoo3o.github.io/2019/06/29/VSCode%E4%BD%BF%E7%94%A8%E4%BD%BF%E7%94%A8docker%E6%90%AD%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2/index.html">
+<meta property="og:site_name" content="jiayaoO3O&#39;s Blog">
+<meta property="og:description" content="随着vscode推出remote-container容器开发模式,在docker里面搭hexo变得简单了起来,非常方便,现在来记录一下vscode使用docker搭建hexo的步骤. 首先要知道待解决的问题有哪些:  vscode的remote-container模式好在哪. 如何使用vscode调用docker生成一个镜像. 生成的镜像会有哪些问题. 安装hexo需要哪些东西. 要对Docker">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2019/07/04/5d1dce8fb3c5d35149.png">
+<meta property="og:image" content="https://i.loli.net/2019/07/04/5d1dcf7a3fe2e53998.png">
+<meta property="og:image" content="https://i.loli.net/2019/07/04/5d1dd01a72fce45611.png">
+<meta property="og:image" content="https://i.loli.net/2019/07/04/5d1dd0dacffe353417.png">
+<meta property="og:image" content="https://i.loli.net/2019/07/04/5d1dd1c4e3c3670595.png">
+<meta property="og:image" content="https://i.loli.net/2019/07/04/5d1dd578e2bca71189.png">
+<meta property="og:image" content="https://i.loli.net/2019/07/04/5d1dda0281bac67071.png">
+<meta property="article:published_time" content="2019-06-28T16:49:03.000Z">
+<meta property="article:modified_time" content="2021-07-12T03:16:05.984Z">
+<meta property="article:author" content="jiayao">
+<meta property="article:tag" content="docker">
+<meta property="article:tag" content="hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2019/07/04/5d1dce8fb3c5d35149.png">
+
+
+<link rel="canonical" href="http://jiayaoo3o.github.io/2019/06/29/VSCode%E4%BD%BF%E7%94%A8%E4%BD%BF%E7%94%A8docker%E6%90%AD%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;http:&#x2F;&#x2F;jiayaoo3o.github.io&#x2F;2019&#x2F;06&#x2F;29&#x2F;VSCode%E4%BD%BF%E7%94%A8%E4%BD%BF%E7%94%A8docker%E6%90%AD%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2&#x2F;&quot;,&quot;path&quot;:&quot;2019&#x2F;06&#x2F;29&#x2F;VSCode使用使用docker搭建hexo博客&#x2F;&quot;,&quot;title&quot;:&quot;VSCode使用docker搭建hexo博客&quot;}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<title>VSCode使用docker搭建hexo博客 | jiayaoO3O's Blog</title><script src="/js/config.js"></script>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">jiayaoO3O's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">sudo reboot</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#vscode%E7%9A%84remote-container%E6%A8%A1%E5%BC%8F%E5%A5%BD%E5%9C%A8%E5%93%AA"><span class="nav-text">vscode的remote-container模式好在哪</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8vscode%E8%B0%83%E7%94%A8docker%E7%94%9F%E6%88%90%E4%B8%80%E4%B8%AAhexo%E5%AE%B9%E5%99%A8"><span class="nav-text">如何使用vscode调用docker生成一个hexo容器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6"><span class="nav-text">前提条件:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4"><span class="nav-text">步骤:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%9F%E6%88%90%E7%9A%84%E9%95%9C%E5%83%8F%E4%BC%9A%E6%9C%89%E5%93%AA%E4%BA%9B%E9%97%AE%E9%A2%98"><span class="nav-text">生成的镜像会有哪些问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85hexo%E9%9C%80%E8%A6%81%E5%93%AA%E4%BA%9B%E4%B8%9C%E8%A5%BF"><span class="nav-text">安装hexo需要哪些东西</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A6%81%E5%AF%B9dockerfile%E8%BF%9B%E8%A1%8C%E4%BB%80%E4%B9%88%E4%BF%AE%E6%94%B9"><span class="nav-text">要对Dockerfile进行什么修改</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2"><span class="nav-text">创建博客</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="jiayao"
+      src="/images/pic.jpg">
+  <p class="site-author-name" itemprop="name">jiayao</p>
+  <div class="site-description" itemprop="description">重构！重构！重构！</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">130</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">37</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/jiayaoO3O" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;jiayaoO3O" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/jiayao3.14@outlook.com" title="E-Mail → jiayao3.14@outlook.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://jiayaoo3o.github.io/2019/06/29/VSCode%E4%BD%BF%E7%94%A8%E4%BD%BF%E7%94%A8docker%E6%90%AD%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/pic.jpg">
+      <meta itemprop="name" content="jiayao">
+      <meta itemprop="description" content="重构！重构！重构！">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jiayaoO3O's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          VSCode使用docker搭建hexo博客<a href="https://github.com/jiayaoO3O/jiayaoO3O.github.io/blob/Blog/source/_posts/VSCode%E4%BD%BF%E7%94%A8%E4%BD%BF%E7%94%A8docker%E6%90%AD%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2.md" class="post-edit-link" title="编辑" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-06-29 00:49:03" itemprop="dateCreated datePublished" datetime="2019-06-29T00:49:03+08:00">2019-06-29</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-07-12 11:16:05" itemprop="dateModified" datetime="2021-07-12T11:16:05+08:00">2021-07-12</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>随着vscode推出remote-container容器开发模式,在docker里面搭hexo变得简单了起来,非常方便,现在来记录一下vscode使用docker搭建hexo的步骤.</p>
+<p>首先要知道待解决的问题有哪些:</p>
+<ul>
+<li>vscode的remote-container模式好在哪.</li>
+<li>如何使用vscode调用docker生成一个镜像.</li>
+<li>生成的镜像会有哪些问题.</li>
+<li>安装hexo需要哪些东西.</li>
+<li>要对Dockerfile进行什么修改才能让生成的容器本身就安装好hexo.</li>
+</ul>
+<span id="more"></span>
+<h2 id="vscode的remote-container模式好在哪">vscode的remote-container模式好在哪</h2>
+<p>优点有3个:</p>
+<ol type="1">
+<li>vscode的<code>remote-container</code>模式使得新手用户几乎不需要太多的手动干涉docker,即可开箱即用.只需安装对应的插件,并且安装了docker,即可成功地让vscode帮你完成大部分事情.</li>
+<li>vscode还会将你本机的git配置与容器中的git进行关联,使得几乎可以直接在容器中使用<code>hexo d</code>命令将博客部署到GitHubPage而不需要任何设置.</li>
+<li>不管你去到哪台电脑,只要这台电脑的vscode安装了这个插件和docker,就能自动识别到<code>.devcontainer</code>文件夹中的内容,然后<strong>自动帮你生成hexo镜像</strong>.</li>
+</ol>
+<h2 id="如何使用vscode调用docker生成一个hexo容器">如何使用vscode调用docker生成一个hexo容器</h2>
+<h3 id="前提条件">前提条件:</h3>
+<ol type="1">
+<li><p>安装了<strong>vscode 1.35</strong>以上版本.</p></li>
+<li><p>安装了<code>Remote Developmentm</code>插件.<img src="https://i.loli.net/2019/07/04/5d1dce8fb3c5d35149.png" /></p></li>
+<li><p>电脑已经安装了docker.</p></li>
+</ol>
+<h3 id="步骤">步骤:</h3>
+<ol type="1">
+<li><p>使用vscode打开你想要创建hexo博客的文件夹(这个文件夹既可以是新创建的文件夹,又可以是你以前就已经用hexo写过博客的文件夹),例如我这里的<strong>hexodocker</strong>空文件夹.<img src="https://i.loli.net/2019/07/04/5d1dcf7a3fe2e53998.png" /></p></li>
+<li><p>按F1,输入<code>remote</code>,在选项中选择<code>Open Folder in Container</code>,选择我们现在所在的这个hexodocker文件夹<img src="https://i.loli.net/2019/07/04/5d1dd01a72fce45611.png" /></p></li>
+<li><p>下一步vscode会让你选择你所需要的基础镜像,由于我们知道hexo是基于node.js的所以要找到node.js镜像<img src="https://i.loli.net/2019/07/04/5d1dd0dacffe353417.png" /></p></li>
+<li><p>选择完镜像,这时候vscode就会在你的这个目录下生成一个<code>.devcontainer</code>文件夹,这个文件夹有两个文件,一个是<code>devcontainer.json</code>,另一个是<code>Dockerfile</code>文件,vscode此时会依靠这两个文件,驱使docker生成新的镜像与容器.注意这时候生成镜像与容器所需的时间完全取决于你的电脑性能和网络性能,如果感觉vscode卡了很久都没用动,可以直接关闭vscode并且重新打开.<img src="https://i.loli.net/2019/07/04/5d1dd1c4e3c3670595.png" /></p></li>
+<li><p>一切完成之后,可以看到自动生成的Dockerfile的内容,并且docker已经按照这个文件创建了镜像与容器,而且已经自动将这个容器与我们当前的文件夹进行了一个挂载.</p>
+<p>但是要注意的是,这个生成的镜像却并不是最终我们所需要的,因为这些内容只是vscode帮我们自动生成的,我们要对它进行修改.<img src="https://i.loli.net/2019/07/04/5d1dd578e2bca71189.png" /></p></li>
+</ol>
+<h3 id="生成的镜像会有哪些问题">生成的镜像会有哪些问题</h3>
+<p>根据我爬过的坑,生成的镜像并不能直接使用,会有一些问题:</p>
+<ol type="1">
+<li>容器内的默认时区是UTC,而中国的时区是CST,如果不把时区改过来,生成的文章时间是错误的.解决的方法请看我这一篇文章<a href="https://jiayaoo3o.github.io/2019/06/29/docker容器设置时区/">docker容器设置时区</a>.</li>
+<li>容器默认是没有对中文进行处理的,所以直接通过镜像生成的容器是无法输入中文的,那当我们使用<code>hexo new "文章标题"</code> 包含中文的时候,会无法输入.解决方法请看我的这一篇文章<a href="https://jiayaoo3o.github.io/2019/06/29/解决docker容器无法输入中文问题/">解决docker容器无法输入中文问题</a>.</li>
+</ol>
+<h3 id="安装hexo需要哪些东西">安装hexo需要哪些东西</h3>
+<p>这里不会教你使用hexo的方方面面,这些东西去看网上的博客一搜一大把,我们只需要知道,安装hexo只需要在确保node.js环境正常的情况下输入</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli </span><br><span class="line">npm install hexo -g</span><br></pre></td></tr></table></figure>
+<p>即可安装,所以我们也要在dockerfile中配置这两句.</p>
+<h3 id="要对dockerfile进行什么修改">要对Dockerfile进行什么修改</h3>
+<p>接下来直接贴上Dockerfile文件,注意看注释,并且仔细对比哪些是自动生成的,哪些是人为添加的.</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#-------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="comment"># Copyright (c) Microsoft Corporation. All rights reserved.</span></span><br><span class="line"><span class="comment"># Licensed under the MIT License. See https://go.microsoft.com/fwlink/?linkid=2090316 for license information.</span></span><br><span class="line"><span class="comment">#-------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">FROM</span> node:lts</span><br><span class="line"></span><br><span class="line"><span class="comment"># Configure apt</span></span><br><span class="line"><span class="keyword">ENV</span> DEBIAN_FRONTEND=noninteractive</span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> sed -i <span class="string">&#x27;s/deb.debian.org/mirrors.ustc.edu.cn/g&#x27;</span> /etc/apt/sources.list \</span></span><br><span class="line"><span class="bash">    &amp;&amp; apt-get update \</span></span><br><span class="line"><span class="bash">    &amp;&amp; apt-get -y install --no-install-recommends apt-utils 2&gt;&amp;1 </span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Verify git and needed tools are installed</span></span><br><span class="line"><span class="comment"># 这一部分直接解决了时区问题和中文输入问题</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> apt-get install -y git procps locales \</span></span><br><span class="line"><span class="bash">    &amp;&amp; sed -i <span class="string">&#x27;/^#.* zh_CN.UTF-8 /s/^#//&#x27;</span> /etc/locale.gen \</span></span><br><span class="line"><span class="bash">    &amp;&amp; locale-gen \</span></span><br><span class="line"><span class="bash">    &amp;&amp; ln -fs /usr/share/zoneinfo/Asia/Shanghai /etc/localtime\</span></span><br><span class="line"><span class="bash">    &amp;&amp; dpkg-reconfigure -f noninteractive tzdata</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Remove outdated yarn from /opt and install via package </span></span><br><span class="line"><span class="comment"># so it can be easily updated via apt-get upgrade yarn</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> rm -rf /opt/yarn-* \</span></span><br><span class="line"><span class="bash">    &amp;&amp; rm -f /usr/<span class="built_in">local</span>/bin/yarn \</span></span><br><span class="line"><span class="bash">    &amp;&amp; rm -f /usr/<span class="built_in">local</span>/bin/yarnpkg \</span></span><br><span class="line"><span class="bash">    &amp;&amp; apt-get install -y curl apt-transport-https lsb-release \</span></span><br><span class="line"><span class="bash">    &amp;&amp; curl -sS https://dl.yarnpkg.com/$(lsb_release -is | tr <span class="string">&#x27;[:upper:]&#x27;</span> <span class="string">&#x27;[:lower:]&#x27;</span>)/pubkey.gpg | apt-key add - 2&gt;/dev/null \</span></span><br><span class="line"><span class="bash">    &amp;&amp; <span class="built_in">echo</span> <span class="string">&quot;deb https://dl.yarnpkg.com/<span class="subst">$(lsb_release -is | tr &#x27;[:upper:]&#x27; &#x27;[:lower:]&#x27;)</span>/ stable main&quot;</span> | tee /etc/apt/sources.list.d/yarn.list \</span></span><br><span class="line"><span class="bash">    &amp;&amp; apt-get update \</span></span><br><span class="line"><span class="bash">    &amp;&amp; apt-get -y install --no-install-recommends yarn</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Install eslint</span></span><br><span class="line"><span class="comment"># 这一部分负责安装hexo</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> npm install -g eslint \</span></span><br><span class="line"><span class="bash">    &amp;&amp; npm install -g hexo-cli \</span></span><br><span class="line"><span class="bash">    &amp;&amp; npm install hexo -g</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Clean up</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> apt-get autoremove -y \</span></span><br><span class="line"><span class="bash">    &amp;&amp; apt-get clean -y \</span></span><br><span class="line"><span class="bash">    &amp;&amp; rm -rf /var/lib/apt/lists/* </span></span><br><span class="line"></span><br><span class="line"><span class="keyword">ENV</span> DEBIAN_FRONTEND=dialog</span><br><span class="line"></span><br><span class="line"><span class="comment"># Set the default shell to bash instead of sh</span></span><br><span class="line"><span class="keyword">ENV</span> <span class="keyword">SHELL</span><span class="bash"> /bin/bash</span></span><br><span class="line"><span class="comment"># 这里负责设置环境变量</span></span><br><span class="line"><span class="keyword">ENV</span> LANG=<span class="string">&#x27;zh_CN.utf8&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>修改完成之后,我们要继续按F1,然后找到<code>Rebuild Container</code>重新生成新容器,这个时候就会得到一个完全可用的hexo容器.<img src="https://i.loli.net/2019/07/04/5d1dda0281bac67071.png" /></p>
+<h2 id="创建博客">创建博客</h2>
+<p>这里与平时创建博客的方法就完全一致了,只要在终端中输入<code>hexo init</code>即可,而如果你以前就已经在这个文件夹里面使用<code>hexo init</code>初始化过,那建议删除<code>node_modules</code>文件夹,然后再在终端中输入<code>npm install</code>命令安装所有需要的模块.</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div></div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="jiayao 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.png" alt="jiayao 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>jiayao
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://jiayaoo3o.github.io/2019/06/29/VSCode%E4%BD%BF%E7%94%A8%E4%BD%BF%E7%94%A8docker%E6%90%AD%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2/" title="VSCode使用docker搭建hexo博客">http://jiayaoo3o.github.io/2019/06/29/VSCode使用使用docker搭建hexo博客/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-ND</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/docker/" rel="tag"><i class="fa fa-tag"></i> docker</a>
+              <a href="/tags/hexo/" rel="tag"><i class="fa fa-tag"></i> hexo</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2019/06/28/windows10%E4%B8%8BUWP%E5%BA%94%E7%94%A8%E4%BD%BF%E7%94%A8%E7%B3%BB%E7%BB%9F%E4%BB%A3%E7%90%86/" rel="prev" title="Windows10下UWP应用使用系统代理">
+                  <i class="fa fa-chevron-left"></i> Windows10下UWP应用使用系统代理
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2019/06/29/%E8%A7%A3%E5%86%B3docker%E5%AE%B9%E5%99%A8%E6%97%A0%E6%B3%95%E8%BE%93%E5%85%A5%E4%B8%AD%E6%96%87%E9%97%AE%E9%A2%98/" rel="next" title="解决docker容器无法输入中文问题">
+                  解决docker容器无法输入中文问题 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+<script src="/js/comments.js"></script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">jiayao</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{&quot;enable&quot;:true,&quot;tags&quot;:&quot;none&quot;,&quot;js&quot;:&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;mathjax@3.1.4&#x2F;es5&#x2F;tex-mml-chtml.js&quot;}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>

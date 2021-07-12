@@ -1,0 +1,3108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/ArtificialIntelligence32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/ArtificialIntelligence16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="5IoOHPeK1Gs6LKpb_pJOXhrUePDQUxzqf0hPjeAzdLo">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+
+<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;jiayaoo3o.github.io&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:false,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;none&quot;,&quot;post_header&quot;:&quot;none&quot;,&quot;post_body&quot;:&quot;none&quot;,&quot;coll_header&quot;:&quot;none&quot;,&quot;sidebar&quot;:&quot;none&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;},&quot;path&quot;:&quot;&#x2F;search.xml&quot;,&quot;localsearch&quot;:{&quot;enable&quot;:true,&quot;trigger&quot;:&quot;auto&quot;,&quot;top_n_per_article&quot;:1,&quot;unescape&quot;:false,&quot;preload&quot;:false}}</script>
+<meta name="description" content="重构！重构！重构！">
+<meta property="og:type" content="website">
+<meta property="og:title" content="jiayaoO3O&#39;s Blog">
+<meta property="og:url" content="http://jiayaoo3o.github.io/index.html">
+<meta property="og:site_name" content="jiayaoO3O&#39;s Blog">
+<meta property="og:description" content="重构！重构！重构！">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="jiayao">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://jiayaoo3o.github.io/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:true,&quot;isPost&quot;:false,&quot;lang&quot;:&quot;zh-CN&quot;,&quot;comments&quot;:&quot;&quot;,&quot;permalink&quot;:&quot;&quot;,&quot;path&quot;:&quot;index.html&quot;,&quot;title&quot;:&quot;&quot;}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<title>jiayaoO3O's Blog</title><script src="/js/config.js"></script>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">jiayaoO3O's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">sudo reboot</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="jiayao"
+      src="/images/pic.jpg">
+  <p class="site-author-name" itemprop="name">jiayao</p>
+  <div class="site-description" itemprop="description">重构！重构！重构！</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">130</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">37</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/jiayaoO3O" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;jiayaoO3O" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/jiayao3.14@outlook.com" title="E-Mail → jiayao3.14@outlook.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://jiayaoo3o.github.io/2021/05/29/Ubuntu%E9%85%8D%E7%BD%AEsamba/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/pic.jpg">
+      <meta itemprop="name" content="jiayao">
+      <meta itemprop="description" content="重构！重构！重构！">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jiayaoO3O's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/29/Ubuntu%E9%85%8D%E7%BD%AEsamba/" class="post-title-link" itemprop="url">Ubuntu配置samba</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-05-29 16:35:00" itemprop="dateCreated datePublished" datetime="2021-05-29T16:35:00+08:00">2021-05-29</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-07-12 11:16:05" itemprop="dateModified" datetime="2021-07-12T11:16:05+08:00">2021-07-12</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="安装samba">安装samba</h2>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install samba</span><br></pre></td></tr></table></figure>
+<h2 id="配置samba">配置samba</h2>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nano /etc/samba/smb.conf</span><br></pre></td></tr></table></figure>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">[global]</span></span><br><span class="line"><span class="attr">read</span> <span class="string">raw = Yes</span></span><br><span class="line"><span class="attr">write</span> <span class="string">raw = Yes</span></span><br><span class="line"><span class="attr">socket</span> <span class="string">options = TCP_NODELAY IPTOS_LOWDELAY SO_RCVBUF=131072 SO_SNDBUF=131072</span></span><br><span class="line"><span class="attr">min</span> <span class="string">receivefile size = 16384</span></span><br><span class="line"><span class="attr">use</span> <span class="string">sendfile = true</span></span><br><span class="line"><span class="attr">aio</span> <span class="string">read size = 16384</span></span><br><span class="line"><span class="attr">aio</span> <span class="string">write size = 16384</span></span><br><span class="line"></span><br><span class="line"><span class="attr">[sambashare]</span></span><br><span class="line"><span class="attr">comment</span> = <span class="string">Samba on Ubuntu</span></span><br><span class="line"><span class="attr">path</span> = <span class="string">/home/username/sambashare</span></span><br><span class="line"><span class="attr">read</span> <span class="string">only = no</span></span><br><span class="line"><span class="attr">browsable</span> = <span class="string">yes</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service smbd restart</span><br></pre></td></tr></table></figure>
+<h2 id="设置用户名密码">设置用户名密码</h2>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo smbpasswd -a username</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://jiayaoo3o.github.io/2021/05/27/docker%E9%83%A8%E7%BD%B2elasticsearch/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/pic.jpg">
+      <meta itemprop="name" content="jiayao">
+      <meta itemprop="description" content="重构！重构！重构！">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jiayaoO3O's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/27/docker%E9%83%A8%E7%BD%B2elasticsearch/" class="post-title-link" itemprop="url">docker部署elasticsearch</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-05-27 10:05:00" itemprop="dateCreated datePublished" datetime="2021-05-27T10:05:00+08:00">2021-05-27</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-07-12 11:16:05" itemprop="dateModified" datetime="2021-07-12T11:16:05+08:00">2021-07-12</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="部署elasticsearch">部署elasticsearch</h2>
+<h3 id="使用单节点模式">使用单节点模式</h3>
+<p>在本地或者测试环境可以使用单节点模式, 简单方便</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name elasticsearch --net elastic -v /path/to/data:/usr/share/elasticsearch/data -p 9200:9200 -p 9300:9300 -d -e discovery.type=single-node -e ELASTIC_PASSWORD=xxxxx -e xpack.security.enabled=true -e xpack.security.authc.api_key.enabled=true docker.elastic.co/elasticsearch/elasticsearch:7.13.0</span><br></pre></td></tr></table></figure>
+<p>成功之后ES会以单节点模式启动.</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/05/27/docker%E9%83%A8%E7%BD%B2elasticsearch/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://jiayaoo3o.github.io/2021/05/27/docker%E9%83%A8%E7%BD%B2nginx%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/pic.jpg">
+      <meta itemprop="name" content="jiayao">
+      <meta itemprop="description" content="重构！重构！重构！">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jiayaoO3O's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/27/docker%E9%83%A8%E7%BD%B2nginx%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/" class="post-title-link" itemprop="url">docker部署nginx反向代理</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-05-27 10:05:00" itemprop="dateCreated datePublished" datetime="2021-05-27T10:05:00+08:00">2021-05-27</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-07-12 11:16:05" itemprop="dateModified" datetime="2021-07-12T11:16:05+08:00">2021-07-12</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="创建nginx.conf配置文件">创建nginx.conf配置文件</h2>
+<p>通过nginx官方镜像创建nginx.conf模板, 然后在该模板上进行修改即可</p>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">user</span>  <span class="string">nginx;</span></span><br><span class="line"><span class="attr">worker_processes</span>  <span class="string">auto;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">error_log</span>  <span class="string">/var/log/nginx/error.log notice;</span></span><br><span class="line"><span class="attr">pid</span>        <span class="string">/var/run/nginx.pid;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">events</span> <span class="string">&#123;</span></span><br><span class="line">    <span class="attr">worker_connections</span>  <span class="string">1024;</span></span><br><span class="line"><span class="attr">&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">http</span> <span class="string">&#123;</span></span><br><span class="line">    <span class="attr">include</span>       <span class="string">/etc/nginx/mime.types;</span></span><br><span class="line">    <span class="attr">default_type</span>  <span class="string">application/octet-stream;</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">log_format</span>  <span class="string">main  &#x27;$remote_addr - $remote_user [$time_local] &quot;$request&quot; &#x27;</span></span><br><span class="line">                      <span class="meta">&#x27;$status</span> <span class="string">$body_bytes_sent &quot;$http_referer&quot; &#x27;</span></span><br><span class="line">                      <span class="meta">&#x27;&quot;$http_user_agent&quot;</span> <span class="string">&quot;$http_x_forwarded_for&quot;&#x27;;</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">access_log</span>  <span class="string">/var/log/nginx/access.log  main;</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">sendfile</span>        <span class="string">on;</span></span><br><span class="line"><span class="comment">    #tcp_nopush     on;</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">keepalive_timeout</span>  <span class="string">65;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">    #gzip  on;</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">include</span> <span class="string">/etc/nginx/conf.d/*.conf;</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">server&#123;</span></span><br><span class="line">        <span class="attr">server_name</span> <span class="string">被访问的域名;</span></span><br><span class="line">        <span class="attr">listen</span> <span class="string">8080;</span></span><br><span class="line">        <span class="attr">location</span> <span class="string">/ &#123;</span></span><br><span class="line">            <span class="attr">proxy_pass</span> <span class="string">http://target-server;</span></span><br><span class="line">        <span class="attr">&#125;</span></span><br><span class="line">    <span class="attr">&#125;</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">upstream</span> <span class="string">target-server&#123;</span></span><br><span class="line">        <span class="attr">server</span> <span class="string">xx.xx.xx.xx:xxxx;</span></span><br><span class="line">    <span class="attr">&#125;</span></span><br><span class="line"><span class="attr">&#125;</span></span><br></pre></td></tr></table></figure>
+<h2 id="运行nginx">运行nginx</h2>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name nginx -p 80:8080 -v /host/path/nginx.conf:/etc/nginx/nginx.conf:ro -d nginx:stable</span><br></pre></td></tr></table></figure>
+<p>注意这里最关键的是对端口的映射, 观察这个命令, 并不是直接将host的80端口和容器的80端口进行映射, 而是先将host的80和nginx的8080进行绑定, 然后nginx再对8080端口进行监听然后反向代理.</p>
+<p>这么做的原因是默认普通权限下容器内nginx是不能够监听1024以下的端口的, 需要提升权限, 但是通过80-&gt;8080的映射转换, 就可以正常启动了.</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://jiayaoo3o.github.io/2021/05/27/frp%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%AE%B0%E5%BD%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/pic.jpg">
+      <meta itemprop="name" content="jiayao">
+      <meta itemprop="description" content="重构！重构！重构！">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jiayaoO3O's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/27/frp%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%AE%B0%E5%BD%95/" class="post-title-link" itemprop="url">frp配置文件记录</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-05-27 09:50:00" itemprop="dateCreated datePublished" datetime="2021-05-27T09:50:00+08:00">2021-05-27</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-07-12 11:16:05" itemprop="dateModified" datetime="2021-07-12T11:16:05+08:00">2021-07-12</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="下载frp">下载frp</h2>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget https://github.com/fatedier/frp/releases/download/v0.36.2/frp_0.36.2_linux_amd64.tar.gz</span><br><span class="line">tar -zxvf ./*.tar.gz</span><br></pre></td></tr></table></figure>
+<h2 id="frpc.ini">frpc.ini</h2>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">[common]</span></span><br><span class="line"><span class="attr">server_addr</span> = <span class="string">xx.xx.xx.xx</span></span><br><span class="line"><span class="attr">server_port</span> = <span class="string">7000</span></span><br><span class="line"><span class="attr">token</span>=<span class="string">xxxxxxxxxx</span></span><br><span class="line"><span class="attr">login_fail_exit</span>=<span class="string">false</span></span><br><span class="line"></span><br><span class="line"><span class="attr">[rdp]</span></span><br><span class="line"><span class="attr">type</span> = <span class="string">tcp</span></span><br><span class="line"><span class="attr">local_ip</span> = <span class="string">127.0.0.1</span></span><br><span class="line"><span class="attr">local_port</span> = <span class="string">3389</span></span><br><span class="line"><span class="attr">remote_port</span> = <span class="string">3389</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>login_fail_exit=false这个配置能够让程序即使链接失败也不会自动退出, 例如当设置frpc为开机启动, 但是刚开机电脑会没有网络这种情况, 如果不设置该配置项, 失败次数过多之后frpc会自动退出.</p>
+</blockquote>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/05/27/frp%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%AE%B0%E5%BD%95/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://jiayaoo3o.github.io/2020/07/13/Win10%E9%85%8D%E7%BD%AE%E5%90%8C%E6%97%B6%E4%BD%BF%E7%94%A8%E7%BD%91%E7%BA%BF%E5%92%8CWiFi%E8%AE%BF%E9%97%AE%E5%86%85%E5%A4%96%E7%BD%91/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/pic.jpg">
+      <meta itemprop="name" content="jiayao">
+      <meta itemprop="description" content="重构！重构！重构！">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jiayaoO3O's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2020/07/13/Win10%E9%85%8D%E7%BD%AE%E5%90%8C%E6%97%B6%E4%BD%BF%E7%94%A8%E7%BD%91%E7%BA%BF%E5%92%8CWiFi%E8%AE%BF%E9%97%AE%E5%86%85%E5%A4%96%E7%BD%91/" class="post-title-link" itemprop="url">Win10配置同时使用网线和WiFi访问内外网</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-07-13 17:25:00" itemprop="dateCreated datePublished" datetime="2020-07-13T17:25:00+08:00">2020-07-13</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-07-12 11:16:05" itemprop="dateModified" datetime="2021-07-12T11:16:05+08:00">2021-07-12</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="使用场景">使用场景</h2>
+<p>公司内网服务器不能连外网, 或者网速很慢, 但是平时开发又有使用外网的需求, 为了不想要频繁地切换网络, 需要对网络进行配置, 使得平时访问外网可以使用WiFi热点, 而内网的服务器或者内网网站又能通过网线直接访问.</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/07/13/Win10%E9%85%8D%E7%BD%AE%E5%90%8C%E6%97%B6%E4%BD%BF%E7%94%A8%E7%BD%91%E7%BA%BF%E5%92%8CWiFi%E8%AE%BF%E9%97%AE%E5%86%85%E5%A4%96%E7%BD%91/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://jiayaoo3o.github.io/2020/06/23/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1WSL2%E7%9A%84%E7%BD%91%E7%BB%9C%E4%BB%A3%E7%90%86%E9%85%8D%E7%BD%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/pic.jpg">
+      <meta itemprop="name" content="jiayao">
+      <meta itemprop="description" content="重构！重构！重构！">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jiayaoO3O's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2020/06/23/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1WSL2%E7%9A%84%E7%BD%91%E7%BB%9C%E4%BB%A3%E7%90%86%E9%85%8D%E7%BD%AE/" class="post-title-link" itemprop="url">记录一次WSL2的网络代理配置</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-06-23 16:33:00" itemprop="dateCreated datePublished" datetime="2020-06-23T16:33:00+08:00">2020-06-23</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-07-12 11:16:05" itemprop="dateModified" datetime="2021-07-12T11:16:05+08:00">2021-07-12</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>目标是在WSL2使用安装在Win10内的V2ray来实现科学上网.</p>
+<h2 id="wsl2获取win10ip">WSL2获取Win10ip</h2>
+<p>在Win10 -&gt; WSL2这个方向, 是可以直接通过Localhost来访问的, 但是WSL2 -&gt; Win10这个方向就不能直接访问Localhost了, 需要指定Win10的ip, 想要查看WSL2中Win10的ip, 只需要查看<code>resolve.conf</code> :</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/resolv.conf</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> This file was automatically generated by WSL. To stop automatic generation of this file, add the following entry to /etc/wsl.conf:</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> [network]</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> generateResolvConf = <span class="literal">false</span></span></span><br><span class="line">nameserver 172.18.176.1</span><br></pre></td></tr></table></figure>
+<p>这个172.18.176.1就是在WSL2中Win10的ip.</p>
+<p>想要方便获取这个IP, 可以直接使用下方命令 :</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/resolv.conf|grep nameserver|awk &#x27;&#123;print $2&#125;&#x27;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/06/23/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1WSL2%E7%9A%84%E7%BD%91%E7%BB%9C%E4%BB%A3%E7%90%86%E9%85%8D%E7%BD%AE/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://jiayaoo3o.github.io/2020/06/19/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%AAWin10%202004%E7%89%88%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%89%8B%E6%9C%BA%E5%85%B1%E4%BA%AB%E7%BD%91%E7%BB%9C%E7%9A%84bug/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/pic.jpg">
+      <meta itemprop="name" content="jiayao">
+      <meta itemprop="description" content="重构！重构！重构！">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jiayaoO3O's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2020/06/19/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%AAWin10%202004%E7%89%88%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%89%8B%E6%9C%BA%E5%85%B1%E4%BA%AB%E7%BD%91%E7%BB%9C%E7%9A%84bug/" class="post-title-link" itemprop="url">记录一个Win10 2004版本使用USB网络共享导致的bug</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-06-19 11:09:00" itemprop="dateCreated datePublished" datetime="2020-06-19T11:09:00+08:00">2020-06-19</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-07-12 11:16:05" itemprop="dateModified" datetime="2021-07-12T11:16:05+08:00">2021-07-12</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="触发状态">触发状态</h2>
+<ul>
+<li>系统 : Win10 2004</li>
+<li>cpu : amd R7-4800U</li>
+<li>手机 : 小米10Pro</li>
+</ul>
+<h2 id="bug症状">bug症状</h2>
+<p>使用数据线连接电脑和手机, 手机开启<code>个人热点-USB网络共享功能</code>, 系统会变得卡顿, 点击任务栏反应会变慢, 点击左下角win键甚至要等待数秒到数十秒才会弹出窗口.</p>
+<h2 id="解决方案">解决方案</h2>
+<p>不使用USB网络共享功能, 用手机开热点算了.</p>
+<h2 id="原因猜测">原因猜测</h2>
+<ul>
+<li>可能是amd的cpu驱动问题.</li>
+<li>可能是Win10 2004问题.</li>
+<li>可能是手机的USB网络共享功能有问题.</li>
+</ul>
+<p>由于设备不多, 难以测试, 并且影响不大, 所以就不深究了.</p>
+<blockquote>
+<p>2020.07.14更新</p>
+</blockquote>
+<p>我发现我是用红米5A接上microUSB数据线开启同样的USB网络共享功能啥事没有, 也不卡顿, 所以要么是微软偷偷修复了bug(?), 要么是amd的type-c驱动有问题(?) 要么是手机的接口有问题(?) 不好说, 但是现在用红米开热点就完事了.</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://jiayaoo3o.github.io/2020/06/16/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1%E9%80%80%E4%BC%91%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%AE%89%E8%A3%85Uubuntu%E6%90%AD%E5%BB%BANAS%E8%BF%87%E7%A8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/pic.jpg">
+      <meta itemprop="name" content="jiayao">
+      <meta itemprop="description" content="重构！重构！重构！">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jiayaoO3O's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2020/06/16/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1%E9%80%80%E4%BC%91%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%AE%89%E8%A3%85Uubuntu%E6%90%AD%E5%BB%BANAS%E8%BF%87%E7%A8%8B/" class="post-title-link" itemprop="url">记录一次退休笔记本安装Ubuntu搭建NAS过程</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-06-16 09:37:00" itemprop="dateCreated datePublished" datetime="2020-06-16T09:37:00+08:00">2020-06-16</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-07-12 11:16:05" itemprop="dateModified" datetime="2021-07-12T11:16:05+08:00">2021-07-12</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="笔记本配置">笔记本配置</h2>
+<ul>
+<li>型号 : 坠机堡垒</li>
+<li>服役时长 : 5年</li>
+<li>cpu : i5-4200h</li>
+<li>内存 : 8+4的ddr3内存</li>
+<li>硬盘 : 240G用了4年的威刚SATA固态+1T机械硬盘用于存电影</li>
+<li>屏幕 : 45%NTSC祖传普通15.6屏幕</li>
+</ul>
+<p>换了新电脑, 这台老机器就决定用来当NAS用了.</p>
+<blockquote>
+<p>2020.10.15更新</p>
+</blockquote>
+<p>刚好三个月过去了, 中间又换了两种方案, 现在终于确定了什么系统做nas适合我.</p>
+<p>本来是从win10切过去了freenas, 因为我发现freenas原生就带有OneDrive云同步功能, 并且还有ZFS这种文件格式对数据进行保护, 所以一开始用起来觉得很完美, 但是由于以前没用过FreeBSD, 才发现freenas下的插件生态居然这么贫瘠, 第一次看到官方加上三方的插件一共就这么一点的时候我惊了, 就只有一个qBittorrent是能够开箱即用的, 并且由于我没有公网ip, 连装zerotier-one都失败了, 这就导致了这个freenas只能完全在内网, 没法远程访问.</p>
+<p>本来我以为就得这么别扭地用着freenas的时候, 我突然发现freenas公司现在在做一个新的项目 : <a target="_blank" rel="noopener" href="https://www.truenas.com/download-truenas-scale/">TrueNAS SCALE</a>, 这个项目是FreeNas公司目前在做的新的一款nas系统, 它让我感到兴奋的原因是这个新的系统<strong>是基于Debian而不是FreeBSD进行开发的!!!</strong>, 这就意味着可以原生使用Docker, 整个Docker镜像生态都可以直接接入到TrueNAS里面, 而不仅仅是以前的几十个插件, 甚至连zerotier都可以直接在DockerHub上面搜到镜像, 所以当我知道了这个系统之后, 马上就切换过去了, 但是由于目前这个系统还在非常早期的阶段, 有问题是很正常的, 各种各样的bug也经常出现, 如果想要稳定现在还是不适合上车. 现在可以说一下这个系统目前有什么坑.</p>
+<p>首先第一点是, 尽量不要将这个系统安装在内存卡和U盘上, 经过我多次尝试, 只要是将系统安装到内存卡或U盘上, 就没有启动正常过, 要么是刚启动就完全卡住, 要么就是无法导入boot-pool, 需要手动import, 但是当我用硬盘安装时, 瞬间流畅进入系统.</p>
+<p>第二点就是只要更新系统, Docker里面的镜像和容器会被全部清除, 所以启动容器要尽量挂在到本地, 并且保存好docker run命令, 以后更新系统之后方便重新启动容器.</p>
+<p>上面这两点是目前比较大的坑, 其余的页面小bug还是能够接受的, 并且新的TrueNAS SCALE可以无缝导入以前freenas的存储池, 所以目前基本完美.</p>
+<blockquote>
+<p>2020.07.15更新</p>
+</blockquote>
+<p>还是选择装回去Win10 2004了, Ubuntu下还是没法做到完美的Ondrive方案,我几百个G的视频想要完美同步到Onedrive, 所以选择安装2004版本, 开WSL2使用docker来确保原来的服务都是可用的, 以后通过笔记本远程桌面到这台NAS做主力机算了, 现在的笔记本夏天发热太严重了, 所以选择将服务压力都放到NAS上面, 笔记本直接远程桌面上去当正常电脑用.</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/06/16/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1%E9%80%80%E4%BC%91%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%AE%89%E8%A3%85Uubuntu%E6%90%AD%E5%BB%BANAS%E8%BF%87%E7%A8%8B/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://jiayaoo3o.github.io/2020/06/15/%E5%88%A0%E9%99%A4win10%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95Radeon%E8%AE%BE%E7%BD%AE%E9%80%89%E9%A1%B9/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/pic.jpg">
+      <meta itemprop="name" content="jiayao">
+      <meta itemprop="description" content="重构！重构！重构！">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jiayaoO3O's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2020/06/15/%E5%88%A0%E9%99%A4win10%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95Radeon%E8%AE%BE%E7%BD%AE%E9%80%89%E9%A1%B9/" class="post-title-link" itemprop="url">删除Win10右键菜单Radeon设置选项</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-06-15 18:31:00" itemprop="dateCreated datePublished" datetime="2020-06-15T18:31:00+08:00">2020-06-15</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-07-12 11:16:05" itemprop="dateModified" datetime="2021-07-12T11:16:05+08:00">2021-07-12</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <ol type="1">
+<li><p>打开regedit.</p></li>
+<li><p>输入 :</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">计算机\HKEY_CLASSES_ROOT\Directory\Background\shellex\ContextMenuHandlers\</span><br></pre></td></tr></table></figure></li>
+<li><p>删除ACE文件夹.</p></li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://jiayaoo3o.github.io/2020/06/11/%E6%AF%94frp%E6%9B%B4%E5%A5%BD%E7%94%A8%E7%9A%84%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E5%B7%A5%E5%85%B7-ZeroTier%20One/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/pic.jpg">
+      <meta itemprop="name" content="jiayao">
+      <meta itemprop="description" content="重构！重构！重构！">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jiayaoO3O's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2020/06/11/%E6%AF%94frp%E6%9B%B4%E5%A5%BD%E7%94%A8%E7%9A%84%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E5%B7%A5%E5%85%B7-ZeroTier%20One/" class="post-title-link" itemprop="url">比frp更好用的内网穿透工具-ZeroTie One</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-06-11 14:51:00" itemprop="dateCreated datePublished" datetime="2020-06-11T14:51:00+08:00">2020-06-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-07-12 11:16:05" itemprop="dateModified" datetime="2021-07-12T11:16:05+08:00">2021-07-12</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>曾经我觉得, 最好用的内网穿透工具是frp, 并且写了一篇文章来赞美免费提供8M带宽提供内网穿透的<a href="https://jiayaoo3o.github.io/2019/03/01/Sakura-Frp-%E5%85%8D%E8%B4%B9%E7%9A%84%E9%AB%98%E9%80%9F%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E5%B7%A5%E5%85%B7/">Sakura Frp</a>, 但后来我发现, 哪怕是Sakura Frp免费提供了公网服务器, 使用起来还是有点繁琐了, 并且速度只有8M, 所以最终我找到了能够代替frp的内网穿透工具 : ZeroTier One.</p>
+<h2 id="zerotier-one是什么">ZeroTier One是什么?</h2>
+<p>ZeroTier One是一款内网穿透软件, 但是和frp的"内网客户端-远程公网服务器-内网客户端"模式不同的是, ZeroTier One是通过p2p方式在不同的设备之间进行连接的, 只要所有的设备都加入了同一个ZeroTier Network, 互相之间就可以像在局域网中那样访问对方, 并且是直接连接而不是走公网服务器, 速度上限基本取决与设备之间的网速而不是ZeroTier服务器.免费版的ZeroTier能够连接多达100各设备, 足够个人使用了.</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/06/11/%E6%AF%94frp%E6%9B%B4%E5%A5%BD%E7%94%A8%E7%9A%84%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E5%B7%A5%E5%85%B7-ZeroTier%20One/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://jiayaoo3o.github.io/2020/01/12/docker%E9%83%A8%E7%BD%B2Oracle12c/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/pic.jpg">
+      <meta itemprop="name" content="jiayao">
+      <meta itemprop="description" content="重构！重构！重构！">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jiayaoO3O's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2020/01/12/docker%E9%83%A8%E7%BD%B2Oracle12c/" class="post-title-link" itemprop="url">docker部署Oracle12c</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-01-12 22:38:00" itemprop="dateCreated datePublished" datetime="2020-01-12T22:38:00+08:00">2020-01-12</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-07-12 11:16:05" itemprop="dateModified" datetime="2021-07-12T11:16:05+08:00">2021-07-12</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="本机安装docker">本机安装docker</h2>
+<p>安装过程省略 , 注意docker for Windows 是依赖Win10的hyper-v功能的,而hyper-v的虚拟化技术目前与VMware并不兼容 , 所以使用了VMware安装虚拟机却想要使用docker for Windows , 有可能需要卸载VMware.</p>
+<h2 id="卸载原本的oracle数据库">卸载原本的Oracle数据库</h2>
+<p>参考下列文章 :</p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/34256436">Oracle 11g数据库安装和卸载教程</a></p>
+<ol type="1">
+<li><p>开始－&gt;设置－&gt;控制面板－&gt;管理工具－&gt;服务 停止所有Oracle服务.</p></li>
+<li><p>开始－&gt;程序－&gt;Oracle - OraDb11g_home1－&gt;Oracle安装产品－&gt; Universal Installer 卸装所有Oracle产品.</p></li>
+<li><p>运行regedit,删除下列所有注册表内容 :</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\\SOFTWARE\\ORACLE</span><br><span class="line">HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\ 中所有与Oracle有关的内容</span><br><span class="line">HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet002\\Services\\ 中所有与Oracle有关的内容</span><br><span class="line">HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\ 中所有与Oracle有关的内容</span><br><span class="line">HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Eventlog\\Application\\ 中所有与Oracle有关的内容</span><br></pre></td></tr></table></figure></li>
+<li><p>开始－&gt;设置－&gt;控制面板－&gt;系统－&gt;高级－&gt;环境变量 删除环境变量CLASSPATH和PATH中有关Oracle的设定.</p></li>
+<li><p>重新启动计算机.</p></li>
+</ol>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/01/12/docker%E9%83%A8%E7%BD%B2Oracle12c/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://jiayaoo3o.github.io/2019/12/31/%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E5%AF%BC%E6%95%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/pic.jpg">
+      <meta itemprop="name" content="jiayao">
+      <meta itemprop="description" content="重构！重构！重构！">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jiayaoO3O's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2019/12/31/%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E5%AF%BC%E6%95%B0/" class="post-title-link" itemprop="url">数学笔记-第二章-导数</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-12-31 11:02:00" itemprop="dateCreated datePublished" datetime="2019-12-31T11:02:00+08:00">2019-12-31</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-07-12 11:16:05" itemprop="dateModified" datetime="2021-07-12T11:16:05+08:00">2021-07-12</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">数学笔记</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0/%E7%AC%AC%E4%BA%8C%E7%AB%A0/" itemprop="url" rel="index"><span itemprop="name">第二章</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="导数的含义">导数的含义</h2>
+<p>导数是<strong>增量比的极限</strong>.</p>
+<blockquote>
+<p>这句话揭露了导数的本质是极限, 也说明了为什么第一章要学极限, 因为导数就是极限.</p>
+</blockquote>
+<h2 id="导数要解决的问题">导数要解决的问题</h2>
+<ul>
+<li>用导数的定义求导</li>
+<li>复合函数求导</li>
+<li>高阶求导</li>
+<li>隐函数求导</li>
+<li>参数方程求导</li>
+</ul>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/12/31/%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E5%AF%BC%E6%95%B0/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://jiayaoo3o.github.io/2019/12/27/2019%E4%BC%98%E8%B4%A8%E4%BA%A7%E5%93%81%E5%B9%B4%E5%BA%A6%E7%9B%98%E7%82%B9/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/pic.jpg">
+      <meta itemprop="name" content="jiayao">
+      <meta itemprop="description" content="重构！重构！重构！">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jiayaoO3O's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2019/12/27/2019%E4%BC%98%E8%B4%A8%E4%BA%A7%E5%93%81%E5%B9%B4%E5%BA%A6%E7%9B%98%E7%82%B9/" class="post-title-link" itemprop="url">2019优质产品年度盘点</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-12-27 12:14:00" itemprop="dateCreated datePublished" datetime="2019-12-27T12:14:00+08:00">2019-12-27</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-07-12 11:16:05" itemprop="dateModified" datetime="2021-07-12T11:16:05+08:00">2021-07-12</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%B8%AA%E4%BA%BA%E5%AE%89%E5%88%A9/" itemprop="url" rel="index"><span itemprop="name">个人安利</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>最近看到很多节目都在搞年度盘点 , 那我也来盘点一下2019年我遇到的值得称道的年度产品.</p>
+<blockquote>
+<p>年度最佳软件 : scoop</p>
+</blockquote>
+<blockquote>
+<p>年度最佳笔记应用 : notion</p>
+</blockquote>
+<blockquote>
+<p>年度最佳编辑器 : VSCode</p>
+</blockquote>
+<blockquote>
+<p>年度最佳markdown编辑器 : Typora</p>
+</blockquote>
+<blockquote>
+<p>年度最佳在线交友平台 : Github</p>
+</blockquote>
+<blockquote>
+<p>年度最佳浏览器 : 新Microsoft Edge</p>
+</blockquote>
+<blockquote>
+<p>年度最佳在线付费服务 : Office 365</p>
+</blockquote>
+<blockquote>
+<p>年度最佳键盘输入体验 : 将CapsLock键映射为Ctrl</p>
+</blockquote>
+<blockquote>
+<p>年度最佳鼠标输入体验 : 将前进键+左键/右键映射为切换桌面</p>
+</blockquote>
+<blockquote>
+<p>年度最佳运动鞋 : 态极1.0Plus</p>
+</blockquote>
+<blockquote>
+<p>年度最高性价比价格敏感人群无线蓝牙耳机 : QCY T5</p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://jiayaoo3o.github.io/2019/12/27/%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%BF%9E%E7%BB%AD%E5%87%BD%E6%95%B0%E9%97%AD%E5%8C%BA%E9%97%B4%E4%B8%89%E5%A4%A7%E5%AE%9A%E7%90%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/pic.jpg">
+      <meta itemprop="name" content="jiayao">
+      <meta itemprop="description" content="重构！重构！重构！">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jiayaoO3O's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2019/12/27/%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%BF%9E%E7%BB%AD%E5%87%BD%E6%95%B0%E9%97%AD%E5%8C%BA%E9%97%B4%E4%B8%89%E5%A4%A7%E5%AE%9A%E7%90%86/" class="post-title-link" itemprop="url">数学笔记-第一章-连续函数闭区间三大定理</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-12-27 09:38:00" itemprop="dateCreated datePublished" datetime="2019-12-27T09:38:00+08:00">2019-12-27</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-07-12 11:16:05" itemprop="dateModified" datetime="2021-07-12T11:16:05+08:00">2021-07-12</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">数学笔记</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0/%E7%AC%AC%E4%B8%80%E7%AB%A0/" itemprop="url" rel="index"><span itemprop="name">第一章</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="最值定理">最值定理</h2>
+<p>若<span class="math inline">\(y=f(x)\)</span>在<span class="math inline">\([a , b]\)</span>上连续 , 则<span class="math inline">\(y\)</span>在<span class="math inline">\([a , b]\)</span>上总有最大值和最小值.</p>
+<h2 id="零点定理">零点定理</h2>
+<p>若<span class="math inline">\(y=f(x)\)</span>在<span class="math inline">\([a , b]\)</span>连续 , 且<span class="math inline">\(f(a)\)</span>和<span class="math inline">\(f(b)\)</span>异号 , 即<span class="math inline">\(f(a)\cdot f(b)&lt;0\)</span> , 则在<span class="math inline">\([a , b]\)</span>中至少存在一点<span class="math inline">\(x_0\)</span>使得<span class="math inline">\(f(x_0)=0\)</span> , 即图像与<span class="math inline">\(x\)</span>轴至少有一个交点 .</p>
+<h3 id="零点定理的作用">零点定理的作用</h3>
+<p>三大定理的作用都是用来解决证明题的 , 包括第三章的中值定理 , 和第五章定积分那里 , 整个第一学期能考证明题的只有这三个地方.</p>
+<p>零点定理主要是用来解决需要证明一切关于<span class="math inline">\(\xi\)</span>为0的证明题.</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/12/27/%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%BF%9E%E7%BB%AD%E5%87%BD%E6%95%B0%E9%97%AD%E5%8C%BA%E9%97%B4%E4%B8%89%E5%A4%A7%E5%AE%9A%E7%90%86/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://jiayaoo3o.github.io/2019/12/26/%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%BF%9E%E7%BB%AD%E4%B8%8E%E9%97%B4%E6%96%AD/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/pic.jpg">
+      <meta itemprop="name" content="jiayao">
+      <meta itemprop="description" content="重构！重构！重构！">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jiayaoO3O's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2019/12/26/%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%BF%9E%E7%BB%AD%E4%B8%8E%E9%97%B4%E6%96%AD/" class="post-title-link" itemprop="url">数学笔记-第一章-连续与间断</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-12-26 18:06:56" itemprop="dateCreated datePublished" datetime="2019-12-26T18:06:56+08:00">2019-12-26</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-07-12 11:16:05" itemprop="dateModified" datetime="2021-07-12T11:16:05+08:00">2021-07-12</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">数学笔记</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0/%E7%AC%AC%E4%B8%80%E7%AB%A0/" itemprop="url" rel="index"><span itemprop="name">第一章</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="连续">连续</h2>
+<p>连续就是指 :</p>
+<p>函数在该点的<strong>极限值 = 函数值</strong></p>
+<p>这是函数连续的<strong>最重要概念</strong>.</p>
+<blockquote>
+<p>注意 : 函数连续可以推导出函数的极限值存在 , 但是反过来 , 函数的极限值存在 , 却不能说明函数连续.</p>
+</blockquote>
+<h3 id="连续的充要条件">连续的充要条件</h3>
+<blockquote>
+<p>解决<strong>分段函数</strong>的<strong>分段点</strong>的连续问题</p>
+</blockquote>
+<p>充要条件 :</p>
+<p>如果函数在<span class="math inline">\(x_0\)</span>处连续 , 则函数在<span class="math inline">\(x_0\)</span>处的左右极限存在并相等 , 并且极限值等于函数值.</p>
+<p>这句话说明了4件事情 :</p>
+<p>如果一个函数连续 , 则 :</p>
+<ul>
+<li>左极限存在</li>
+<li>右极限存在</li>
+<li>左右极限相等</li>
+<li>极限值等于函数值</li>
+</ul>
+<p>上面四点有任意一点不满足 , 则说明函数在该点不连续.</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/12/26/%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%BF%9E%E7%BB%AD%E4%B8%8E%E9%97%B4%E6%96%AD/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://jiayaoo3o.github.io/2019/12/25/%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%B8%80%E7%AB%A0-%E6%9E%81%E9%99%90/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/pic.jpg">
+      <meta itemprop="name" content="jiayao">
+      <meta itemprop="description" content="重构！重构！重构！">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jiayaoO3O's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2019/12/25/%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%B8%80%E7%AB%A0-%E6%9E%81%E9%99%90/" class="post-title-link" itemprop="url">数学笔记-第一章-极限</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-12-25 16:27:56" itemprop="dateCreated datePublished" datetime="2019-12-25T16:27:56+08:00">2019-12-25</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-07-12 11:16:05" itemprop="dateModified" datetime="2021-07-12T11:16:05+08:00">2021-07-12</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">数学笔记</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0/%E7%AC%AC%E4%B8%80%E7%AB%A0/" itemprop="url" rel="index"><span itemprop="name">第一章</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>极限是学习高等数学的第一个知识点 , 这一章学习极限 , 主要就是学习计算极限.而计算极限最重要的一步 , 也是第一步 , 就是<strong>判断极限的型</strong>.</p>
+<h2 id="极限的型">极限的型</h2>
+<p>极限的型可以粗略地分为4种 , 分别为 : <span class="math display">\[
+\frac cc=C , \frac 0c=0 , \frac c0=\infty , \frac 00=未定型
+\]</span> 所谓的未定型 , 就是结果是未知的 , 不可预料的 , 而前面三种的答案都是唯一固定的 , 所以考试只会考未定型.</p>
+<h2 id="计算极限的方法">计算极限的方法</h2>
+<p>这里的方法细分可以分为9种 , 有一些方法在以后学了更高级的方法后就没用了 , 但也是用来打基础的.</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/12/25/%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%B8%80%E7%AB%A0-%E6%9E%81%E9%99%90/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://jiayaoo3o.github.io/2019/12/24/%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E7%AC%AC%E9%9B%B6%E7%AB%A0-%E4%B8%80%E5%88%87%E7%9A%84%E5%BC%80%E5%A7%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/pic.jpg">
+      <meta itemprop="name" content="jiayao">
+      <meta itemprop="description" content="重构！重构！重构！">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jiayaoO3O's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2019/12/24/%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E7%AC%AC%E9%9B%B6%E7%AB%A0-%E4%B8%80%E5%88%87%E7%9A%84%E5%BC%80%E5%A7%8B/" class="post-title-link" itemprop="url">数学笔记-第零章-一切的开始</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-12-24 16:27:56" itemprop="dateCreated datePublished" datetime="2019-12-24T16:27:56+08:00">2019-12-24</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-07-12 11:16:05" itemprop="dateModified" datetime="2021-07-12T11:16:05+08:00">2021-07-12</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">数学笔记</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0/%E7%AC%AC%E9%9B%B6%E7%AB%A0/" itemprop="url" rel="index"><span itemprop="name">第零章</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="为什么要写这个数学笔记">为什么要写这个数学笔记</h2>
+<p>我上大学遇到的高数老师 , 叫邝雪松 , 他是我认为的 , 我在大学遇到过的最厉害 , 最有激情 , 最会教课的老师 . 他的讲课风格非常厉害而且通俗易懂 , 基本完全放弃PPT . 每节他的课 , 前面几排都是要抢着去的 , 比其他那些只知道念课件的老师不知道强到哪里去了.</p>
+<p>我非常钦佩他的上课水平 , 并且当时的我较为详细地将他的讲课内容记录到了笔记本中 , 在16年末到17年初 , 刚好准备过年的时候 , 制作了第一版word文档的数学笔记 :</p>
+<p><img src="https://i.loli.net/2019/12/26/UJCGe4xFOVEqjWL.png" /></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/12/24/%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E7%AC%AC%E9%9B%B6%E7%AB%A0-%E4%B8%80%E5%88%87%E7%9A%84%E5%BC%80%E5%A7%8B/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://jiayaoo3o.github.io/2019/12/21/Hexo%E9%80%9A%E8%BF%87GitHubActions%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90%E5%8F%91%E5%B8%83/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/pic.jpg">
+      <meta itemprop="name" content="jiayao">
+      <meta itemprop="description" content="重构！重构！重构！">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jiayaoO3O's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2019/12/21/Hexo%E9%80%9A%E8%BF%87GitHubActions%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90%E5%8F%91%E5%B8%83/" class="post-title-link" itemprop="url">Hexo通过GitHub Actions持续集成发布</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-12-21 17:06:56" itemprop="dateCreated datePublished" datetime="2019-12-21T17:06:56+08:00">2019-12-21</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-07-12 11:16:05" itemprop="dateModified" datetime="2021-07-12T11:16:05+08:00">2021-07-12</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>GitHub Page博客源文件,通过GitHub Action自动发布推送</p>
+<h2 id="原理">原理</h2>
+<p>简单来说,原理就是将所有的hexo文章文件放到当前的<strong>Blog</strong>分支,然后在<strong>Blog</strong>分支添加一个Action,每当这个分支接收到更新,就触发一次Action,在Github提供的免费服务器上安装node.js,再安装hexo,然后生成静态页面,推送到<strong>jiayaoO3O.github.io</strong>的<strong>master</strong>分支.</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/12/21/Hexo%E9%80%9A%E8%BF%87GitHubActions%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90%E5%8F%91%E5%B8%83/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://jiayaoo3o.github.io/2019/12/20/%E4%BD%BF%E7%94%A8mklink%E5%91%BD%E4%BB%A4%E8%BD%AF%E8%BF%9E%E6%8E%A5Onedrive%E5%90%8C%E6%AD%A5%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E5%A4%B9/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/pic.jpg">
+      <meta itemprop="name" content="jiayao">
+      <meta itemprop="description" content="重构！重构！重构！">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jiayaoO3O's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2019/12/20/%E4%BD%BF%E7%94%A8mklink%E5%91%BD%E4%BB%A4%E8%BD%AF%E8%BF%9E%E6%8E%A5Onedrive%E5%90%8C%E6%AD%A5%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E5%A4%B9/" class="post-title-link" itemprop="url">使用mklink命令软连接Onedrive同步任意文件夹</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-12-20 23:47:34" itemprop="dateCreated datePublished" datetime="2019-12-20T23:47:34+08:00">2019-12-20</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-07-12 11:16:05" itemprop="dateModified" datetime="2021-07-12T11:16:05+08:00">2021-07-12</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>一般来说,想要让Onedrive将某个目录下的文件上传到云,得将对应的文件或者文件夹拷贝到Onedrive目录下,但是有时候却又不方便将文件挪动到Onedrive,例如D盘是仓库盘,存放着大量视频,但是Onedrive却在C盘,这个时候将视频移动到Onedrive会占用大量空间,并且本来D盘作为仓库盘就是用于存放资料的,现在挪动到C盘,影响文件规划.</p>
+<p>所以可以使用mklink命令来在存放文件的目录和Onedrive目录中创建一个连接,让Onedrive识别到.</p>
+<p>使用管理员权限打开CMD,输入以下命令:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mklink /J OneDrive文件夹下的目录绝对路径 需要链接到Onedrive的目录绝对路径</span><br></pre></td></tr></table></figure>
+<p>即可.</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://jiayaoo3o.github.io/2019/07/02/326-3%E7%9A%84%E5%B9%82/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/pic.jpg">
+      <meta itemprop="name" content="jiayao">
+      <meta itemprop="description" content="重构！重构！重构！">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jiayaoO3O's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2019/07/02/326-3%E7%9A%84%E5%B9%82/" class="post-title-link" itemprop="url">326.3的幂</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-07-02 19:26:53" itemprop="dateCreated datePublished" datetime="2019-07-02T19:26:53+08:00">2019-07-02</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-07-12 11:16:05" itemprop="dateModified" datetime="2021-07-12T11:16:05+08:00">2021-07-12</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">算法学习</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/leetcode/" itemprop="url" rel="index"><span itemprop="name">leetcode</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="题目">题目</h2>
+<p>给定一个整数，写一个函数来判断它是否是 3 的幂次方。</p>
+<p>示例 1:</p>
+<blockquote>
+<p>输入: 27 输出: true</p>
+</blockquote>
+<p>示例 2:</p>
+<blockquote>
+<p>输入: 0 输出: false</p>
+</blockquote>
+<p>示例 3:</p>
+<blockquote>
+<p>输入: 9 输出: true</p>
+</blockquote>
+<p>示例 4:</p>
+<blockquote>
+<p>输入: 45 输出: false</p>
+</blockquote>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/07/02/326-3%E7%9A%84%E5%B9%82/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://jiayaoo3o.github.io/2019/07/02/292-Nim%E6%B8%B8%E6%88%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/pic.jpg">
+      <meta itemprop="name" content="jiayao">
+      <meta itemprop="description" content="重构！重构！重构！">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jiayaoO3O's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2019/07/02/292-Nim%E6%B8%B8%E6%88%8F/" class="post-title-link" itemprop="url">292.Nim游戏</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-07-02 16:21:16" itemprop="dateCreated datePublished" datetime="2019-07-02T16:21:16+08:00">2019-07-02</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-07-12 11:16:05" itemprop="dateModified" datetime="2021-07-12T11:16:05+08:00">2021-07-12</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">算法学习</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/leetcode/" itemprop="url" rel="index"><span itemprop="name">leetcode</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="题目">题目</h2>
+<p>你和你的朋友，两个人一起玩 Nim 游戏：桌子上有一堆石头，每次你们轮流拿掉 1 - 3 块石头。 拿掉最后一块石头的人就是获胜者。你作为先手。</p>
+<p>你们是聪明人，每一步都是最优解。 编写一个函数，来判断你是否可以在给定石头数量的情况下赢得游戏。</p>
+<p>示例:</p>
+<blockquote>
+<p>输入: 4 输出: false 解释: 如果堆中有 4 块石头，那么你永远不会赢得比赛；因为无论你拿走 1 块、2 块 还是 3 块石头，最后一块石头总是会被你的朋友拿走。</p>
+</blockquote>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/07/02/292-Nim%E6%B8%B8%E6%88%8F/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://jiayaoo3o.github.io/2019/07/01/283-%E7%A7%BB%E5%8A%A8%E9%9B%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/pic.jpg">
+      <meta itemprop="name" content="jiayao">
+      <meta itemprop="description" content="重构！重构！重构！">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jiayaoO3O's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2019/07/01/283-%E7%A7%BB%E5%8A%A8%E9%9B%B6/" class="post-title-link" itemprop="url">283.移动零</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-07-01 23:53:24" itemprop="dateCreated datePublished" datetime="2019-07-01T23:53:24+08:00">2019-07-01</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-07-12 11:16:05" itemprop="dateModified" datetime="2021-07-12T11:16:05+08:00">2021-07-12</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">算法学习</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/leetcode/" itemprop="url" rel="index"><span itemprop="name">leetcode</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="题目">题目</h2>
+<p>给定一个数组 nums，编写一个函数将所有 0 移动到数组的末尾，同时保持非零元素的相对顺序。</p>
+<p>示例: &gt; 输入: [0,1,0,3,12] &gt; 输出: [1,3,12,0,0]</p>
+<p>说明: - 必须在原数组上操作，不能拷贝额外的数组。 - 尽量减少操作次数。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/07/01/283-%E7%A7%BB%E5%8A%A8%E9%9B%B6/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://jiayaoo3o.github.io/2019/06/29/docker%E5%AE%B9%E5%99%A8%E8%AE%BE%E7%BD%AE%E6%97%B6%E5%8C%BA/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/pic.jpg">
+      <meta itemprop="name" content="jiayao">
+      <meta itemprop="description" content="重构！重构！重构！">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jiayaoO3O's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2019/06/29/docker%E5%AE%B9%E5%99%A8%E8%AE%BE%E7%BD%AE%E6%97%B6%E5%8C%BA/" class="post-title-link" itemprop="url">docker容器设置时区</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-06-29 01:17:15" itemprop="dateCreated datePublished" datetime="2019-06-29T01:17:15+08:00">2019-06-29</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-07-12 11:16:05" itemprop="dateModified" datetime="2021-07-12T11:16:05+08:00">2021-07-12</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>docker容器中的时区一般来说都是使用<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%8D%8F%E8%B0%83%E4%B8%96%E7%95%8C%E6%97%B6">UTC</a>,但是中国的时区是使用<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/CST">CST</a>,所以当使用某些需要依赖时间的服务时时间就会对不上,这时候就要修改容器的时区.</p>
+<p>Debian和ubuntu类似但是稍微有点不同.</p>
+<h2 id="ubuntu">Ubuntu</h2>
+<p>ubuntu镜像本身是没有安装一个叫tzdata的软件,这个软件可以帮我们设置时区,而且在首次安装后会自动帮我们设置已经指定了的时区,所以要做的有2步,在Dockerfile文件中添加以下命令,既可在原有的RUN指令之后添加,也可另起一行RUN,但必须在<strong>apt-get update</strong>命令之后:</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/06/29/docker%E5%AE%B9%E5%99%A8%E8%AE%BE%E7%BD%AE%E6%97%B6%E5%8C%BA/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://jiayaoo3o.github.io/2019/06/29/%E8%A7%A3%E5%86%B3docker%E5%AE%B9%E5%99%A8%E6%97%A0%E6%B3%95%E8%BE%93%E5%85%A5%E4%B8%AD%E6%96%87%E9%97%AE%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/pic.jpg">
+      <meta itemprop="name" content="jiayao">
+      <meta itemprop="description" content="重构！重构！重构！">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jiayaoO3O's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2019/06/29/%E8%A7%A3%E5%86%B3docker%E5%AE%B9%E5%99%A8%E6%97%A0%E6%B3%95%E8%BE%93%E5%85%A5%E4%B8%AD%E6%96%87%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">解决docker容器无法输入中文问题</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-06-29 00:52:15" itemprop="dateCreated datePublished" datetime="2019-06-29T00:52:15+08:00">2019-06-29</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-07-12 11:16:05" itemprop="dateModified" datetime="2021-07-12T11:16:05+08:00">2021-07-12</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>一般情况下docker镜像产生的容器,都是无法直接在终端中输入中文的,因为docker镜像追求的就是最小化修改,没有必要的部分是不会进行添加与修改的.</p>
+<p>虽然Debian和Ubuntu是爹和儿子,但是两者设置的方法略有不同.</p>
+<p>总体的步骤就是:</p>
+<ol type="1">
+<li>修改文件<strong>/etc/locale.gen</strong>,将需要的语言注释取消掉.</li>
+<li>运行<strong>locale-gen</strong>命令.</li>
+</ol>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/06/29/%E8%A7%A3%E5%86%B3docker%E5%AE%B9%E5%99%A8%E6%97%A0%E6%B3%95%E8%BE%93%E5%85%A5%E4%B8%AD%E6%96%87%E9%97%AE%E9%A2%98/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://jiayaoo3o.github.io/2019/06/29/VSCode%E4%BD%BF%E7%94%A8%E4%BD%BF%E7%94%A8docker%E6%90%AD%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/pic.jpg">
+      <meta itemprop="name" content="jiayao">
+      <meta itemprop="description" content="重构！重构！重构！">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jiayaoO3O's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2019/06/29/VSCode%E4%BD%BF%E7%94%A8%E4%BD%BF%E7%94%A8docker%E6%90%AD%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2/" class="post-title-link" itemprop="url">VSCode使用docker搭建hexo博客</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-06-29 00:49:03" itemprop="dateCreated datePublished" datetime="2019-06-29T00:49:03+08:00">2019-06-29</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-07-12 11:16:05" itemprop="dateModified" datetime="2021-07-12T11:16:05+08:00">2021-07-12</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>随着vscode推出remote-container容器开发模式,在docker里面搭hexo变得简单了起来,非常方便,现在来记录一下vscode使用docker搭建hexo的步骤.</p>
+<p>首先要知道待解决的问题有哪些:</p>
+<ul>
+<li>vscode的remote-container模式好在哪.</li>
+<li>如何使用vscode调用docker生成一个镜像.</li>
+<li>生成的镜像会有哪些问题.</li>
+<li>安装hexo需要哪些东西.</li>
+<li>要对Dockerfile进行什么修改才能让生成的容器本身就安装好hexo.</li>
+</ul>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/06/29/VSCode%E4%BD%BF%E7%94%A8%E4%BD%BF%E7%94%A8docker%E6%90%AD%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://jiayaoo3o.github.io/2019/06/28/windows10%E4%B8%8BUWP%E5%BA%94%E7%94%A8%E4%BD%BF%E7%94%A8%E7%B3%BB%E7%BB%9F%E4%BB%A3%E7%90%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/pic.jpg">
+      <meta itemprop="name" content="jiayao">
+      <meta itemprop="description" content="重构！重构！重构！">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jiayaoO3O's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2019/06/28/windows10%E4%B8%8BUWP%E5%BA%94%E7%94%A8%E4%BD%BF%E7%94%A8%E7%B3%BB%E7%BB%9F%E4%BB%A3%E7%90%86/" class="post-title-link" itemprop="url">Windows10下UWP应用使用系统代理</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-06-28 11:08:12" itemprop="dateCreated datePublished" datetime="2019-06-28T11:08:12+08:00">2019-06-28</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-07-12 11:16:05" itemprop="dateModified" datetime="2021-07-12T11:16:05+08:00">2021-07-12</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>由于UWP本身运行在沙盒中,默认情况下是不能直接访问localhost的,所以也就不能直接访问本机的代理服务,但是Win10自身有一个叫CheckNetIsolation.exe 的命令行工具可以将uwp应用设置为使用代理.</p>
+<h2 id="单独指定某个uwp应用可以代理">单独指定某个UWP应用可以代理</h2>
+<ol type="1">
+<li><p>通过Win+S在搜索框输入"注册表"来打开<strong>注册表编辑器</strong><img src="https://i.loli.net/2019/06/28/5d16280329cd127618.png" /></p></li>
+<li><p>在上图的蓝色框处,输入下面的地址:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppContainer\Mappings</span><br></pre></td></tr></table></figure>
+<p>就会定位到上图的位置,左边的的密密麻麻的都是电脑上UWP应用的SID值,而右边绿色框的DIsplayName就是你点击的某个uwp应用的名字,现在要做的就是慢慢按方向键下键,寻找你需要进行代理的uwp软件.</p></li>
+<li><p>找到需要代理的软件之后,复制该软件红色框处的SID,然后在CMD中输入以下命令:</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CheckNetIsolation.exe loopbackexempt <span class="literal">-a</span> <span class="literal">-p</span>=UWP的SID</span><br></pre></td></tr></table></figure>
+<p>就可以直接生效了.</p></li>
+<li><p>如果需要取消代理,恢复原样,在CMD中输入以下命令:</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CheckNetIsolation.exe loopbackexempt <span class="literal">-d</span> <span class="literal">-p</span>=UWP的SID</span><br></pre></td></tr></table></figure>
+<h2 id="对所有uwp应用设置可以代理">对所有UWP应用设置可以代理</h2>
+<p>从上面的方法可以知道,想要对某个uwp使用代理,就只要知道它的SID然后设置就可以了,现在想要对所有uwp进行设置,也就是只要知道所有uwp的SID.</p>
+<p>在CMD中输入以下命令即可对所有UWP进行设置:</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FOR</span> /F <span class="string">&quot;tokens=11 delims=\&quot;</span> %p <span class="keyword">IN</span> (<span class="string">&#x27;REG QUERY &quot;HKCU\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppContainer\Mappings&quot;&#x27;</span>) <span class="keyword">DO</span> CheckNetIsolation.exe LoopbackExempt <span class="literal">-a</span> <span class="literal">-p</span>=%p</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://jiayaoo3o.github.io/2019/06/26/CapsLock%E9%94%AE%E7%9A%84AutoHotKey%E6%98%A0%E5%B0%84%E6%96%B9%E6%A1%88/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/pic.jpg">
+      <meta itemprop="name" content="jiayao">
+      <meta itemprop="description" content="重构！重构！重构！">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jiayaoO3O's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2019/06/26/CapsLock%E9%94%AE%E7%9A%84AutoHotKey%E6%98%A0%E5%B0%84%E6%96%B9%E6%A1%88/" class="post-title-link" itemprop="url">CapsLock键的AutoHotKey映射方案</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-06-26 20:46:36" itemprop="dateCreated datePublished" datetime="2019-06-26T20:46:36+08:00">2019-06-26</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-07-12 11:16:05" itemprop="dateModified" datetime="2021-07-12T11:16:05+08:00">2021-07-12</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>CapsLock键,占着最好的位置,产出最低的贡献,所以很多人包括我都会选择将它映射成其他功能. vim党喜欢将CapsLock键映射成esc,这样退出输入模式就会非常的轻松,但是我vim用得不多,所以更想要将它映射成ctrl键,并且由于vim的hjkl方向移动很好用,所以我也打算将CapsLock＋hjkl实现方向移动.</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/06/26/CapsLock%E9%94%AE%E7%9A%84AutoHotKey%E6%98%A0%E5%B0%84%E6%96%B9%E6%A1%88/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://jiayaoo3o.github.io/2019/06/26/linux%E5%AE%89%E8%A3%85docker/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/pic.jpg">
+      <meta itemprop="name" content="jiayao">
+      <meta itemprop="description" content="重构！重构！重构！">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jiayaoO3O's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2019/06/26/linux%E5%AE%89%E8%A3%85docker/" class="post-title-link" itemprop="url">linux安装docker</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-06-26 20:44:13" itemprop="dateCreated datePublished" datetime="2019-06-26T20:44:13+08:00">2019-06-26</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-07-12 11:16:05" itemprop="dateModified" datetime="2021-07-12T11:16:05+08:00">2021-07-12</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="不要直接安装apt仓库内的docker.io">不要直接安装apt仓库内的docker.io</h2>
+<p>apt仓库中的docker.io是很老版本的docker,现在新版的docker是直接叫做docker-ce,不要直接<code>sudo apt install docker.io</code></p>
+<p>如果你已经这样安装了docker.io,请输入以下命令卸载:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get remove docker docker-engine docker.io containerd runc</span><br></pre></td></tr></table></figure>
+<p>此时docker.io会被卸载,但是以前下载的images, containers,volumes都会得以保留.</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/06/26/linux%E5%AE%89%E8%A3%85docker/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://jiayaoo3o.github.io/2019/06/26/git%E9%A1%B9%E7%9B%AE%E6%8D%A2%E8%A1%8C%E7%AC%A6LF%E4%B8%8ECRLF%E5%AF%BC%E8%87%B4%E7%9A%84%E5%A4%A7%E9%87%8F%E6%9B%B4%E6%94%B9%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/pic.jpg">
+      <meta itemprop="name" content="jiayao">
+      <meta itemprop="description" content="重构！重构！重构！">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jiayaoO3O's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2019/06/26/git%E9%A1%B9%E7%9B%AE%E6%8D%A2%E8%A1%8C%E7%AC%A6LF%E4%B8%8ECRLF%E5%AF%BC%E8%87%B4%E7%9A%84%E5%A4%A7%E9%87%8F%E6%9B%B4%E6%94%B9%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/" class="post-title-link" itemprop="url">git项目换行符LF与CRLF导致的大量更改解决办法</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-06-26 20:40:27" itemprop="dateCreated datePublished" datetime="2019-06-26T20:40:27+08:00">2019-06-26</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-07-12 11:16:05" itemprop="dateModified" datetime="2021-07-12T11:16:05+08:00">2021-07-12</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="产生该问题的原因">产生该问题的原因</h2>
+<p>产生该问题的原因是由于Windows平台和linux平台的默认换行符是不一样的,linux使用的是<code>0x0A(LF)</code>而Windows使用的是<code>0x0D0A(CRLF)</code>,这就导致了当Windows下的代码放到linux下运行时,虽然代码没有错,但是linux下的git检测到项目的换行符为CRLF时会自动换成LF.</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/06/26/git%E9%A1%B9%E7%9B%AE%E6%8D%A2%E8%A1%8C%E7%AC%A6LF%E4%B8%8ECRLF%E5%AF%BC%E8%87%B4%E7%9A%84%E5%A4%A7%E9%87%8F%E6%9B%B4%E6%94%B9%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://jiayaoo3o.github.io/2019/06/26/278-%E7%AC%AC%E4%B8%80%E4%B8%AA%E9%94%99%E8%AF%AF%E7%9A%84%E7%89%88%E6%9C%AC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/pic.jpg">
+      <meta itemprop="name" content="jiayao">
+      <meta itemprop="description" content="重构！重构！重构！">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jiayaoO3O's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2019/06/26/278-%E7%AC%AC%E4%B8%80%E4%B8%AA%E9%94%99%E8%AF%AF%E7%9A%84%E7%89%88%E6%9C%AC/" class="post-title-link" itemprop="url">278.第一个错误的版本</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-06-26 20:39:19" itemprop="dateCreated datePublished" datetime="2019-06-26T20:39:19+08:00">2019-06-26</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-07-12 11:16:05" itemprop="dateModified" datetime="2021-07-12T11:16:05+08:00">2021-07-12</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">算法学习</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/leetcode/" itemprop="url" rel="index"><span itemprop="name">leetcode</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="题目">题目</h2>
+<p>你是产品经理，目前正在带领一个团队开发新的产品。不幸的是，你的产品的最新版本没有通过质量检测。由于每个版本都是基于之前的版本开发的，所以错误的版本之后的所有版本都是错的。</p>
+<p>假设你有 n 个版本 [1, 2, …, n]，你想找出导致之后所有版本出错的第一个错误的版本。</p>
+<p>你可以通过调用 <code>bool isBadVersion(version)</code> 接口来判断版本号 version 是否在单元测试中出错。实现一个函数来查找第一个错误的版本。你应该尽量减少对调用 API 的次数。</p>
+<p>示例:</p>
+<blockquote>
+<p>给定 n = 5，并且 version = 4 是第一个错误的版本。</p>
+<p>调用 isBadVersion(3) -&gt; false 调用 isBadVersion(5) -&gt; true 调用 isBadVersion(4) -&gt; true</p>
+<p>所以，4 是第一个错误的版本。</p>
+</blockquote>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/06/26/278-%E7%AC%AC%E4%B8%80%E4%B8%AA%E9%94%99%E8%AF%AF%E7%9A%84%E7%89%88%E6%9C%AC/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+<script src="/js/comments.js"></script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">jiayao</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{&quot;enable&quot;:true,&quot;tags&quot;:&quot;none&quot;,&quot;js&quot;:&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;mathjax@3.1.4&#x2F;es5&#x2F;tex-mml-chtml.js&quot;}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>

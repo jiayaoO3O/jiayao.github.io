@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/ArtificialIntelligence32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/ArtificialIntelligence16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="5IoOHPeK1Gs6LKpb_pJOXhrUePDQUxzqf0hPjeAzdLo">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+
+<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;jiayaoo3o.github.io&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:false,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;none&quot;,&quot;post_header&quot;:&quot;none&quot;,&quot;post_body&quot;:&quot;none&quot;,&quot;coll_header&quot;:&quot;none&quot;,&quot;sidebar&quot;:&quot;none&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;},&quot;path&quot;:&quot;&#x2F;search.xml&quot;,&quot;localsearch&quot;:{&quot;enable&quot;:true,&quot;trigger&quot;:&quot;auto&quot;,&quot;top_n_per_article&quot;:1,&quot;unescape&quot;:false,&quot;preload&quot;:false}}</script>
+<meta name="description" content="微软的远程桌面功能从xp时代就已经有了,但是却很多人不知道要如何开启,下面就来介绍一下如何开启远程桌面功能">
+<meta property="og:type" content="article">
+<meta property="og:title" content="开启Windows的远程桌面功能">
+<meta property="og:url" content="http://jiayaoo3o.github.io/2019/04/09/%E5%BC%80%E5%90%AFwindows%E7%9A%84%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E5%8A%9F%E8%83%BD/index.html">
+<meta property="og:site_name" content="jiayaoO3O&#39;s Blog">
+<meta property="og:description" content="微软的远程桌面功能从xp时代就已经有了,但是却很多人不知道要如何开启,下面就来介绍一下如何开启远程桌面功能">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2019/04/09/5cabfc686b60a.png">
+<meta property="og:image" content="https://i.loli.net/2019/04/09/5cabfcfa741dc.png">
+<meta property="og:image" content="https://i.loli.net/2019/04/09/5cac0bb7bd5f1.png">
+<meta property="og:image" content="https://i.loli.net/2019/04/09/5cac0cc664270.png">
+<meta property="og:image" content="https://i.loli.net/2019/04/09/5cac0e911bbf0.png">
+<meta property="og:image" content="https://i.loli.net/2019/04/09/5cac0fa8238e0.png">
+<meta property="og:image" content="https://i.loli.net/2019/04/09/5cac1128c4b31.jpg">
+<meta property="og:image" content="https://i.loli.net/2019/04/09/5cac1127e4b05.jpg">
+<meta property="og:image" content="https://i.loli.net/2019/04/09/5cac1128bf48c.jpg">
+<meta property="og:image" content="https://i.loli.net/2019/04/09/5cac1127e849a.png">
+<meta property="og:image" content="https://i.loli.net/2019/04/09/5cac13959f4a3.jpg">
+<meta property="og:image" content="https://i.loli.net/2019/04/09/5cac1395849d7.jpg">
+<meta property="article:published_time" content="2019-04-09T01:52:57.000Z">
+<meta property="article:modified_time" content="2021-07-12T03:16:05.984Z">
+<meta property="article:author" content="jiayao">
+<meta property="article:tag" content="Windows10">
+<meta property="article:tag" content="远程桌面">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2019/04/09/5cabfc686b60a.png">
+
+
+<link rel="canonical" href="http://jiayaoo3o.github.io/2019/04/09/%E5%BC%80%E5%90%AFwindows%E7%9A%84%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E5%8A%9F%E8%83%BD/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;http:&#x2F;&#x2F;jiayaoo3o.github.io&#x2F;2019&#x2F;04&#x2F;09&#x2F;%E5%BC%80%E5%90%AFwindows%E7%9A%84%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E5%8A%9F%E8%83%BD&#x2F;&quot;,&quot;path&quot;:&quot;2019&#x2F;04&#x2F;09&#x2F;开启windows的远程桌面功能&#x2F;&quot;,&quot;title&quot;:&quot;开启Windows的远程桌面功能&quot;}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<title>开启Windows的远程桌面功能 | jiayaoO3O's Blog</title><script src="/js/config.js"></script>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">jiayaoO3O's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">sudo reboot</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A1%AE%E5%AE%9Awindows%E7%89%88%E6%9C%AC"><span class="nav-text">确定Windows版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E8%B4%A6%E5%8F%B7%E5%92%8C%E5%AF%86%E7%A0%81"><span class="nav-text">设置账号和密码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E5%90%AF%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2"><span class="nav-text">开启远程桌面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E8%A1%8C%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E5%B1%80%E5%9F%9F%E7%BD%91"><span class="nav-text">进行远程连接(局域网)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%B5%E8%84%91%E8%BF%9E%E6%8E%A5%E7%94%B5%E8%84%91"><span class="nav-text">电脑连接电脑</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%8B%E6%9C%BA%E8%BF%9E%E6%8E%A5%E7%94%B5%E8%84%91"><span class="nav-text">手机连接电脑</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E8%A1%8C%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F"><span class="nav-text">进行远程连接(内网穿透)</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="jiayao"
+      src="/images/pic.jpg">
+  <p class="site-author-name" itemprop="name">jiayao</p>
+  <div class="site-description" itemprop="description">重构！重构！重构！</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">130</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">37</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/jiayaoO3O" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;jiayaoO3O" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/jiayao3.14@outlook.com" title="E-Mail → jiayao3.14@outlook.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://jiayaoo3o.github.io/2019/04/09/%E5%BC%80%E5%90%AFwindows%E7%9A%84%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E5%8A%9F%E8%83%BD/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/pic.jpg">
+      <meta itemprop="name" content="jiayao">
+      <meta itemprop="description" content="重构！重构！重构！">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jiayaoO3O's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          开启Windows的远程桌面功能<a href="https://github.com/jiayaoO3O/jiayaoO3O.github.io/blob/Blog/source/_posts/%E5%BC%80%E5%90%AFwindows%E7%9A%84%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E5%8A%9F%E8%83%BD.md" class="post-edit-link" title="编辑" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-04-09 09:52:57" itemprop="dateCreated datePublished" datetime="2019-04-09T09:52:57+08:00">2019-04-09</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-07-12 11:16:05" itemprop="dateModified" datetime="2021-07-12T11:16:05+08:00">2021-07-12</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>微软的远程桌面功能从xp时代就已经有了,但是却很多人不知道要如何开启,下面就来介绍一下如何开启远程桌面功能</p>
+<span id="more"></span>
+<h2 id="确定windows版本">确定Windows版本</h2>
+<p>这是一切的开始,微软的<strong>Windows家庭版</strong>,<strong>教育版</strong>默认情况下:</p>
+<ul>
+<li>可以远程连接别的电脑</li>
+<li>但是不能够被远程连接</li>
+</ul>
+<p>这是因为<strong>被远程连接</strong>这是一个高级功能,起码要专业版以上(专业版,企业版,服务器版)才行.教育版,家庭版虽然可以强行通过某些软件开启,但是并不是今天的主题,所以如果你的系统如果是家庭版,可以选择重装系统,或者强行升级成专业版,又或者去找别的教程看家庭版如何使用远程桌面.</p>
+<h2 id="设置账号和密码">设置账号和密码</h2>
+<p>第一步,你的电脑必须要设置有密码,没有密码的话,远程桌面会连接失败</p>
+<h2 id="开启远程桌面">开启远程桌面</h2>
+<ol type="1">
+<li>右键"我的电脑",点击属性</li>
+<li>点击左边的"远程设置"</li>
+</ol>
+<p><img src="https://i.loli.net/2019/04/09/5cabfc686b60a.png" /></p>
+<ol start="3" type="1">
+<li>选择"允许远程连接到此电脑"</li>
+</ol>
+<p><img src="https://i.loli.net/2019/04/09/5cabfcfa741dc.png" /></p>
+<ol start="4" type="1">
+<li>点击蓝色箭头的"选择用户",这个时候你会看到你的账户已经可以进行远程连接了.</li>
+</ol>
+<p><img src="https://i.loli.net/2019/04/09/5cac0bb7bd5f1.png" /></p>
+<h2 id="进行远程连接局域网">进行远程连接(局域网)</h2>
+<h3 id="电脑连接电脑">电脑连接电脑</h3>
+<p>此时,只要是和你的电脑在<strong>同一个局域网</strong>(也可以说同一个路由器下)的设备,都可以使用"微软远程桌面"来远程连接到你的电脑</p>
+<ul>
+<li>winxp或者win7:可以直接在开始菜单-附件里面找到"远程桌面连接"</li>
+<li>Win10: 可以直接在搜索框搜索"远程桌面",就可以打开远程桌面的设置界面了.(我这里只是设置了系统语言是英文,但是你打开的时候会是中文的)</li>
+</ul>
+<p><img src="https://i.loli.net/2019/04/09/5cac0cc664270.png" /></p>
+<p>要设置的其实只有两个地方,一个是上面图片的<strong>电脑</strong>和<strong>用户名</strong>,电脑是指被连接的电脑的ip地址,现在是你的电脑要被连接,所以就写上你自己电脑的局域网ip地址.用户名就是你的账号名称.</p>
+<p><img src="https://i.loli.net/2019/04/09/5cac0e911bbf0.png" /></p>
+<p>另外一个可以设置的是红色箭头的体验选项,这里是你要告诉远程卓面这个软件,你的网络怎么样,如果网络好,就可以给你多一点动画效果,如果网络不好,那就少一点动画效果,这里建议取消勾选桌面背景和菜单动画,剩下的可以勾上.</p>
+<p>点击连接,<strong>输入账号的密码</strong>,就可以在局域网下远程连接到电脑上了.</p>
+<p><img src="https://i.loli.net/2019/04/09/5cac0fa8238e0.png" /></p>
+<h3 id="手机连接电脑">手机连接电脑</h3>
+<p>手机连接电脑和电脑连接电脑的步骤基本一样,只是电脑上都内置了"远程桌面连接"这个软件,而手机上要使用的话,要去下载一个"微软远程桌面"(也叫"RD Client"),这个软件默认是英文版的,但是单词都比较简单,或者评论区一般也会有发出汉化版地址的.</p>
+<p>确保手机和电脑在同一个局域网下(同一个路由器),然后打开软件.</p>
+<p><img src="https://i.loli.net/2019/04/09/5cac1128c4b31.jpg" /></p>
+<p>点击右上角的加号,添加一个远程电脑 <img src="https://i.loli.net/2019/04/09/5cac1127e4b05.jpg" /> 点击ADD MANUAlLY</p>
+<p><img src="https://i.loli.net/2019/04/09/5cac1128bf48c.jpg" /></p>
+<p>PC name输入电脑的ip地址</p>
+<p>User name 点击 添加一个账户,输入电脑的用户名和密码,就可以了</p>
+<p><img src="https://i.loli.net/2019/04/09/5cac1127e849a.png" /></p>
+<p><strong>在手机设置上取消"方向锁定"</strong>,有的手机叫"自动方向",或者"自动旋转",一定要让手机<strong>可以自动旋转</strong>,也就是指手机横屏时,软件也会横过来这个状态.取消方向锁定是因为这个app到现在对全面屏(刘海屏,水滴屏)的适配还没有到位,直接设置它的横屏模式会导致鼠标位置偏移等问题.</p>
+<p><img src="https://i.loli.net/2019/04/09/5cac13959f4a3.jpg" /></p>
+<p>关闭了方向锁定之后,进入软件,点击连接,手机就可以连接到电脑上了.</p>
+<p><img src="https://i.loli.net/2019/04/09/5cac1395849d7.jpg" /></p>
+<p>注意,现在这台被连接的电脑,同一时间内只能被一个账号连接,而一个账号只能在一台设备上连接,也就是说,你的A账号用手机连接电脑的时候,电脑会被踢下线,而电脑登录A账号的时候,手机就被踢下线,并且如果你的电脑有B账号,手机用B账号连接电脑,A账号也会被踢下线.</p>
+<p>解决方法,请看这篇文章:</p>
+<p><a href="https://jiayaoo3o.github.io/2019/04/09/%E8%A7%A3%E9%99%A4Windows10%E5%A4%9A%E8%B4%A6%E6%88%B7%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E8%BF%9E%E6%8E%A5%E9%99%90%E5%88%B6/">解除Windows10多账户远程桌面连接限制</a></p>
+<h2 id="进行远程连接内网穿透">进行远程连接(内网穿透)</h2>
+<p>虽然现在可以使用远程连接,但是得让两个设备都在同一个路由器下面,功能上有局限性,而想要外网也能够远程连接,我们需要内网穿透,具体操作请看这篇文章:</p>
+<p><a href="https://jiayaoo3o.github.io/2019/03/01/Sakura-Frp-%E5%85%8D%E8%B4%B9%E7%9A%84%E9%AB%98%E9%80%9F%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E5%B7%A5%E5%85%B7/">Sakura frp--免费的高速内网穿透工具</a></p>
+<p>进行了内网穿透之后,就可以按照这篇教程的操作继续连接了.</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div></div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="jiayao 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.png" alt="jiayao 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>jiayao
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://jiayaoo3o.github.io/2019/04/09/%E5%BC%80%E5%90%AFwindows%E7%9A%84%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E5%8A%9F%E8%83%BD/" title="开启Windows的远程桌面功能">http://jiayaoo3o.github.io/2019/04/09/开启windows的远程桌面功能/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-ND</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Windows10/" rel="tag"><i class="fa fa-tag"></i> Windows10</a>
+              <a href="/tags/%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2/" rel="tag"><i class="fa fa-tag"></i> 远程桌面</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2019/04/09/%E8%A7%A3%E9%99%A4windows10%E5%A4%9A%E8%B4%A6%E6%88%B7%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E8%BF%9E%E6%8E%A5%E9%99%90%E5%88%B6/" rel="prev" title="解除Windows10多账户远程桌面连接限制">
+                  <i class="fa fa-chevron-left"></i> 解除Windows10多账户远程桌面连接限制
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2019/04/16/1001-A-B-Format/" rel="next" title="1001 A+B Format">
+                  1001 A+B Format <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+<script src="/js/comments.js"></script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">jiayao</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{&quot;enable&quot;:true,&quot;tags&quot;:&quot;none&quot;,&quot;js&quot;:&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;mathjax@3.1.4&#x2F;es5&#x2F;tex-mml-chtml.js&quot;}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/ArtificialIntelligence32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/ArtificialIntelligence16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="5IoOHPeK1Gs6LKpb_pJOXhrUePDQUxzqf0hPjeAzdLo">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+
+<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;jiayaoo3o.github.io&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:false,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;none&quot;,&quot;post_header&quot;:&quot;none&quot;,&quot;post_body&quot;:&quot;none&quot;,&quot;coll_header&quot;:&quot;none&quot;,&quot;sidebar&quot;:&quot;none&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;},&quot;path&quot;:&quot;&#x2F;search.xml&quot;,&quot;localsearch&quot;:{&quot;enable&quot;:true,&quot;trigger&quot;:&quot;auto&quot;,&quot;top_n_per_article&quot;:1,&quot;unescape&quot;:false,&quot;preload&quot;:false}}</script>
+<meta name="description" content="scoop是什么 Scoop是一款Windows下的命令行软件管理工具,类似于ubuntu下的apt,它存在的意义,就是为了解决Windows下没有一个统一包管理器的痛点,有了scoop,在Windows下也能一条命令直接安装,升级,卸载,切换软件的不同版本等">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Windows下的软件管理神器:scoop">
+<meta property="og:url" content="http://jiayaoo3o.github.io/2019/01/30/windows%E4%B8%8B%E7%9A%84%E8%BD%AF%E4%BB%B6%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A8-scoop/index.html">
+<meta property="og:site_name" content="jiayaoO3O&#39;s Blog">
+<meta property="og:description" content="scoop是什么 Scoop是一款Windows下的命令行软件管理工具,类似于ubuntu下的apt,它存在的意义,就是为了解决Windows下没有一个统一包管理器的痛点,有了scoop,在Windows下也能一条命令直接安装,升级,卸载,切换软件的不同版本等">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2019/01/31/5c528038a674b.png">
+<meta property="og:image" content="https://i.loli.net/2019/01/31/5c529f03b26cc.png">
+<meta property="og:image" content="https://i.loli.net/2019/01/31/5c52a47d6b568.png">
+<meta property="article:published_time" content="2019-01-30T03:40:00.000Z">
+<meta property="article:modified_time" content="2021-07-12T03:16:05.984Z">
+<meta property="article:author" content="jiayao">
+<meta property="article:tag" content="Windows10">
+<meta property="article:tag" content="包管理器">
+<meta property="article:tag" content="scoop">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2019/01/31/5c528038a674b.png">
+
+
+<link rel="canonical" href="http://jiayaoo3o.github.io/2019/01/30/windows%E4%B8%8B%E7%9A%84%E8%BD%AF%E4%BB%B6%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A8-scoop/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;http:&#x2F;&#x2F;jiayaoo3o.github.io&#x2F;2019&#x2F;01&#x2F;30&#x2F;windows%E4%B8%8B%E7%9A%84%E8%BD%AF%E4%BB%B6%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A8-scoop&#x2F;&quot;,&quot;path&quot;:&quot;2019&#x2F;01&#x2F;30&#x2F;windows下的软件管理神器-scoop&#x2F;&quot;,&quot;title&quot;:&quot;Windows下的软件管理神器:scoop&quot;}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<title>Windows下的软件管理神器:scoop | jiayaoO3O's Blog</title><script src="/js/config.js"></script>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">jiayaoO3O's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">sudo reboot</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#scoop%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-text">scoop是什么</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85scoop"><span class="nav-text">安装scoop</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8scoop"><span class="nav-text">使用scoop</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE%E8%BD%AF%E4%BB%B6"><span class="nav-text">查找软件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E8%BD%AF%E4%BB%B6"><span class="nav-text">安装软件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%B8%E8%BD%BD%E8%BD%AF%E4%BB%B6"><span class="nav-text">卸载软件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%87%E7%BA%A7%E8%BD%AF%E4%BB%B6"><span class="nav-text">升级软件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A3%80%E6%9F%A5%E8%BD%AF%E4%BB%B6%E7%8A%B6%E6%80%81"><span class="nav-text">检查软件状态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B8%85%E7%90%86%E7%BC%93%E5%AD%98"><span class="nav-text">清理缓存</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E8%BD%AF%E4%BB%B6%E6%97%A7%E7%89%88%E6%9C%AC"><span class="nav-text">删除软件旧版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E8%BD%AF%E4%BB%B6%E4%B8%BB%E9%A1%B5"><span class="nav-text">查看软件主页</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%87%E6%8D%A2%E8%BD%AF%E4%BB%B6%E7%89%88%E6%9C%AC"><span class="nav-text">切换软件版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E4%BD%BF%E7%94%A8%E4%BB%A3%E7%90%86"><span class="nav-text">设置使用代理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E9%A2%9D%E5%A4%96%E7%9A%84%E4%BB%93%E5%BA%93bucket"><span class="nav-text">添加额外的仓库bucket</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E5%8F%AF%E6%B7%BB%E5%8A%A0%E4%BB%93%E5%BA%93"><span class="nav-text">查看可添加仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E5%B7%B2%E7%BB%8F%E6%B7%BB%E5%8A%A0%E7%9A%84%E4%BB%93%E5%BA%93"><span class="nav-text">查看已经添加的仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E5%B7%B2%E7%BB%8F%E6%B7%BB%E5%8A%A0%E7%9A%84%E4%BB%93%E5%BA%93"><span class="nav-text">删除已经添加的仓库</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#scoop%E7%9A%84%E6%9C%AC%E5%9C%B0%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95"><span class="nav-text">Scoop的本地文件目录</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#scoop%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9%E5%88%86%E6%9E%90"><span class="nav-text">scoop的优缺点分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#scoop%E7%9A%84%E4%BC%98%E7%82%B9"><span class="nav-text">scoop的优点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#scoop%E7%9A%84%E7%BC%BA%E7%82%B9"><span class="nav-text">scoop的缺点</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text">总结</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="jiayao"
+      src="/images/pic.jpg">
+  <p class="site-author-name" itemprop="name">jiayao</p>
+  <div class="site-description" itemprop="description">重构！重构！重构！</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">130</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">37</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/jiayaoO3O" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;jiayaoO3O" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/jiayao3.14@outlook.com" title="E-Mail → jiayao3.14@outlook.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://jiayaoo3o.github.io/2019/01/30/windows%E4%B8%8B%E7%9A%84%E8%BD%AF%E4%BB%B6%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A8-scoop/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/pic.jpg">
+      <meta itemprop="name" content="jiayao">
+      <meta itemprop="description" content="重构！重构！重构！">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jiayaoO3O's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Windows下的软件管理神器:scoop<a href="https://github.com/jiayaoO3O/jiayaoO3O.github.io/blob/Blog/source/_posts/windows%E4%B8%8B%E7%9A%84%E8%BD%AF%E4%BB%B6%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A8-scoop.md" class="post-edit-link" title="编辑" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-01-30 11:40:00" itemprop="dateCreated datePublished" datetime="2019-01-30T11:40:00+08:00">2019-01-30</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-07-12 11:16:05" itemprop="dateModified" datetime="2021-07-12T11:16:05+08:00">2021-07-12</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="scoop是什么">scoop是什么</h1>
+<p><a target="_blank" rel="noopener" href="https://scoop.sh/">Scoop</a>是一款Windows下的命令行软件管理工具,类似于ubuntu下的apt,它存在的意义,就是为了解决Windows下没有一个统一包管理器的痛点,有了scoop,在Windows下也能一条命令直接安装,升级,卸载,切换软件的不同版本等</p>
+<span id="more"></span>
+<hr />
+<h1 id="安装scoop">安装scoop</h1>
+<p>scoop的使用与安装都要依赖PowerShell,所以电脑系统最好是Windows10的.安装方法很简单,以下命令都在PowerShell中输入:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set-executionpolicy remotesigned -s currentuser</span><br></pre></td></tr></table></figure>
+<p>会提示是否允许执行远程脚本,输入a同意全部.</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">iex</span> (<span class="built_in">new-object</span> net.webclient).downloadstring(<span class="string">&#x27;https://get.scoop.sh&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>运行上面这条命令,scoop就会安装在你的C: 用户名,这时候在PowerShell中输入</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scoop help</span><br></pre></td></tr></table></figure>
+<p>就会显示出scoop的基本操作命令</p>
+<p><img src="https://i.loli.net/2019/01/31/5c528038a674b.png" /></p>
+<hr />
+<h1 id="使用scoop">使用scoop</h1>
+<p>scoop的用法与一般的Linux软件类似,都是</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scoop 操作 对象软件</span><br></pre></td></tr></table></figure>
+<h2 id="查找软件">查找软件</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scoop search 软件名</span><br></pre></td></tr></table></figure>
+<p>例如:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scoop search vim</span><br></pre></td></tr></table></figure>
+<p>如果后面不跟软件名,直接输入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scoop search			</span><br></pre></td></tr></table></figure>
+<p>那scoop会直接显示仓库目前有的所有软件,可以一个一个慢慢看</p>
+<h2 id="安装软件">安装软件</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scoop install 软件名</span><br></pre></td></tr></table></figure>
+<p>例如:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">scoop install vim</span><br><span class="line">scoop install python</span><br><span class="line">scoop install nodejs</span><br></pre></td></tr></table></figure>
+<p>即可安装vim</p>
+<h2 id="卸载软件">卸载软件</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scoop uninstall 软件名</span><br></pre></td></tr></table></figure>
+<p>例如:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scoop uninstall vim</span><br></pre></td></tr></table></figure>
+<h2 id="升级软件">升级软件</h2>
+<p>如果想要查看今天仓库更新了哪些软件,输入:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scoop update</span><br></pre></td></tr></table></figure>
+<p>就会显示所有今天升级更新的软件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scoop update 软件名</span><br></pre></td></tr></table></figure>
+<p>即可更新对应软件</p>
+<p>如果想要直接升级所有软件,输入:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scoop update *</span><br></pre></td></tr></table></figure>
+<p>即可升级所有软件</p>
+<h2 id="检查软件状态">检查软件状态</h2>
+<p>如果想要知道自己有哪些软件可以升级,输入:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scoop status</span><br></pre></td></tr></table></figure>
+<p>如果想要查看scoop是否出现了问题,输入:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scoop checkup</span><br></pre></td></tr></table></figure>
+<h2 id="清理缓存">清理缓存</h2>
+<p>每当scoop下载了软件之后,再卸载这个软件,当初下载的这个软件包文件还会存在,所以下一次安装就不用再下载了,想要清理缓存,可以输入:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scoop cache rm 软件名</span><br></pre></td></tr></table></figure>
+<p>想要清除所有缓存,可以输入:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scoop cache rm *</span><br></pre></td></tr></table></figure>
+<h2 id="删除软件旧版本">删除软件旧版本</h2>
+<p>每当scoop升级了软件之后,旧版本仍会保留在电脑上,以便于切换到旧版本,想要删除软件旧版本,输入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scoop cleanup 软件名</span><br></pre></td></tr></table></figure>
+<p>想要删除所有软件的所有旧版本,输入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scoop cleanup *</span><br></pre></td></tr></table></figure>
+<h2 id="查看软件主页">查看软件主页</h2>
+<p>如果你想了解仓库中的某一个软件,输入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scoop home 软件名</span><br></pre></td></tr></table></figure>
+<p>即可打开软件的主页</p>
+<h2 id="切换软件版本">切换软件版本</h2>
+<p>如果同时安装了某个软件的不同大版本,例如python(默认的python是python3)和python27,或者同时安装了java8和java11,可以通过:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scoop reset 想要使用的版本名称</span><br></pre></td></tr></table></figure>
+<p>进行切换</p>
+<h2 id="设置使用代理">设置使用代理</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scoop config proxy 127.0.0.1:10809</span><br></pre></td></tr></table></figure>
+<hr />
+<h1 id="添加额外的仓库bucket">添加额外的仓库bucket</h1>
+<p>scoop中的仓库被叫做bucket,安装好的scoop默认会带有一个主仓库,名字就叫Scoop,主仓库里面的软件,有很多,但是基本都是比较适合程序员的软件,更重要的一点是,要入选主仓库的软件,都是没有GUI的,也就是说都是命令行软件,而scoop官方还有一个第三方bucket,里面有更多的常用软件,所以我们要添加额外的仓库</p>
+<h2 id="查看可添加仓库">查看可添加仓库</h2>
+<p>想要查看可添加仓库,输入:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scoop bucket known</span><br></pre></td></tr></table></figure>
+<p>即可显示仓库列表</p>
+<p><img src="https://i.loli.net/2019/01/31/5c529f03b26cc.png" /></p>
+<p>一般来说,比较有用的仓库如下,要添加仓库,输入:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">scoop bucket add extras</span><br><span class="line">scoop bucket add java</span><br><span class="line">scoop bucket add jetbrains</span><br></pre></td></tr></table></figure>
+<p>添加了java库之后,就可以安装各个版本的jdk了,而且scoop会帮你自动设置好环境变量,真正做到了开箱即用,爽翻.</p>
+<p>如果想要添加不在上述列表的非官方仓库的话,输入:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scoop bucket add 仓库名 仓库的github地址</span><br></pre></td></tr></table></figure>
+<p>例如:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scoop bucket add Ash258 &#x27;https://github.com/Ash258/scoop-Ash258.git&#x27;</span><br></pre></td></tr></table></figure>
+<p>即可添加非官方仓库</p>
+<h2 id="查看已经添加的仓库">查看已经添加的仓库</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scoop bucket list</span><br></pre></td></tr></table></figure>
+<h2 id="删除已经添加的仓库">删除已经添加的仓库</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scoop bucket rm 仓库名</span><br></pre></td></tr></table></figure>
+<hr />
+<h1 id="scoop的本地文件目录">Scoop的本地文件目录</h1>
+<p>上面已经说了,scoop是安装在用户目录下的,目录格式为:</p>
+<p><img src="https://i.loli.net/2019/01/31/5c52a47d6b568.png" /></p>
+<p>这里最值得称道的是persist文件夹,因为我们知道,scoop安装的所有软件都是安装在scoop文件夹下的,那如果软件升级了的话,以前旧软件的设置和数据是不是全部清除了呢?例如vscode上的设置和安装的插件,是不是升级了之后,都没有了呢?不是的,因为scoop会将各个软件的设置数据,例如vscode软件的data文件夹(vscode的设置和插件都放在data文件夹),单独放到persist文件夹中,在用软链接链接到软件所在的文件夹,这样,每次升级软件,persist文件夹的各个软件的设置数据都会保持不变,从而保存设置.</p>
+<p>另一个需要注意的是,所有的对scoop操作都不要在文件夹中进行,因为有可能会破坏scoop的文件结构,想要对scoop进行任何操纵,都需要在命令行中进行</p>
+<hr />
+<h1 id="scoop的优缺点分析">scoop的优缺点分析</h1>
+<p>scoop作为一款Windows下的包管理器,意义是非凡的,尤其是对于程序员而言,它极大地解决了程序员安装各种开发环境的麻烦,一键自动设置环境变量,包括:</p>
+<ul>
+<li>dotnet core</li>
+<li>java</li>
+<li>python</li>
+<li>nodejs</li>
+<li>go</li>
+<li>kotlin</li>
+<li>ruby</li>
+</ul>
+<p>各种软件,包括:</p>
+<ul>
+<li>idea</li>
+<li>vscode</li>
+<li>vim</li>
+<li>git</li>
+<li>pycharm</li>
+<li>maven</li>
+<li>make</li>
+<li>gcc</li>
+<li>gdb</li>
+<li>mysql</li>
+<li>gradle</li>
+<li>android-sdk</li>
+</ul>
+<p>等,可以说,scoop真的是每一个程序员的必备神器</p>
+<h2 id="scoop的优点">scoop的优点</h2>
+<ol type="1">
+<li>干净,不会污染系统,保持最高度清洁.scoop安装的所有软件都会放在用户目录的scoop文件夹下</li>
+<li>简单,一句命令即可安装软件,开箱即用,不用再去各个软件的官网下载软件</li>
+<li>省心,升级软件及时,软件数量多,解决问题快</li>
+</ol>
+<h2 id="scoop的缺点">scoop的缺点</h2>
+<p>虽然scoop这么强大,但是它还是有缺点的</p>
+<ol type="1">
+<li>网络问题,因为scoop是外国人发明的,而且scoop里面的软件有一些也是外国软件,并且scoop的每一个软件下载地址都是软件的官网,所以有时候必须要科学上网才能下载,并且下载速度也不稳定,有一些软件很快,有一些软件却很慢</li>
+<li>安装问题,scoop的安装会有一个问题,就是如果你安装某个软件失败了,再安装一次,这时候scoop会提示你软件已经安装过了,但是安装失败又用不了,所以这个时候要先执行一次scoop uninstall卸载刚刚失败的软件,再安装</li>
+</ol>
+<hr />
+<h1 id="总结">总结</h1>
+<p>scoop可以说是我2018年遇到的最好用,对我帮助最大的软件,我第一次用这个软件的时候,马上拿出信用卡进行捐赠了,希望你也能喜欢这一款神器,💉 💧 🐮 🍺</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div></div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="jiayao 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.png" alt="jiayao 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>jiayao
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://jiayaoo3o.github.io/2019/01/30/windows%E4%B8%8B%E7%9A%84%E8%BD%AF%E4%BB%B6%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A8-scoop/" title="Windows下的软件管理神器:scoop">http://jiayaoo3o.github.io/2019/01/30/windows下的软件管理神器-scoop/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-ND</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Windows10/" rel="tag"><i class="fa fa-tag"></i> Windows10</a>
+              <a href="/tags/%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/" rel="tag"><i class="fa fa-tag"></i> 包管理器</a>
+              <a href="/tags/scoop/" rel="tag"><i class="fa fa-tag"></i> scoop</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2019/01/29/%E5%B9%BF%E4%B8%9C%E6%B5%B7%E6%B4%8B%E5%A4%A7%E5%AD%A6%E4%B8%89%E7%A7%8D%E8%B7%AF%E7%94%B1%E5%99%A8%E4%B8%8A%E7%BD%91%E6%96%B9%E5%BC%8F/" rel="prev" title="广东海洋大学三种路由器上网方式">
+                  <i class="fa fa-chevron-left"></i> 广东海洋大学三种路由器上网方式
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2019/03/01/Sakura-Frp-%E5%85%8D%E8%B4%B9%E7%9A%84%E9%AB%98%E9%80%9F%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E5%B7%A5%E5%85%B7/" rel="next" title="Sakura frp--免费的高速内网穿透工具">
+                  Sakura frp--免费的高速内网穿透工具 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+<script src="/js/comments.js"></script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">jiayao</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{&quot;enable&quot;:true,&quot;tags&quot;:&quot;none&quot;,&quot;js&quot;:&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;mathjax@3.1.4&#x2F;es5&#x2F;tex-mml-chtml.js&quot;}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>

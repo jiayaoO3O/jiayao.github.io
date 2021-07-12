@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/ArtificialIntelligence32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/ArtificialIntelligence16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="5IoOHPeK1Gs6LKpb_pJOXhrUePDQUxzqf0hPjeAzdLo">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+
+<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;jiayaoo3o.github.io&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:false,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;none&quot;,&quot;post_header&quot;:&quot;none&quot;,&quot;post_body&quot;:&quot;none&quot;,&quot;coll_header&quot;:&quot;none&quot;,&quot;sidebar&quot;:&quot;none&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;},&quot;path&quot;:&quot;&#x2F;search.xml&quot;,&quot;localsearch&quot;:{&quot;enable&quot;:true,&quot;trigger&quot;:&quot;auto&quot;,&quot;top_n_per_article&quot;:1,&quot;unescape&quot;:false,&quot;preload&quot;:false}}</script>
+<meta name="description" content="极限是学习高等数学的第一个知识点 , 这一章学习极限 , 主要就是学习计算极限.而计算极限最重要的一步 , 也是第一步 , 就是判断极限的型. 极限的型 极限的型可以粗略地分为4种 , 分别为 : \[ \frac cc&#x3D;C , \frac 0c&#x3D;0 , \frac c0&#x3D;\infty , \frac 00&#x3D;未定型 \] 所谓的未定型 , 就是结果是未知的 , 不可预料的 , 而前面三种的答案都是">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数学笔记-第一章-极限">
+<meta property="og:url" content="http://jiayaoo3o.github.io/2019/12/25/%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%B8%80%E7%AB%A0-%E6%9E%81%E9%99%90/index.html">
+<meta property="og:site_name" content="jiayaoO3O&#39;s Blog">
+<meta property="og:description" content="极限是学习高等数学的第一个知识点 , 这一章学习极限 , 主要就是学习计算极限.而计算极限最重要的一步 , 也是第一步 , 就是判断极限的型. 极限的型 极限的型可以粗略地分为4种 , 分别为 : \[ \frac cc&#x3D;C , \frac 0c&#x3D;0 , \frac c0&#x3D;\infty , \frac 00&#x3D;未定型 \] 所谓的未定型 , 就是结果是未知的 , 不可预料的 , 而前面三种的答案都是">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-12-25T08:27:56.000Z">
+<meta property="article:modified_time" content="2021-07-12T03:16:05.984Z">
+<meta property="article:author" content="jiayao">
+<meta property="article:tag" content="广东海洋大学">
+<meta property="article:tag" content="高等数学">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://jiayaoo3o.github.io/2019/12/25/%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%B8%80%E7%AB%A0-%E6%9E%81%E9%99%90/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;http:&#x2F;&#x2F;jiayaoo3o.github.io&#x2F;2019&#x2F;12&#x2F;25&#x2F;%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%B8%80%E7%AB%A0-%E6%9E%81%E9%99%90&#x2F;&quot;,&quot;path&quot;:&quot;2019&#x2F;12&#x2F;25&#x2F;数学笔记-第一章-极限&#x2F;&quot;,&quot;title&quot;:&quot;数学笔记-第一章-极限&quot;}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<title>数学笔记-第一章-极限 | jiayaoO3O's Blog</title><script src="/js/config.js"></script>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">jiayaoO3O's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">sudo reboot</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9E%81%E9%99%90%E7%9A%84%E5%9E%8B"><span class="nav-text">极限的型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%9E%81%E9%99%90%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-text">计算极限的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A9%E7%94%A8%E8%BF%9E%E7%BB%AD%E6%B1%82%E6%9E%81%E9%99%90"><span class="nav-text">1.利用连续求极限</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A9%E7%94%A8%E6%97%A0%E7%A9%B7%E5%B0%8F%E4%B8%8E%E6%97%A0%E7%A9%B7%E5%A4%A7%E7%9A%84%E5%85%B3%E7%B3%BB%E6%B1%82%E6%9E%81%E9%99%90"><span class="nav-text">2.利用无穷小与无穷大的关系求极限</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E5%A4%96%E8%AF%9D-%E5%A6%82%E4%BD%95%E5%B0%86%E5%8F%98%E5%BD%A2%E4%BD%93%E8%BD%AC%E5%8C%96%E4%B8%BA%E5%9B%9B%E5%A4%A7%E7%B1%BB%E5%9E%8B"><span class="nav-text">题外话 : 如何将变形体转化为四大类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A9%E7%94%A8%E6%9E%81%E9%99%90%E5%AD%98%E5%9C%A8%E7%9A%84%E5%85%85%E8%A6%81%E6%9D%A1%E4%BB%B6%E6%B1%82%E6%9E%81%E9%99%90"><span class="nav-text">3.利用极限存在的充要条件求极限</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A9%E7%94%A8%E5%A4%B9%E9%80%BC%E5%87%86%E5%88%99%E6%B1%82%E6%9E%81%E9%99%90%E5%86%B7%E9%97%A8"><span class="nav-text">4.利用夹逼准则求极限(冷门)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A9%E7%94%A8%E9%87%8D%E8%A6%81%E6%9E%81%E9%99%90%E4%B8%80%E6%B1%82%E6%9E%81%E9%99%90"><span class="nav-text">5.利用重要极限一求极限</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A9%E7%94%A8%E9%87%8D%E8%A6%81%E6%9E%81%E9%99%90%E4%BA%8C%E6%B1%82%E6%9E%81%E9%99%90%E9%87%8D%E8%A6%81"><span class="nav-text">6.利用重要极限二求极限(重要)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E8%90%BD%E4%B8%8D%E6%98%8E"><span class="nav-text">7.下落不明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A9%E7%94%A8%E6%9C%89%E7%95%8C%E5%87%BD%E6%95%B0%E4%B8%8E%E6%97%A0%E7%A9%B7%E5%B0%8F%E7%9B%B8%E4%B9%98%E4%BB%8D%E4%B8%BA%E6%97%A0%E7%A9%B7%E5%B0%8F%E6%B1%82%E6%9E%81%E9%99%90"><span class="nav-text">8.利用有界函数与无穷小相乘仍为无穷小求极限</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A9%E7%94%A8%E7%AD%89%E4%BB%B7%E6%B1%82%E6%9E%81%E9%99%90"><span class="nav-text">9.利用等价求极限</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E6%9D%9F"><span class="nav-text">结束</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="jiayao"
+      src="/images/pic.jpg">
+  <p class="site-author-name" itemprop="name">jiayao</p>
+  <div class="site-description" itemprop="description">重构！重构！重构！</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">130</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">37</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/jiayaoO3O" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;jiayaoO3O" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/jiayao3.14@outlook.com" title="E-Mail → jiayao3.14@outlook.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://jiayaoo3o.github.io/2019/12/25/%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%B8%80%E7%AB%A0-%E6%9E%81%E9%99%90/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/pic.jpg">
+      <meta itemprop="name" content="jiayao">
+      <meta itemprop="description" content="重构！重构！重构！">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jiayaoO3O's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          数学笔记-第一章-极限<a href="https://github.com/jiayaoO3O/jiayaoO3O.github.io/blob/Blog/source/_posts/%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%B8%80%E7%AB%A0-%E6%9E%81%E9%99%90.md" class="post-edit-link" title="编辑" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-12-25 16:27:56" itemprop="dateCreated datePublished" datetime="2019-12-25T16:27:56+08:00">2019-12-25</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-07-12 11:16:05" itemprop="dateModified" datetime="2021-07-12T11:16:05+08:00">2021-07-12</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">数学笔记</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0/%E7%AC%AC%E4%B8%80%E7%AB%A0/" itemprop="url" rel="index"><span itemprop="name">第一章</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>极限是学习高等数学的第一个知识点 , 这一章学习极限 , 主要就是学习计算极限.而计算极限最重要的一步 , 也是第一步 , 就是<strong>判断极限的型</strong>.</p>
+<h2 id="极限的型">极限的型</h2>
+<p>极限的型可以粗略地分为4种 , 分别为 : <span class="math display">\[
+\frac cc=C , \frac 0c=0 , \frac c0=\infty , \frac 00=未定型
+\]</span> 所谓的未定型 , 就是结果是未知的 , 不可预料的 , 而前面三种的答案都是唯一固定的 , 所以考试只会考未定型.</p>
+<h2 id="计算极限的方法">计算极限的方法</h2>
+<p>这里的方法细分可以分为9种 , 有一些方法在以后学了更高级的方法后就没用了 , 但也是用来打基础的.</p>
+<span id="more"></span>
+<h3 id="利用连续求极限">1.利用连续求极限</h3>
+<blockquote>
+<p>用于<span class="math inline">\(x\)</span>在<span class="math inline">\(f\left(x\right)\)</span>内有意义的<span class="math inline">\(\frac cc\)</span>题型</p>
+</blockquote>
+<p>简单来说 , 就是直接将x代入题目.</p>
+<p><strong>例如 :</strong> <span class="math display">\[
+\lim_{x\rightarrow2}\frac1{x-1}=1
+\]</span> 因为<span class="math inline">\(x=2\)</span>在<span class="math inline">\(f\left(x\right)\)</span>上有意义 , 直接代入就可以了.</p>
+<h3 id="利用无穷小与无穷大的关系求极限">2.利用无穷小与无穷大的关系求极限</h3>
+<blockquote>
+<p>解决<span class="math inline">\(\frac\infty\infty\)</span>型有理函数的题型</p>
+</blockquote>
+<p>无穷小于无穷大的关系 : <span class="math display">\[
+\frac 10=\infty  , \frac 1\infty=0
+\]</span> 由于无穷大<span class="math inline">\(\infty\)</span>是不允许参与极限的四则运算的 , 因此一个题目如果出现了无穷大必须变成无穷小才可以运算.</p>
+<p>要把<span class="math inline">\(\infty\)</span>转变为0 , 方法是把无穷<span class="math inline">\(\infty\)</span>放到分母 , <strong>也就是分子分母同时除以<span class="math inline">\(x\)</span>的最高次幂</strong>.</p>
+<p><strong>例如 :</strong> <span class="math display">\[
+\lim_{x\rightarrow\infty}\frac{3x+2}x
+\]</span> 由于<span class="math inline">\(x\)</span>的最高次幂是1次就让分子分母同时除以<span class="math inline">\(x\)</span> , 变成 : <span class="math display">\[
+\frac{3x+2}x=3+\frac2x
+\]</span> <span class="math display">\[
+\because\frac 2\infty=0
+\]</span> <span class="math display">\[
+\therefore\lim_{x\rightarrow\infty}\frac{3x+2}x=3
+\]</span> 这个方法 , 是解决这类型题目的通用方法 , 但是我们还有一些小技巧 , 去快速得到结果的那就是 :</p>
+<blockquote>
+<p>当遇到<span class="math inline">\(\frac\infty\infty\)</span>型有理函数时 - 当分子最高次幂与分母最高次幂相同时 , 极限值是各个最高次幂的系数和之商 - 当分子最高次幂小于分母时 , 极限为0 - 当分子最高次幂大于分母时 , 极限为<span class="math inline">\(\infty\)</span> - 口诀 : 上大无穷下大零</p>
+</blockquote>
+<p><strong>例如 :</strong> <span class="math display">\[
+\lim_{x\rightarrow\infty}\frac{3x+2}x
+\]</span> <span class="math inline">\(x\)</span>最高次幂1次 , 结果是<span class="math inline">\(x\)</span>的<strong>系数和的商</strong> , 就是<span class="math inline">\(\frac31=3\)</span></p>
+<p><strong>例如 :</strong> <span class="math display">\[
+\lim_{x\rightarrow\infty}\frac{\left(2x-1\right)^{30}\left(3x-2\right)^{20}}{\left(2x+1\right)^{50}}
+\]</span> 分子的最高次幂是<span class="math inline">\(x^{30}\cdot x^{20}=x^{50}\)</span> , 分母最高也是50次幂 , 不用算 , 答案就是系数和商 : <span class="math display">\[
+=\frac{2^{30}\cdot3^{20}}{2^{50}}=\left(\frac32\right)^{20}
+\]</span></p>
+<p><strong>例如 :</strong> <span class="math display">\[
+\lim_{x\rightarrow\infty}\frac{x^2+x}{x^4-3x^3+1}
+\]</span> 最高次幂是4次 , 分母比分子大 , 答案就是0.</p>
+<p><strong>例如 :</strong> <span class="math display">\[
+\lim_{n\rightarrow\infty}\frac{\left(n+2\right)^3+\left(2n+3\right)^3}{\left(n-1\right)\left(2n-1\right)\left(3n-3\right)}
+\]</span> 分子最高3次 , 分母各个<span class="math inline">\(n\)</span>乘了之后也是3次 , 看系数 , 分子第一个<span class="math inline">\(n\)</span>的系数是1 , 第二个<span class="math inline">\(n\)</span>的系数是<span class="math inline">\(2^3=8\)</span> , 相加是9;分母系数为6 , 所以答案就是<span class="math inline">\(\frac96=\frac32\)</span></p>
+<p><strong>例如 :</strong> <span class="math display">\[
+\lim_{n\rightarrow\infty}\frac{\left(n+1\right)\left(n+2\right)\left(n+3\right)}{5n^3}
+\]</span> 答案就是<span class="math inline">\(\frac15\)</span></p>
+<p>这个方法非常好用 , 但是要注意的是 , 首先要判断题目是不是<span class="math inline">\(\frac\infty\infty\)</span>型有理函数 , 否则不能直接这样使用 , 而且虽然通过奇技淫巧一眼看出答案 , 但是考试时<strong>除以<span class="math inline">\(x\)</span>的最高次幂</strong>这个过程还是要写的.</p>
+<h3 id="题外话-如何将变形体转化为四大类型">题外话 : 如何将变形体转化为四大类型</h3>
+<blockquote>
+<p>考试的时候很多情况下不会直接考四大型的原型 , 而是考它们的变形体 , 因此我们最终目的都是<strong>要把这些变形体改变成四大类型</strong>.</p>
+</blockquote>
+<p>而其中最常见的变形体有两种 : <span class="math display">\[
+\infty-\infty型 , 即一个无穷减去一个无穷的形式
+\]</span></p>
+<p><span class="math display">\[
+0\times\infty型 , 即一个0与一个无穷相乘的形式
+\]</span></p>
+<p>遇到<span class="math inline">\(\infty-\infty型\)</span>这种情况 , 通常会有两种形式 , 对应两种解法 :</p>
+<ul>
+<li>有根号 , 要有理化</li>
+<li>无根号 , 要通分</li>
+</ul>
+<p><strong>例如 :</strong> <span class="math display">\[
+\lim_{x\rightarrow+\infty}(\sqrt{x^2+x+1}-\sqrt{x^2-x+1})
+\]</span> 这道题就是 , 一个无穷减去另一个无穷的题型 , 也就是<span class="math inline">\(\infty-\infty型\)</span> , 并且有根号 , 所以按照解法 , 就是有理化 , 通过平方差公式将<span class="math inline">\(\infty-\infty\)</span>转变成<span class="math inline">\(\frac\infty\infty\)</span> : <span class="math display">\[
+=\lim_{x\rightarrow+\infty}\frac{2x}{\sqrt{x^2+x+1}+\sqrt{x^2-x+1}}
+\]</span> 这个时候就变成了上面说的<span class="math inline">\(\frac\infty\infty\)</span>型有理函数了 , 直接用奇技淫巧 , 看<span class="math inline">\(x\)</span>最高次幂 , 分子和分母都是1次 ,</p>
+<blockquote>
+<p>注意分母的根号 , 这里<span class="math inline">\(x\)</span>开了根号后是1次 , 不是2次</p>
+</blockquote>
+<p>当分子最高次幂与分母最高次幂相同时 , 极限值是各个最高次幂的系数之商 : <span class="math display">\[
+=\frac2{1+1}=1
+\]</span> <strong>例如 :</strong> <span class="math display">\[
+\lim_{x\rightarrow 1}\left(\frac1{1-x}-\frac3{1-x^3}\right)
+\]</span> 对于没有根号的<span class="math inline">\(\infty-\infty型\)</span> , 就需要进行通分 : <span class="math display">\[
+=\lim_{x\rightarrow 1}\frac{1+x+x^2-3}{1-x^3}
+\]</span> 这个时候代入<span class="math inline">\(x=1\)</span>就变成了<span class="math inline">\(\frac 00=未定型\)</span> , 还得继续进行约分.如果因为<span class="math inline">\(x\rightarrow 1\)</span>而导致一个极限是<span class="math inline">\(\frac 00\)</span> , 说明<span class="math inline">\(\left(x-1\right)\)</span>一定是这个方程的一个根 , 也就是说 , 分子和分母一定可以同时消去一个<span class="math inline">\(\left(x-1\right)\)</span> , 这可以为约分提供一个切入的思路. <span class="math display">\[
+=\lim_{x\rightarrow 1}\frac{\left(x-1\right)\left(x+2\right)}{\left(1-x\right)\left(1+x+x^2\right)}
+\]</span></p>
+<p><span class="math display">\[
+=-\lim_{x\rightarrow 1}\frac{x+2}{1+x+x^2}=-1
+\]</span></p>
+<p>这时候就直接变成<span class="math inline">\(\frac cc\)</span> , 代入<span class="math inline">\(x\rightarrow 1\)</span> , 结果就出来了 , 等于<span class="math inline">\(-1\)</span></p>
+<p>遇到<span class="math inline">\(0\times\infty型\)</span>这种情况 , 就更简单了 , 因为无穷大和无穷小之间可以相互转化 : <span class="math display">\[
+0\times\infty=\frac1\infty\times\infty=\frac\infty\infty
+\]</span></p>
+<p><span class="math display">\[
+0\times\infty=\frac10\times0=\frac00
+\]</span></p>
+<p>所以我们遇到<span class="math inline">\(0\times\infty型\)</span>时只要通过转换 , 把任意一个变成分母 , 就可以变成标准型了.</p>
+<h3 id="利用极限存在的充要条件求极限">3.利用极限存在的充要条件求极限</h3>
+<blockquote>
+<p>解决分段函数的分段点的极限问题</p>
+</blockquote>
+<p>极限存在的充要条件求极限 : &gt; 如果函数在该点的极限存在 , 则该点的<strong>左右极限存在并且相等</strong> &gt; 这句话说明 , 通过充要条件 , 满足下面三点 , 即极限存在 : &gt; &gt; - 左极限存在 &gt; - 右极限存在 &gt; - 两者相等</p>
+<p><strong>例如 :</strong> <span class="math display">\[
+设f\left(x\right)=\left\{\begin{array}{l}3x+2 , x\leq0\\x^2+1 , 0&lt;x\leq1\\\frac2x , 0&lt;x\end{array}\right.
+\]</span></p>
+<p><span class="math inline">\(分别讨论x\rightarrow 0以及x\rightarrow 1时f(x)的极限是否存在\)</span></p>
+<p>使用极限存在的充要条件 : <span class="math display">\[
+当x\rightarrow 0时
+\]</span></p>
+<p><span class="math display">\[
+左极限 :\lim_{x\rightarrow0^-}f\left(x\right)=\lim_{x\rightarrow0^-}\left(3x+2\right)=2
+\]</span></p>
+<p><span class="math display">\[
+右极限 :\lim_{x\rightarrow0^+}f\left(x\right)=\lim_{x\rightarrow0^+}\left(x^2+1\right)=1
+\]</span></p>
+<p><span class="math display">\[
+\because\lim_{x\rightarrow0^-}f\left(x\right)\neq\lim_{x\rightarrow0^+}f\left(x\right)
+\]</span></p>
+<p><span class="math display">\[
+\therefore\lim_{x\rightarrow0}f\left(x\right)不存在
+\]</span></p>
+<p><span class="math display">\[
+当x\rightarrow 1时
+\]</span></p>
+<p><span class="math display">\[
+左极限 :\lim_{x\rightarrow1^-}f\left(x\right)=\lim_{x\rightarrow1^-}\left(x^2+1\right)=2
+\]</span></p>
+<p><span class="math display">\[
+右极限 :\lim_{x\rightarrow1^+}f\left(x\right)=\lim_{x\rightarrow1^+}\left(\frac2x\right)=2
+\]</span></p>
+<p><span class="math display">\[
+\because\lim_{x\rightarrow1^-}f\left(x\right)\neq\lim_{x\rightarrow1^+}f\left(x\right)
+\]</span></p>
+<p><span class="math display">\[
+\therefore\lim_{x\rightarrow1}f\left(x\right)存在
+\]</span></p>
+<blockquote>
+<p>注意 : 分段函数分为显分段和隐分段 , 显分段是直接可以看出来的 , 就像上面那题 , 一眼看出是分段函数 , 但是隐分段函数可能不能一下子被想起来 , 例如下面两种形式 , 要意识到是分段函数 : - 绝对值函数 - <span class="math inline">\(a^\infty\)</span>对于<span class="math inline">\(+\infty\)</span>和<span class="math inline">\(-\infty\)</span>有区别 , 例如<span class="math inline">\(\left(\frac12\right)^\infty\)</span> , 当是<span class="math inline">\(+\infty\)</span>时 , 极限是0 ; 当是<span class="math inline">\(-\infty\)</span>时 , 极限是无穷大.</p>
+</blockquote>
+<h3 id="利用夹逼准则求极限冷门">4.利用夹逼准则求极限(冷门)</h3>
+<blockquote>
+<p>解决<strong>数列和</strong>与<strong>含有n次方阶乘</strong>的极限问题</p>
+</blockquote>
+<p>数列和的极限问题有4种 : &gt; - 等差数列求极限 &gt; - 等比数列求极限 &gt; - 可以裂项数列求极限 &gt; - 夹逼准则求极限</p>
+<p>一个题目只有当前面三种数列形式都不符合时 , 才使用最后一个夹逼准则求极限.</p>
+<p><strong>例如 :</strong></p>
+<p>等差数列 : <span class="math display">\[
+\lim_{n\rightarrow\infty}\frac{1+2+3+\dots+\left(n-1\right)}{n^2}
+\]</span> 有通项公式 : <span class="math display">\[
+=\lim_{n\rightarrow\infty}\frac{\frac{\left(n-1\right)\left(n-1+1\right)}2}{n^2}=\frac 12
+\]</span> <strong>例如 :</strong></p>
+<p>等比数列 : <span class="math display">\[
+\lim_{n\rightarrow\infty}\left(1+\frac12+\frac1{2^2}+\dots+\frac1{2^n}\right)
+\]</span> 有通项公式 : <span class="math display">\[
+=\lim_{n\rightarrow\infty}\frac{1-\frac1{2^{n+1}}}{1-\frac12}=2
+\]</span> 上面两种题型 , 就是等差与等比数列 , 有直接的解法 , 并不需要使用夹逼准则.</p>
+<blockquote>
+<p><strong>夹逼准则 :</strong> 如果数列<span class="math inline">\(x_n\)</span> , <span class="math inline">\(y_n\)</span> , <span class="math inline">\(z_n\)</span>满足下列条件 :</p>
+<ul>
+<li><span class="math inline">\(y_n\leq x_n\leq z_n\)</span> <span class="math inline">\((n=1 , 2 , 3 , \dots)\)</span></li>
+<li><span class="math inline">\(\lim_{n\rightarrow\infty}y_n=\lim_{n\rightarrow\infty}z_n=a\)</span></li>
+</ul>
+<p>那么数列<span class="math inline">\(x_n\)</span>的极限存在 , 且<span class="math inline">\(\lim_{n\rightarrow\infty}x_n=a\)</span></p>
+</blockquote>
+<p>夹逼准则的使用方法是 :</p>
+<p><strong>左边数列<span class="math inline">\(y_n\)</span>要取所有的最小项 , 右边数列<span class="math inline">\(z_n\)</span>取所有的最大项</strong>.</p>
+<p><strong>例如 :</strong> <span class="math display">\[
+\lim_{n\rightarrow\infty}n\left(\frac1{n^2+\pi}+\frac1{n^2+2\pi}+\dots+\frac1{n^2+n\pi}\right)
+\]</span> 按照上面说的夹逼准则的使用方法 , 左边选择这个数列的最小项 , 右边选择这个数列的最大项 <span class="math display">\[
+当x\rightarrow \infty , 最小项为y_n=\frac1{n^2+n\pi} , 最大项为z_n=\frac1{n^2+\pi}
+\]</span></p>
+<p><span class="math display">\[
+\therefore n\cdot\frac1{n^2+n\pi}\leq n\left(\frac1{n^2+\pi}+\frac1{n^2+2\pi}\right)\leq n\cdot\frac1{n^2+\pi}
+\]</span></p>
+<p><span class="math display">\[
+\lim_{n\rightarrow\infty}y_n=\lim_{n\rightarrow\infty}\left(n\cdot\frac n{n^2+n\pi}\right)=\lim_{n\rightarrow\infty}\frac1{1+\frac\pi n}=1
+\]</span></p>
+<p><span class="math display">\[
+\lim_{n\rightarrow\infty}z_n=\lim_{n\rightarrow\infty}\left(n\cdot\frac n{n^2+\pi}\right)=\lim_{n\rightarrow\infty}\frac1{1+\frac\pi {n^2}}=1
+\]</span></p>
+<p><span class="math display">\[
+\because\lim_{n\rightarrow\infty}y_n=\lim_{n\rightarrow\infty}z_n=1
+\]</span></p>
+<p><span class="math display">\[
+\therefore\lim_{n\rightarrow\infty}n\left(\frac1{n^2+\pi}+\frac1{n^2+2\pi}+\dots+\frac1{n^2+n\pi}\right)=1
+\]</span></p>
+<blockquote>
+<p>注意 : 夹逼准则只用来解决数列问题 , 函数问题会有比夹逼准则更好的方法 , 所以函数问题不要用夹逼准则.</p>
+</blockquote>
+<h3 id="利用重要极限一求极限">5.利用重要极限一求极限</h3>
+<blockquote>
+<p>解决<span class="math inline">\(\frac\infty\infty型\)</span>三角函数极限问题</p>
+</blockquote>
+<p>重要极限一公式 : <span class="math display">\[
+\lim_{x\rightarrow0}\left(\frac{\sin X}X\right)=1
+\]</span></p>
+<p><span class="math display">\[
+\lim_{x\rightarrow0}\left(\frac{\tan X}X\right)=1
+\]</span></p>
+<p><span class="math display">\[
+\lim_{x\rightarrow0}\left(\frac X{\sin X}\right)=1
+\]</span></p>
+<p>这里的<span class="math inline">\(X\)</span>可以指一个<span class="math inline">\(f(x)\)</span>整体 , 例如分子假如是<span class="math inline">\(\sin 3x\)</span> , 那么如果分母也一样是<span class="math inline">\(3x\)</span> , 那结论一样正确.</p>
+<p><strong>例如 :</strong> <span class="math display">\[
+\lim_{x\rightarrow0}\frac{x-\sin2x}{x+\sin2x}
+\]</span></p>
+<p><span class="math display">\[
+=\lim_{x\rightarrow0}\frac{1-\frac{\sin2x}x}{1+\frac{\sin2x}x}
+\]</span></p>
+<p>这里<span class="math inline">\(\sin\)</span>后面是<span class="math inline">\(2x\)</span> , 但是分母只有一个<span class="math inline">\(x\)</span> , 所以得让分子和分母变为相同 : <span class="math display">\[
+=\lim_{x\rightarrow0}\frac{1-2\frac{\sin2x}{2x}}{1+2\frac{\sin2x}{2x}}
+\]</span> 此时使用重要极限一 : <span class="math display">\[
+=\frac {1-2}{1+2}
+\]</span></p>
+<h3 id="利用重要极限二求极限重要">6.利用重要极限二求极限(重要)</h3>
+<blockquote>
+<p>主要解决<strong>幂指函数</strong>的极限问题</p>
+</blockquote>
+<blockquote>
+<p>幂指函数 : 指底数是变量 , 指数也是变量的函数 , 例如 :</p>
+<ul>
+<li><span class="math inline">\(x^x\)</span></li>
+<li><span class="math inline">\(xln\left(x\right)\)</span></li>
+<li><span class="math inline">\(\sqrt[x]x\)</span></li>
+</ul>
+<p>都是幂指函数的常见形态</p>
+</blockquote>
+<p>重要极限二公式 : <span class="math display">\[
+\lim_{X\rightarrow\infty}\left(1+\frac1X\right)^X=e
+\]</span></p>
+<p><span class="math display">\[
+\lim_{X\rightarrow0}\left(1+X\right)^\frac1X=e
+\]</span></p>
+<p>一个求极限题目 , 必须是<strong>1加无穷小的无穷大次方型</strong> , 才能使用上述的重要极限二公式.</p>
+<p>这种题型的解法比较单一 , 就是要<strong>配出1+</strong> , 然后按照上面两个公式去凑就行了.</p>
+<p><strong>例如 :</strong> <span class="math display">\[
+\lim_{n\rightarrow\infty}\left(1+\frac1n\right)^{n+3}
+\]</span> 首先判断当<span class="math inline">\(x\rightarrow \infty\)</span>时 , 是不是<strong>1加无穷小的无穷大次方</strong> , 发现是 , 所以用重要极限二公式来解决.</p>
+<p>由题目可知 , 重要极限二公式中的<span class="math inline">\(X\)</span>是<span class="math inline">\(n\)</span> , 但是指数部分是<span class="math inline">\(n+3\)</span> , 所以要变成<span class="math inline">\(n\)</span> : <span class="math display">\[
+=\lim_{n\rightarrow\infty}\left(1+\frac1n\right)^{n\times\frac1n\times(n+3)}
+\]</span></p>
+<p><span class="math display">\[
+=\lim_{n\rightarrow\infty}e^{\frac1n\left(n+3\right)}
+\]</span></p>
+<p><span class="math display">\[
+=e^1
+\]</span></p>
+<p><strong>例如 :</strong> <span class="math display">\[
+\lim_{x\rightarrow0}\left(1-2x\right)^\frac1x
+\]</span> 也是要配出一个<strong>1加无穷小的无穷大次方</strong> : <span class="math display">\[
+=\lim_{x\rightarrow0}\left(1+\left(-2x\right)\right)^{\frac1{-2x}(-2x){(\frac 1x})}
+\]</span> 这时候使用重要极限二 : <span class="math display">\[
+=\lim_{x\rightarrow0}e^{\frac1x\left(-2x\right)}=e^{-2}
+\]</span> <strong>例如 :</strong> <span class="math display">\[
+\lim_{x\rightarrow\infty}\left(1+\frac kx\right)^x
+\]</span> 也要配出<strong>1加无穷小的无穷大次方</strong> : <span class="math display">\[
+=\lim_{x\rightarrow\infty}\left[\left(1+\frac kx\right)^\frac xk\right]^k
+\]</span> 这时候使用重要极限二 : <span class="math display">\[
+=e^k
+\]</span> <strong>例如 :</strong> <span class="math display">\[
+\lim_{x\rightarrow\infty}\left(\frac{x^2}{x^2-1}\right)^x
+\]</span> 配出<strong>1加无穷小的无穷大次方</strong> : <span class="math display">\[
+=\lim_{x\rightarrow\infty}\left(1+\frac1{x^2-1}\right)^x
+\]</span> 此时指数和分母仍然不一致 , 继续变 : <span class="math display">\[
+=\lim_{x\rightarrow\infty}\left[\left(1+\frac1{x^2-1}\right)^{x^2-1}\right]^\frac x{x^2-1}
+\]</span></p>
+<p><span class="math display">\[
+=e^0=1
+\]</span></p>
+<h3 id="下落不明">7.下落不明</h3>
+<h3 id="利用有界函数与无穷小相乘仍为无穷小求极限">8.利用有界函数与无穷小相乘仍为无穷小求极限</h3>
+<blockquote>
+<p>主要解决下面4种有界函数的极限 : - <span class="math inline">\(sin\infty\)</span> - <span class="math inline">\(cos \infty\)</span> - <span class="math inline">\(arctan\infty\)</span> - <span class="math inline">\(arccot \infty\)</span></p>
+</blockquote>
+<p>上述四种函数都是有界函数 , 它们与0相乘 , 结果就是0</p>
+<p><strong>例如 :</strong> <span class="math display">\[
+\lim_{x\rightarrow\infty}\frac{\sin x}x
+\]</span></p>
+<p><span class="math display">\[
+\because当x\rightarrow\infty时 , \frac 1x是无穷小量 , \sin x是有界量
+\]</span></p>
+<p><span class="math display">\[
+\therefore\lim_{x\rightarrow\infty}\frac{\sin x}x=0
+\]</span></p>
+<p><strong>例如 :</strong> <span class="math display">\[
+\lim_{x\rightarrow\infty}\frac{\arctan x}x
+\]</span></p>
+<p><span class="math display">\[
+\because当x\rightarrow\infty时 , \frac 1x是无穷小量 , \arctan x是有界量 , \left|\arctan\;x\right|&lt;\frac\pi2
+\]</span></p>
+<p><span class="math display">\[
+\therefore\lim_{x\rightarrow\infty}\frac{\arctan x}x=0
+\]</span></p>
+<h3 id="利用等价求极限">9.利用等价求极限</h3>
+<blockquote>
+<p>只适用于无穷小的题型</p>
+</blockquote>
+<blockquote>
+<p>等价无穷小 : 默认<span class="math inline">\(A\)</span> , <span class="math inline">\(B\)</span>是无穷小函数 , 即为0 , 则当<span class="math inline">\(\lim\left(\frac AB\right)=1\)</span>时称做<span class="math inline">\(A\)</span> , <span class="math inline">\(B\)</span>等价无穷小. 在此前提下当<span class="math inline">\(x\rightarrow 0\)</span> , 有以下等价关系 : - <span class="math inline">\(\sin x\rightleftharpoons x\)</span> - <span class="math inline">\(\tan x\rightleftharpoons x\)</span> - <span class="math inline">\(\arcsin x\rightleftharpoons x\)</span> - <span class="math inline">\(\arctan x\rightleftharpoons x\)</span> - <span class="math inline">\(1-\cos x\rightleftharpoons\frac12x^2\)</span> - <span class="math inline">\(\ln\left(1+x\right)\rightleftharpoons x\)</span> - <span class="math inline">\(\left(1+x\right)^2-1\rightleftharpoons ax , 其中a \neq 0且为常数\)</span> - <span class="math inline">\(e^x-1\rightleftharpoons x\)</span> - <span class="math inline">\(a^x-1\rightleftharpoons x\ln a , 其中a&gt;0\)</span></p>
+<p>这里的<span class="math inline">\(x\)</span>不单单指<span class="math inline">\(x\)</span> , 也可以指一个<span class="math inline">\(f(x)\)</span>整体 , 即<span class="math inline">\(\sin f(x)\rightleftharpoons f(x)\)</span></p>
+</blockquote>
+<p>学习了等价变换之后 , 很多题目就变得简单起来了.</p>
+<p><strong>例如 :</strong> <span class="math display">\[
+\lim_{x\rightarrow0}\frac{\arctan 3x}{5x}
+\]</span> <span class="math display">\[
+\because \arctan 3x\rightleftharpoons 3x
+\]</span> <span class="math display">\[
+\therefore=\lim_{x\rightarrow0}\frac{3x}{5x}=\frac 35
+\]</span></p>
+<p><strong>例如 :</strong> <span class="math display">\[
+\lim_{x\rightarrow0}\frac{\left(\sin x^3\right)\tan x}{1-\cos x^2}
+\]</span></p>
+<p><span class="math display">\[
+\because \tan x\rightleftharpoons x , \sin x^3\rightleftharpoons x^3 , 1-\cos {(x^2)}\rightleftharpoons\frac12{(x^2)}^2
+\]</span></p>
+<p><span class="math display">\[
+\therefore=\lim_{x\rightarrow0}\frac{x^3\times x}{\frac12\left(x^2\right)^2}=2
+\]</span></p>
+<p><strong>例如 :</strong> <span class="math display">\[
+\lim_{x\rightarrow0}\frac{\ln\left(1+3x\sin x\right)}{\tan x^2}
+\]</span></p>
+<p><span class="math display">\[
+=\lim_{x\rightarrow0}\frac{3x\sin x}{x^2}
+\]</span></p>
+<p><span class="math display">\[
+=\lim_{x\rightarrow 0}\frac{3x^2}{x^2}=3
+\]</span></p>
+<p><strong>例如 :</strong> <span class="math display">\[
+\lim_{x\rightarrow0}\frac{e^{5x}-1}x
+\]</span></p>
+<p><span class="math display">\[
+=\lim_{x\rightarrow0}\frac{5x}x=5
+\]</span></p>
+<blockquote>
+<p>等价求极限是一个非常强大的方法 , 但是在用的时候必须注意的两个点 : - 使用等价之前一定要看清楚是不是无穷小 - 满足上一个条件的情况下 , 等价只能用于乘除 , 不能用于加减 , 遇到加减必须转换成乘除</p>
+</blockquote>
+<p><strong>例如 :</strong> <span class="math display">\[
+\lim_{x\rightarrow0}\frac{\tan x-\sin x}{\sin^32x}
+\]</span></p>
+<p><span class="math display">\[
+当x\rightarrow0时 , \tan x\rightleftharpoons x , \sin x\rightleftharpoons x
+\]</span></p>
+<p><span class="math display">\[
+\therefore原式等价于\lim_{x\rightarrow0}\frac{x-x}{\left(2x\right)^3}=0
+\]</span></p>
+<p><strong>上述方法是绝对的错误的!!!</strong></p>
+<p>这就是上面说的 , 等价求极限 , 只能用于乘除 , 不能用于加减.</p>
+<p>正确方法是先得将加减转换成乘除 : <span class="math display">\[
+\because\tan x-\sin x=\tan x\left(1-\cos x\right)\rightleftharpoons\frac12x^3 , \sin2x\rightleftharpoons2x
+\]</span></p>
+<p><span class="math display">\[
+\therefore\lim_{x\rightarrow0}\frac{\tan x-\sin x}{\sin^32x}=\lim_{x\rightarrow0}\frac{\frac12 x^3}{\left(2x\right)^3}=\frac 1{16}
+\]</span></p>
+<h2 id="结束">结束</h2>
+<p>高数第一章是比较有意思的一章 , 大一新生高考完还有点学习的劲头 , 赶紧假装努力奋斗一下吧 , 后面的课你就没啥激情了.</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div></div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="jiayao 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.png" alt="jiayao 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>jiayao
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://jiayaoo3o.github.io/2019/12/25/%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%B8%80%E7%AB%A0-%E6%9E%81%E9%99%90/" title="数学笔记-第一章-极限">http://jiayaoo3o.github.io/2019/12/25/数学笔记-第一章-极限/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-ND</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E5%B9%BF%E4%B8%9C%E6%B5%B7%E6%B4%8B%E5%A4%A7%E5%AD%A6/" rel="tag"><i class="fa fa-tag"></i> 广东海洋大学</a>
+              <a href="/tags/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/" rel="tag"><i class="fa fa-tag"></i> 高等数学</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2019/12/24/%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E7%AC%AC%E9%9B%B6%E7%AB%A0-%E4%B8%80%E5%88%87%E7%9A%84%E5%BC%80%E5%A7%8B/" rel="prev" title="数学笔记-第零章-一切的开始">
+                  <i class="fa fa-chevron-left"></i> 数学笔记-第零章-一切的开始
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2019/12/26/%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%BF%9E%E7%BB%AD%E4%B8%8E%E9%97%B4%E6%96%AD/" rel="next" title="数学笔记-第一章-连续与间断">
+                  数学笔记-第一章-连续与间断 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+<script src="/js/comments.js"></script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">jiayao</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{&quot;enable&quot;:true,&quot;tags&quot;:&quot;none&quot;,&quot;js&quot;:&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;mathjax@3.1.4&#x2F;es5&#x2F;tex-mml-chtml.js&quot;}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>

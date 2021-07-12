@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/ArtificialIntelligence32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/ArtificialIntelligence16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="5IoOHPeK1Gs6LKpb_pJOXhrUePDQUxzqf0hPjeAzdLo">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+
+<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;jiayaoo3o.github.io&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:false,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;none&quot;,&quot;post_header&quot;:&quot;none&quot;,&quot;post_body&quot;:&quot;none&quot;,&quot;coll_header&quot;:&quot;none&quot;,&quot;sidebar&quot;:&quot;none&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;},&quot;path&quot;:&quot;&#x2F;search.xml&quot;,&quot;localsearch&quot;:{&quot;enable&quot;:true,&quot;trigger&quot;:&quot;auto&quot;,&quot;top_n_per_article&quot;:1,&quot;unescape&quot;:false,&quot;preload&quot;:false}}</script>
+<meta name="description" content="题目 People on Mars count their numbers with base 13:  Zero on Earth is called &quot;tret&quot; on Mars. The numbers 1 to 12 on Earth is called &quot;jan, feb, mar, apr, may, jun, jly, aug, sep, oct, nov, dec&quot; on Mars">
+<meta property="og:type" content="article">
+<meta property="og:title" content="1100 Mars Numbers">
+<meta property="og:url" content="http://jiayaoo3o.github.io/2019/04/29/1100-Mars-Numbers/index.html">
+<meta property="og:site_name" content="jiayaoO3O&#39;s Blog">
+<meta property="og:description" content="题目 People on Mars count their numbers with base 13:  Zero on Earth is called &quot;tret&quot; on Mars. The numbers 1 to 12 on Earth is called &quot;jan, feb, mar, apr, may, jun, jly, aug, sep, oct, nov, dec&quot; on Mars">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-04-29T11:38:06.000Z">
+<meta property="article:modified_time" content="2021-07-12T03:16:05.980Z">
+<meta property="article:author" content="jiayao">
+<meta property="article:tag" content="PAT">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://jiayaoo3o.github.io/2019/04/29/1100-Mars-Numbers/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;http:&#x2F;&#x2F;jiayaoo3o.github.io&#x2F;2019&#x2F;04&#x2F;29&#x2F;1100-Mars-Numbers&#x2F;&quot;,&quot;path&quot;:&quot;2019&#x2F;04&#x2F;29&#x2F;1100-Mars-Numbers&#x2F;&quot;,&quot;title&quot;:&quot;1100 Mars Numbers&quot;}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<title>1100 Mars Numbers | jiayaoO3O's Blog</title><script src="/js/config.js"></script>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">jiayaoO3O's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">sudo reboot</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE"><span class="nav-text">题目</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#input-specification"><span class="nav-text">Input Specification:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#output-specification"><span class="nav-text">Output Specification:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sample-input"><span class="nav-text">Sample Input:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sample-output"><span class="nav-text">Sample Output:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E6%84%8F"><span class="nav-text">题意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="nav-text">代码</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="jiayao"
+      src="/images/pic.jpg">
+  <p class="site-author-name" itemprop="name">jiayao</p>
+  <div class="site-description" itemprop="description">重构！重构！重构！</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">130</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">37</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/jiayaoO3O" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;jiayaoO3O" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/jiayao3.14@outlook.com" title="E-Mail → jiayao3.14@outlook.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://jiayaoo3o.github.io/2019/04/29/1100-Mars-Numbers/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/pic.jpg">
+      <meta itemprop="name" content="jiayao">
+      <meta itemprop="description" content="重构！重构！重构！">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jiayaoO3O's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          1100 Mars Numbers<a href="https://github.com/jiayaoO3O/jiayaoO3O.github.io/blob/Blog/source/_posts/1100-Mars-Numbers.md" class="post-edit-link" title="编辑" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-04-29 19:38:06" itemprop="dateCreated datePublished" datetime="2019-04-29T19:38:06+08:00">2019-04-29</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-07-12 11:16:05" itemprop="dateModified" datetime="2021-07-12T11:16:05+08:00">2021-07-12</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">算法学习</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/PAT/" itemprop="url" rel="index"><span itemprop="name">PAT</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="题目">题目</h2>
+<p>People on Mars count their numbers with base 13:</p>
+<ul>
+<li>Zero on Earth is called "tret" on Mars.</li>
+<li>The numbers 1 to 12 on Earth is called "jan, feb, mar, apr, may, jun, jly, aug, sep, oct, nov, dec" on Mars, respectively.</li>
+<li>For the next higher digit, Mars people name the 12 numbers as "tam, hel, maa, huh, tou, kes, hei, elo, syy, lok, mer, jou", respectively.</li>
+</ul>
+<p>For examples, the number 29 on Earth is called "hel mar" on Mars; and "elo nov" on Mars corresponds to 115 on Earth. In order to help communication between people from these two planets, you are supposed to write a program for mutual translation between Earth and Mars number systems.</p>
+<h3 id="input-specification">Input Specification:</h3>
+<p>Each input file contains one test case. For each case, the first line contains a positive integer <em>N</em> (&lt;100). Then <em>N</em> lines follow, each contains a number in [0, 169), given either in the form of an Earth number, or that of Mars.</p>
+<h3 id="output-specification">Output Specification:</h3>
+<p>For each number, print in a line the corresponding number in the other language.</p>
+<h3 id="sample-input">Sample Input:</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">4</span><br><span class="line">29</span><br><span class="line">5</span><br><span class="line">elo nov</span><br><span class="line">tam</span><br></pre></td></tr></table></figure>
+<h3 id="sample-output">Sample Output:</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hel mar</span><br><span class="line">may</span><br><span class="line">115</span><br><span class="line">13</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<h2 id="题意">题意</h2>
+<p>火星的数字是13进制的,并且他们的数字并不用0~9来表示,而是:</p>
+<ul>
+<li>当数字是1~12时,用jan, feb, mar, apr, may, jun, jly, aug, sep, oct, nov, dec来表示1~12.</li>
+<li>当数字超过12,有两位时,高位用tam, hel, maa, huh, tou, kes, hei, elo, syy, lok, mer, jou来表示1~12.</li>
+<li>0用tret表示.</li>
+<li>当数字是13,也即火星上的"10"时,只用一个"tam"表示,"20"用"hel"表示,也就是说,当火星数字是10,20,30这种整数时,后面的零不用写.</li>
+</ul>
+<p>现在要你设计一个翻译程序,如果输入的是地球整数,那就把它翻译成13进制的火星数字;如果输入是火星数字,就把它翻译成10进制的地球数字.</p>
+<h2 id="思路">思路</h2>
+<p>这道题要考虑的情况相当相当多,既要进制转换,又要字符替换,还要对不同长度的数字进行不同情况的分析.</p>
+<p>用火星数字获取火星文字,可以直接使用字符串数组,下标表示火星数字,数组存放着火星对应的文字.</p>
+<p>用火星文字获取火星数字,可以使用泛型字典,通过火星文字直接获得对应的火星数字.</p>
+<p>而这道题明确告诉我们火星的文字只有高低两位,所以判断的时候就比较方便.</p>
+<h2 id="代码">代码</h2>
+<p>首先我们先实现一个地球数字转换成火星文字的函数:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">public static string translateToMars(int EarthNumber)</span><br><span class="line">&#123;</span><br><span class="line">    if (EarthNumber == 0)</span><br><span class="line">    &#123;</span><br><span class="line">        return &quot;tret&quot;;//如果地球数字输入0直接返回,不用判断了.</span><br><span class="line">    &#125;</span><br><span class="line">    string[] lowerDigits = &#123; &quot;tret&quot;, &quot;jan&quot;, &quot;feb&quot;, &quot;mar&quot;, &quot;apr&quot;, &quot;may&quot;, &quot;jun&quot;, &quot;jly&quot;, &quot;aug&quot;, &quot;sep&quot;, &quot;oct&quot;, &quot;nov&quot;, &quot;dec&quot; &#125;;</span><br><span class="line">    string[] higherDigit = &#123; &quot;&quot;, &quot;tam&quot;, &quot;hel&quot;, &quot;maa&quot;, &quot;huh&quot;, &quot;tou&quot;, &quot;kes&quot;, &quot;hei&quot;, &quot;elo&quot;, &quot;syy&quot;, &quot;lok&quot;, &quot;mer&quot;, &quot;jou&quot; &#125;;</span><br><span class="line">    int[] number = &#123; 0, 0 &#125;;//number用于存放10进制转换成13进制的结果,结果只有两位,高位和低位.</span><br><span class="line">    int i = 1;</span><br><span class="line">    while (EarthNumber != 0)//进行进制转换.</span><br><span class="line">    &#123;</span><br><span class="line">        number[i--] = EarthNumber % 13;</span><br><span class="line">        EarthNumber /= 13;</span><br><span class="line">    &#125;</span><br><span class="line">    if (number[0] == 0)//如果进制转换的结果的第一位是0,例如05,07,09</span><br><span class="line">    &#123;</span><br><span class="line">        return lowerDigits[number[1]];//那就直接返回低位number[1]对应的数字的火星文字.</span><br><span class="line">    &#125;</span><br><span class="line">    else//如果进制转换的结果第一位不是0</span><br><span class="line">    &#123;</span><br><span class="line">        if (number[1] == 0)//如果第二位是0,例如10,20,30</span><br><span class="line">        &#123;</span><br><span class="line">            return higherDigit[number[0]];</span><br><span class="line">            //那就直接输出高位number[0]对应的数字的火星文字,因为火星文字的低位0是不输出的.</span><br><span class="line">        &#125;</span><br><span class="line">        else</span><br><span class="line">        &#123;</span><br><span class="line">            return higherDigit[number[0]] + &quot; &quot; + lowerDigits[number[1]];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>再实现一个火星文字转地球数字的函数:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">public static int translateToEarth(string MarsNumber)</span><br><span class="line">&#123;</span><br><span class="line">    //先创建两个字典用于通过火星文字得到火星数字.</span><br><span class="line">    Dictionary&lt;string, int&gt; lowerDigits = new Dictionary&lt;string, int&gt;() &#123;</span><br><span class="line">        &#123;&quot;tret&quot;,0&#125;,&#123;&quot;jan&quot;,1&#125;,&#123;&quot;feb&quot;,2&#125;,&#123;&quot;mar&quot;,3&#125;,&#123;&quot;apr&quot;,4&#125;,&#123;&quot;may&quot;,5&#125;,</span><br><span class="line">        &#123;&quot;jun&quot;,6&#125;,&#123;&quot;jly&quot;,7&#125;,&#123;&quot;aug&quot;,8&#125;,&#123;&quot;sep&quot;,9&#125;,&#123;&quot;oct&quot;,10&#125;,&#123;&quot;nov&quot;,11&#125;,&#123;&quot;dec&quot;,12&#125;&#125;;</span><br><span class="line">    Dictionary&lt;string, int&gt; higherDigit = new Dictionary&lt;string, int&gt;() &#123;</span><br><span class="line">        &#123;&quot;tam&quot;,1&#125;,&#123;&quot;hel&quot;,2&#125;,&#123;&quot;maa&quot;,3&#125;,&#123;&quot;huh&quot;,4&#125;,&#123;&quot;tou&quot;,5&#125;,</span><br><span class="line">        &#123;&quot;kes&quot;,6&#125;,&#123;&quot;hei&quot;,7&#125;,&#123;&quot;elo&quot;,8&#125;,&#123;&quot;syy&quot;,9&#125;,&#123;&quot;lok&quot;,10&#125;,&#123;&quot;mer&quot;,11&#125;,&#123;&quot;jou&quot;,12&#125;&#125;;</span><br><span class="line">    string[] numbers = MarsNumber.Split();//尝试将火星文字进行分割.</span><br><span class="line">    if (numbers.Length == 1)//如果长度是1,说明只输入了一个单词.</span><br><span class="line">    &#123;</span><br><span class="line">        if (lowerDigits.ContainsKey(numbers[0]))//如果这个单词在低位字典里,那就返回对应数字.</span><br><span class="line">        &#123;</span><br><span class="line">            return lowerDigits[numbers[0]];</span><br><span class="line">        &#125;</span><br><span class="line">        else</span><br><span class="line">        &#123;</span><br><span class="line">            return higherDigit[numbers[0]] * 13;//如果在高位字典里,那就返回13乘以这个数字.</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    else</span><br><span class="line">    &#123;</span><br><span class="line">        //如果长度是2,那就说明输入了两个单词,那就高位的乘以13,低位的直接获取.</span><br><span class="line">        return higherDigit[numbers[0]] * 13 + lowerDigits[numbers[1]];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">public static void Main()</span><br><span class="line">&#123;</span><br><span class="line">    int result;</span><br><span class="line">    int count = int.Parse(Console.ReadLine());</span><br><span class="line">    while (count-- != 0)</span><br><span class="line">    &#123;</span><br><span class="line">        string input = Console.ReadLine();</span><br><span class="line">        if (int.TryParse(input, out result))//尝试转换成整型,如果成功那就是地球数字,如果失败那就是火星文字.</span><br><span class="line">        &#123;</span><br><span class="line">            Console.WriteLine(translateToMars(result));</span><br><span class="line">        &#125;</span><br><span class="line">        else</span><br><span class="line">        &#123;</span><br><span class="line">            Console.WriteLine(translateToEarth(input));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div></div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="jiayao 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.png" alt="jiayao 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>jiayao
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://jiayaoo3o.github.io/2019/04/29/1100-Mars-Numbers/" title="1100 Mars Numbers">http://jiayaoo3o.github.io/2019/04/29/1100-Mars-Numbers/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-ND</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/PAT/" rel="tag"><i class="fa fa-tag"></i> PAT</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2019/04/28/1092-To-Buy-or-Not-to-Buy/" rel="prev" title="1092 To Buy or Not to Buy">
+                  <i class="fa fa-chevron-left"></i> 1092 To Buy or Not to Buy
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2019/04/30/1108-Finding-Average/" rel="next" title="1108 Finding Average">
+                  1108 Finding Average <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+<script src="/js/comments.js"></script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">jiayao</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{&quot;enable&quot;:true,&quot;tags&quot;:&quot;none&quot;,&quot;js&quot;:&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;mathjax@3.1.4&#x2F;es5&#x2F;tex-mml-chtml.js&quot;}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>
